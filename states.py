@@ -200,6 +200,13 @@ class ComputeState(AppState):
         if done:
                 return WRITE_STATE
 
+        #TODO: Currently, we are getting a runtime error here: File "/root/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 2215, in load_state_dict
+            #raise RuntimeError('Error(s) in loading state_dict for {}:\n\t{}'.format(
+            #RuntimeError: Error(s) in loading state_dict for Autoencoder:
+                #size mismatch for encoder.0.weight: copying a param with shape torch.Size([500, 2999]) from checkpoint, the shape in current model is torch.Size([500, 3000]).
+                #size mismatch for decoder.6.weight: copying a param with shape torch.Size([2999, 500]) from checkpoint, the shape in current model is torch.Size([3000, 500]).
+                #size mismatch for decoder.6.bias: copying a param with shape torch.Size([2999]) from checkpoint, the shape in current model is torch.Size([3000]).
+
         self.log("Loading global weights for model...")
         model = self.load('model')
         state_dict = {name: torch.tensor(param) for name, param in weights.items()}
@@ -306,12 +313,14 @@ class WriteState(AppState):
 
     def run(self):
             self.log('Predicting data...')
-            df = self.load('dataframe')
-            model = self.load('model')
-            output_file = self.load('output_file')
-            target_column = self.load('target_column')
-            pred = model.predict(df.drop(columns = target_column))
-            pd.DataFrame(data={'pred': pred}).to_csv(f'{OUTPUT_DIR}/{output_file}')
+            #TODO: Predicting data and writing final results .csv
+            #Old code:
+            #df = self.load('dataframe')
+            #model = self.load('model')
+            #output_file = self.load('output_file')
+            #target_column = self.load('target_column')
+            #pred = model.predict(df.drop(columns = target_column))
+            #pd.DataFrame(data={'pred': pred}).to_csv(f'{OUTPUT_DIR}/{output_file}')
 
 
             return TERMINAL_STATE
