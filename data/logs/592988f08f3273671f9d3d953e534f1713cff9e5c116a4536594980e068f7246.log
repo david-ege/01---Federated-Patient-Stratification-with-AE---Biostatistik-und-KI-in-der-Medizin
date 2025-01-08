@@ -1,0 +1,35 @@
+2025-01-05 20:02:28,697 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-01-05 20:02:28,701 INFO supervisord started with pid 7
+2025-01-05 20:02:29,704 INFO spawned: 'app' with pid 8
+2025-01-05 20:02:29,708 INFO spawned: 'nginx' with pid 9
+Bottle v0.13.2 server starting up (using WSGIRefServer())...
+Listening on http://localhost:5000/
+Hit Ctrl-C to quit.
+
+2025-01-05 20:02:31,146 INFO success: app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-01-05 20:02:31,147 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+[CTRL] POST /setup
+[Time: 05.01.25 20:02:32] [Level: info] id: e2c43faceadd983d
+[Time: 05.01.25 20:02:32] [Level: info] coordinator: False
+[Time: 05.01.25 20:02:32] [Level: info] clients: ['e2c43faceadd983d', 'cd8c5e43dfcd6784']
+[Time: 05.01.25 20:02:32] [Level: info] state: initial
+[Time: 05.01.25 20:02:32] [Level: info] [State: initial] Initializing: Setting iteration to 0, setting max_iterations to 3...
+[Time: 05.01.25 20:02:32] [Level: info] transition: compute
+127.0.0.1 - - [05/Jan/2025 20:02:32] "POST /api/setup HTTP/1.0" 200 0
+127.0.0.1 - - [05/Jan/2025 20:02:32] "GET /api/status HTTP/1.0" 200 155
+[Time: 05.01.25 20:02:33] [Level: info] state: compute
+[Time: 05.01.25 20:02:33] [Level: info] [State: compute] ITERATION 1
+[Time: 05.01.25 20:02:33] [Level: info] transition: compute
+[Time: 05.01.25 20:02:34] [Level: info] state: compute
+[Time: 05.01.25 20:02:34] [Level: info] [State: compute] ITERATION 2
+[Time: 05.01.25 20:02:34] [Level: info] transition: compute
+[Time: 05.01.25 20:02:35] [Level: info] state: compute
+[Time: 05.01.25 20:02:35] [Level: info] [State: compute] ITERATION 3
+[Time: 05.01.25 20:02:35] [Level: info] transition: write
+127.0.0.1 - - [05/Jan/2025 20:02:35] "GET /api/status HTTP/1.0" 200 153
+[Time: 05.01.25 20:02:36] [Level: info] state: write
+[Time: 05.01.25 20:02:36] [Level: info] transition: terminal
+127.0.0.1 - - [05/Jan/2025 20:02:38] "GET /api/status HTTP/1.0" 200 156
+127.0.0.1 - - [05/Jan/2025 20:02:41] "GET /api/status HTTP/1.0" 200 156
+127.0.0.1 - - [05/Jan/2025 20:02:44] "GET /api/status HTTP/1.0" 200 156
+127.0.0.1 - - [05/Jan/2025 20:02:47] "GET /api/status HTTP/1.0" 200 154

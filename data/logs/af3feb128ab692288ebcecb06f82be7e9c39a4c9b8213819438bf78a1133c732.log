@@ -1,0 +1,38 @@
+2025-01-07 19:12:50,891 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-01-07 19:12:50,894 INFO supervisord started with pid 7
+2025-01-07 19:12:51,897 INFO spawned: 'app' with pid 8
+2025-01-07 19:12:51,898 INFO spawned: 'nginx' with pid 9
+2025-01-07 19:12:52,910 INFO success: app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-01-07 19:12:52,911 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+Bottle v0.13.2 server starting up (using WSGIRefServer())...
+Listening on http://localhost:5000/
+Hit Ctrl-C to quit.
+
+[CTRL] POST /setup
+[Time: 07.01.25 19:12:54] [Level: info] id: 2f4b8031ce8a45e8
+[Time: 07.01.25 19:12:54] [Level: info] coordinator: False
+[Time: 07.01.25 19:12:54] [Level: info] clients: ['2f4b8031ce8a45e8', '3d772da48f4b9f89']
+[Time: 07.01.25 19:12:54] [Level: info] state: initial
+[Time: 07.01.25 19:12:54] [Level: info] [State: initial] Reading configuration file...
+[Time: 07.01.25 19:12:54] [Level: info] [State: initial] Initializing: Setting iteration to 0, setting max_iterations to 3...
+[Time: 07.01.25 19:12:54] [Level: info] [State: initial] Done reading configuration file.
+[Time: 07.01.25 19:12:54] [Level: info] [State: initial] Max Iterations: 10
+[Time: 07.01.25 19:12:54] [Level: info] [State: initial] Reading training data...
+127.0.0.1 - - [07/Jan/2025 19:12:54] "POST /api/setup HTTP/1.0" 200 0
+[Time: 07.01.25 19:12:54] [Level: info] transition: compute
+127.0.0.1 - - [07/Jan/2025 19:12:54] "GET /api/status HTTP/1.0" 200 155
+[Time: 07.01.25 19:12:55] [Level: info] state: compute
+[Time: 07.01.25 19:12:55] [Level: info] [State: compute] ITERATION 1
+[CTRL] POST /data
+127.0.0.1 - - [07/Jan/2025 19:12:55] "POST /api/data?client=3d772da48f4b9f89&memo=None HTTP/1.0" 200 0
+[Time: 07.01.25 19:12:55] [Level: info] [State: compute] Loading global model...
+[Time: 07.01.25 19:12:55] [Level: info] [State: compute] Fitting model...
+[Time: 07.01.25 19:12:55] [Level: info] [State: compute] Scoring model...
+[Time: 07.01.25 19:12:55] [Level: info] [State: compute] Score is: 0.9954431072648999
+[Time: 07.01.25 19:12:55] [Level: info] [State: compute] Sent coefficient: [3.02014409] and intercept: 4.678053129811673
+[Time: 07.01.25 19:12:55] [Level: info] transition: compute
+[Time: 07.01.25 19:12:56] [Level: info] state: compute
+[Time: 07.01.25 19:12:56] [Level: info] [State: compute] ITERATION 2
+127.0.0.1 - - [07/Jan/2025 19:12:57] "GET /api/status HTTP/1.0" 200 164
+[CTRL] GET /data
+127.0.0.1 - - [07/Jan/2025 19:12:57] "GET /api/data HTTP/1.0" 200 189

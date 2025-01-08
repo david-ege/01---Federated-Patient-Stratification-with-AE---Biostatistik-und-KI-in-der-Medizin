@@ -1,0 +1,221 @@
+2025-01-07 10:13:02,987 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-01-07 10:13:02,992 INFO supervisord started with pid 7
+2025-01-07 10:13:03,996 INFO spawned: 'app' with pid 8
+2025-01-07 10:13:04,001 INFO spawned: 'nginx' with pid 9
+2025-01-07 10:13:05,031 INFO success: app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-01-07 10:13:05,031 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+Traceback (most recent call last):
+  File "/app/main.py", line 8, in <module>
+    import states
+  File "/app/states.py", line 8, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+2025-01-07 10:13:05,783 WARN exited: app (exit status 1; not expected)
+2025-01-07 10:13:06,788 INFO spawned: 'app' with pid 45
+2025-01-07 10:13:07,791 INFO success: app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+Traceback (most recent call last):
+  File "/app/main.py", line 8, in <module>
+    import states
+  File "/app/states.py", line 8, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+2025-01-07 10:13:08,574 WARN exited: app (exit status 1; not expected)
+2025-01-07 10:13:09,577 INFO spawned: 'app' with pid 69
+2025-01-07 10:13:10,578 INFO success: app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+Traceback (most recent call last):
+  File "/app/main.py", line 8, in <module>
+    import states
+  File "/app/states.py", line 8, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+2025-01-07 10:13:11,048 WARN exited: app (exit status 1; not expected)
+2025-01-07 10:13:12,052 INFO spawned: 'app' with pid 93
+2025-01-07 10:13:13,054 INFO success: app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+Traceback (most recent call last):
+  File "/app/main.py", line 8, in <module>
+    import states
+  File "/app/states.py", line 8, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+2025-01-07 10:13:13,460 WARN exited: app (exit status 1; not expected)
+2025-01-07 10:13:14,463 INFO spawned: 'app' with pid 117
+2025-01-07 10:13:15,465 INFO success: app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+Traceback (most recent call last):
+  File "/app/main.py", line 8, in <module>
+    import states
+  File "/app/states.py", line 8, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+2025-01-07 10:13:15,817 WARN exited: app (exit status 1; not expected)
+2025-01-07 10:13:16,821 INFO spawned: 'app' with pid 141
+2025-01-07 10:13:17,823 INFO success: app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+Traceback (most recent call last):
+  File "/app/main.py", line 8, in <module>
+    import states
+  File "/app/states.py", line 8, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+2025-01-07 10:13:18,173 WARN exited: app (exit status 1; not expected)
+2025-01-07 10:13:19,176 INFO spawned: 'app' with pid 165
+Traceback (most recent call last):
+  File "/app/main.py", line 8, in <module>
+    import states
+  File "/app/states.py", line 8, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+2025-01-07 10:13:20,318 INFO success: app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-01-07 10:13:20,521 WARN exited: app (exit status 1; not expected)
+2025-01-07 10:13:21,525 INFO spawned: 'app' with pid 189
+2025-01-07 10:13:22,526 INFO success: app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+Traceback (most recent call last):
+  File "/app/main.py", line 8, in <module>
+    import states
+  File "/app/states.py", line 8, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+2025-01-07 10:13:22,878 WARN exited: app (exit status 1; not expected)
+2025-01-07 10:13:23,882 INFO spawned: 'app' with pid 213
+2025-01-07 10:13:24,884 INFO success: app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+Traceback (most recent call last):
+  File "/app/main.py", line 8, in <module>
+    import states
+  File "/app/states.py", line 8, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+2025-01-07 10:13:25,304 WARN exited: app (exit status 1; not expected)
+2025-01-07 10:13:26,316 INFO spawned: 'app' with pid 237
+2025-01-07 10:13:27,318 INFO success: app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+Traceback (most recent call last):
+  File "/app/main.py", line 8, in <module>
+    import states
+  File "/app/states.py", line 8, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+2025-01-07 10:13:27,986 WARN exited: app (exit status 1; not expected)
+2025-01-07 10:13:28,989 INFO spawned: 'app' with pid 261
+2025-01-07 10:13:29,991 INFO success: app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+Traceback (most recent call last):
+  File "/app/main.py", line 8, in <module>
+    import states
+  File "/app/states.py", line 8, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+2025-01-07 10:13:30,666 WARN exited: app (exit status 1; not expected)
+2025-01-07 10:13:31,670 INFO spawned: 'app' with pid 285
+2025-01-07 10:13:32,672 INFO success: app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+Traceback (most recent call last):
+  File "/app/main.py", line 8, in <module>
+    import states
+  File "/app/states.py", line 8, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+2025-01-07 10:13:33,175 WARN exited: app (exit status 1; not expected)
+2025-01-07 10:13:34,179 INFO spawned: 'app' with pid 309
+2025-01-07 10:13:35,181 INFO success: app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+Traceback (most recent call last):
+  File "/app/main.py", line 8, in <module>
+    import states
+  File "/app/states.py", line 8, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+2025-01-07 10:13:35,802 WARN exited: app (exit status 1; not expected)
+2025-01-07 10:13:36,806 INFO spawned: 'app' with pid 333
+2025-01-07 10:13:37,808 INFO success: app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+Traceback (most recent call last):
+  File "/app/main.py", line 8, in <module>
+    import states
+  File "/app/states.py", line 8, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+2025-01-07 10:13:38,475 WARN exited: app (exit status 1; not expected)
+2025-01-07 10:13:39,478 INFO spawned: 'app' with pid 357
+2025-01-07 10:13:40,480 INFO success: app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+Traceback (most recent call last):
+  File "/app/main.py", line 8, in <module>
+    import states
+  File "/app/states.py", line 8, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+2025-01-07 10:13:41,071 WARN exited: app (exit status 1; not expected)
+2025-01-07 10:13:42,081 INFO spawned: 'app' with pid 381
+2025-01-07 10:13:43,083 INFO success: app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+Traceback (most recent call last):
+  File "/app/main.py", line 8, in <module>
+    import states
+  File "/app/states.py", line 8, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+2025-01-07 10:13:44,179 WARN exited: app (exit status 1; not expected)
+2025-01-07 10:13:45,190 INFO spawned: 'app' with pid 405
+2025-01-07 10:13:46,201 INFO success: app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+Traceback (most recent call last):
+  File "/app/main.py", line 8, in <module>
+    import states
+  File "/app/states.py", line 8, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+2025-01-07 10:13:47,193 WARN exited: app (exit status 1; not expected)
+2025-01-07 10:13:48,197 INFO spawned: 'app' with pid 429
+2025-01-07 10:13:49,199 INFO success: app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+Traceback (most recent call last):
+  File "/app/main.py", line 8, in <module>
+    import states
+  File "/app/states.py", line 8, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+2025-01-07 10:13:50,156 WARN exited: app (exit status 1; not expected)
+2025-01-07 10:13:51,159 INFO spawned: 'app' with pid 453
+2025-01-07 10:13:52,161 INFO success: app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+Traceback (most recent call last):
+  File "/app/main.py", line 8, in <module>
+    import states
+  File "/app/states.py", line 8, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+2025-01-07 10:13:52,674 WARN exited: app (exit status 1; not expected)
+2025-01-07 10:13:53,677 INFO spawned: 'app' with pid 477
+2025-01-07 10:13:54,679 INFO success: app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+Traceback (most recent call last):
+  File "/app/main.py", line 8, in <module>
+    import states
+  File "/app/states.py", line 8, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+2025-01-07 10:13:55,848 WARN exited: app (exit status 1; not expected)
+2025-01-07 10:13:56,851 INFO spawned: 'app' with pid 501
+2025-01-07 10:13:57,853 INFO success: app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+Traceback (most recent call last):
+  File "/app/main.py", line 8, in <module>
+    import states
+  File "/app/states.py", line 8, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+2025-01-07 10:13:58,448 WARN exited: app (exit status 1; not expected)
+2025-01-07 10:13:59,452 INFO spawned: 'app' with pid 525
+2025-01-07 10:14:00,458 INFO success: app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+Traceback (most recent call last):
+  File "/app/main.py", line 8, in <module>
+    import states
+  File "/app/states.py", line 8, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+2025-01-07 10:14:01,180 WARN exited: app (exit status 1; not expected)
+2025-01-07 10:14:02,184 INFO spawned: 'app' with pid 549
+2025-01-07 10:14:03,186 INFO success: app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+Traceback (most recent call last):
+  File "/app/main.py", line 8, in <module>
+    import states
+  File "/app/states.py", line 8, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+2025-01-07 10:14:04,421 WARN exited: app (exit status 1; not expected)
+2025-01-07 10:14:05,424 INFO spawned: 'app' with pid 573
+2025-01-07 10:14:06,426 INFO success: app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+Traceback (most recent call last):
+  File "/app/main.py", line 8, in <module>
+    import states
+  File "/app/states.py", line 8, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+2025-01-07 10:14:08,126 WARN exited: app (exit status 1; not expected)
+2025-01-07 10:14:09,129 INFO spawned: 'app' with pid 597

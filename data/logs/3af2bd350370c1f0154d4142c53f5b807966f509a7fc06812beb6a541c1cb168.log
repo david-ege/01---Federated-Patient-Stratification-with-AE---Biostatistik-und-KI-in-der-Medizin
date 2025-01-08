@@ -1,0 +1,54 @@
+2025-01-07 19:12:46,429 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-01-07 19:12:46,432 INFO supervisord started with pid 7
+2025-01-07 19:12:47,435 INFO spawned: 'app' with pid 8
+2025-01-07 19:12:47,437 INFO spawned: 'nginx' with pid 9
+2025-01-07 19:12:48,448 INFO success: app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-01-07 19:12:48,448 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+Bottle v0.13.2 server starting up (using WSGIRefServer())...
+Listening on http://localhost:5000/
+Hit Ctrl-C to quit.
+
+[CTRL] POST /setup
+[Time: 07.01.25 19:12:52] [Level: info] id: 3d772da48f4b9f89
+[Time: 07.01.25 19:12:52] [Level: info] coordinator: True
+[Time: 07.01.25 19:12:52] [Level: info] clients: ['2f4b8031ce8a45e8', '3d772da48f4b9f89']
+[Time: 07.01.25 19:12:52] [Level: info] state: initial
+[Time: 07.01.25 19:12:52] [Level: info] [State: initial] Reading configuration file...
+127.0.0.1 - - [07/Jan/2025 19:12:52] "POST /api/setup HTTP/1.0" 200 0
+[Time: 07.01.25 19:12:52] [Level: info] [State: initial] Initializing: Setting iteration to 0, setting max_iterations to 3...
+[Time: 07.01.25 19:12:52] [Level: info] [State: initial] Done reading configuration file.
+[Time: 07.01.25 19:12:52] [Level: info] [State: initial] Max Iterations: 10
+[Time: 07.01.25 19:12:52] [Level: info] [State: initial] Reading training data...
+[Time: 07.01.25 19:12:52] [Level: info] transition: compute
+127.0.0.1 - - [07/Jan/2025 19:12:52] "GET /api/status HTTP/1.0" 200 155
+[Time: 07.01.25 19:12:53] [Level: info] state: compute
+[Time: 07.01.25 19:12:53] [Level: info] [State: compute] ITERATION 1
+[Time: 07.01.25 19:12:53] [Level: info] [State: compute] Loading global model...
+[Time: 07.01.25 19:12:53] [Level: info] [State: compute] Fitting model...
+[Time: 07.01.25 19:12:53] [Level: info] [State: compute] Scoring model...
+[Time: 07.01.25 19:12:53] [Level: info] [State: compute] Score is: 0.996262943324241
+[Time: 07.01.25 19:12:53] [Level: info] [State: compute] Sent coefficient: [2.47701134] and intercept: 11.075480787733724
+[Time: 07.01.25 19:12:53] [Level: info] transition: aggregate
+[Time: 07.01.25 19:12:54] [Level: info] state: aggregate
+[Time: 07.01.25 19:12:54] [Level: info] [State: aggregate] Waitig for local models...
+127.0.0.1 - - [07/Jan/2025 19:12:55] "GET /api/status HTTP/1.0" 200 156
+[CTRL] GET /data
+127.0.0.1 - - [07/Jan/2025 19:12:55] "GET /api/data HTTP/1.0" 200 190
+[CTRL] POST /data
+127.0.0.1 - - [07/Jan/2025 19:12:57] "POST /api/data?client=2f4b8031ce8a45e8&memo=GATHERROUND1 HTTP/1.0" 200 0
+[Time: 07.01.25 19:12:57] [Level: info] Traceback (most recent call last):
+  File "/root/.local/lib/python3.8/site-packages/FeatureCloud/app/engine/app.py", line 252, in guarded_run
+    self.run()
+  File "/root/.local/lib/python3.8/site-packages/FeatureCloud/app/engine/app.py", line 271, in run
+    transition = self.current_state.run()
+  File "/app/states.py", line 104, in run
+    agg_coef, agg_intercept = self.aggregate_data()
+  File "/root/.local/lib/python3.8/site-packages/FeatureCloud/app/engine/app.py", line 633, in aggregate_data
+    return _aggregate(data, operation)
+  File "/root/.local/lib/python3.8/site-packages/FeatureCloud/app/engine/app.py", line 1200, in _aggregate
+    data_np = [np.array(d) for d in data]
+  File "/root/.local/lib/python3.8/site-packages/FeatureCloud/app/engine/app.py", line 1200, in <listcomp>
+    data_np = [np.array(d) for d in data]
+ValueError: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (2,) + inhomogeneous part.
+
+127.0.0.1 - - [07/Jan/2025 19:12:58] "GET /api/status HTTP/1.0" 200 160

@@ -1,0 +1,63 @@
+2025-01-06 13:18:40,099 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-01-06 13:18:40,102 INFO supervisord started with pid 7
+2025-01-06 13:18:41,106 INFO spawned: 'app' with pid 8
+2025-01-06 13:18:41,110 INFO spawned: 'nginx' with pid 9
+2025-01-06 13:18:42,134 INFO success: app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-01-06 13:18:42,134 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+Bottle v0.13.2 server starting up (using WSGIRefServer())...
+Listening on http://localhost:5000/
+Hit Ctrl-C to quit.
+
+[CTRL] POST /setup
+[Time: 06.01.25 13:18:43] [Level: info] id: 0a0ce8c94d3e4c63
+[Time: 06.01.25 13:18:43] [Level: info] coordinator: False
+[Time: 06.01.25 13:18:43] [Level: info] clients: ['92a4d45fbd6a55d2', '0a0ce8c94d3e4c63']
+[Time: 06.01.25 13:18:43] [Level: info] state: initial
+[Time: 06.01.25 13:18:43] [Level: info] [State: initial] Reading configuration file...
+[Time: 06.01.25 13:18:43] [Level: info] [State: initial] Initializing: Setting iteration to 0, setting max_iterations to 3...
+[Time: 06.01.25 13:18:43] [Level: info] [State: initial] Done reading configuration file.
+[Time: 06.01.25 13:18:43] [Level: info] [State: initial] Max Iterations: 10
+[Time: 06.01.25 13:18:43] [Level: info] transition: compute
+127.0.0.1 - - [06/Jan/2025 13:18:43] "POST /api/setup HTTP/1.0" 200 0
+127.0.0.1 - - [06/Jan/2025 13:18:43] "GET /api/status HTTP/1.0" 200 155
+[Time: 06.01.25 13:18:44] [Level: info] state: compute
+[Time: 06.01.25 13:18:44] [Level: info] [State: compute] ITERATION 1
+[Time: 06.01.25 13:18:44] [Level: info] transition: compute
+[Time: 06.01.25 13:18:45] [Level: info] state: compute
+[Time: 06.01.25 13:18:45] [Level: info] [State: compute] ITERATION 2
+[Time: 06.01.25 13:18:45] [Level: info] transition: compute
+[Time: 06.01.25 13:18:46] [Level: info] state: compute
+[Time: 06.01.25 13:18:46] [Level: info] [State: compute] ITERATION 3
+[Time: 06.01.25 13:18:46] [Level: info] transition: compute
+127.0.0.1 - - [06/Jan/2025 13:18:46] "GET /api/status HTTP/1.0" 200 155
+[Time: 06.01.25 13:18:47] [Level: info] state: compute
+[Time: 06.01.25 13:18:47] [Level: info] [State: compute] ITERATION 4
+[Time: 06.01.25 13:18:47] [Level: info] transition: compute
+[Time: 06.01.25 13:18:48] [Level: info] state: compute
+[Time: 06.01.25 13:18:48] [Level: info] [State: compute] ITERATION 5
+[Time: 06.01.25 13:18:48] [Level: info] transition: compute
+[Time: 06.01.25 13:18:49] [Level: info] state: compute
+[Time: 06.01.25 13:18:49] [Level: info] [State: compute] ITERATION 6
+[Time: 06.01.25 13:18:49] [Level: info] transition: compute
+127.0.0.1 - - [06/Jan/2025 13:18:49] "GET /api/status HTTP/1.0" 200 155
+[Time: 06.01.25 13:18:50] [Level: info] state: compute
+[Time: 06.01.25 13:18:50] [Level: info] [State: compute] ITERATION 7
+[Time: 06.01.25 13:18:50] [Level: info] transition: compute
+[Time: 06.01.25 13:18:51] [Level: info] state: compute
+[Time: 06.01.25 13:18:51] [Level: info] [State: compute] ITERATION 8
+[Time: 06.01.25 13:18:51] [Level: info] transition: compute
+[Time: 06.01.25 13:18:52] [Level: info] state: compute
+[Time: 06.01.25 13:18:52] [Level: info] [State: compute] ITERATION 9
+[Time: 06.01.25 13:18:52] [Level: info] transition: compute
+127.0.0.1 - - [06/Jan/2025 13:18:52] "GET /api/status HTTP/1.0" 200 155
+[Time: 06.01.25 13:18:53] [Level: info] state: compute
+[Time: 06.01.25 13:18:53] [Level: info] [State: compute] ITERATION 10
+[Time: 06.01.25 13:18:53] [Level: info] transition: write
+[Time: 06.01.25 13:18:54] [Level: info] state: write
+[Time: 06.01.25 13:18:54] [Level: info] transition: terminal
+127.0.0.1 - - [06/Jan/2025 13:18:55] "GET /api/status HTTP/1.0" 200 156
+127.0.0.1 - - [06/Jan/2025 13:18:58] "GET /api/status HTTP/1.0" 200 156
+127.0.0.1 - - [06/Jan/2025 13:19:01] "GET /api/status HTTP/1.0" 200 156
+127.0.0.1 - - [06/Jan/2025 13:19:04] "GET /api/status HTTP/1.0" 200 154
+127.0.0.1 - - [06/Jan/2025 13:19:07] "GET /api/status HTTP/1.0" 200 154
+127.0.0.1 - - [06/Jan/2025 13:19:10] "GET /api/status HTTP/1.0" 200 154

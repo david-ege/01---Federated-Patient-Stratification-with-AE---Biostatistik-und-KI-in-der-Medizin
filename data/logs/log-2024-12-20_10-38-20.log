@@ -1,0 +1,93 @@
+{"component":"MAIN","instance":"","level":"info","msg":"Controller start","time":"2024-12-20T10:38:20Z"}
+{"component":"MAIN","instance":"","level":"info","msg":"Mode: Dockerized (isolated)","time":"2024-12-20T10:38:20Z"}
+{"component":"MAIN","instance":"","level":"info","msg":"Configuration value 'HasGPU': false","time":"2024-12-20T10:38:20Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Removing leftover Docker entities for label: fc-controller-label","time":"2024-12-20T10:38:21Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Removed 0 of 0 leftover containers","time":"2024-12-20T10:38:21Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Removed 0 of 24 leftover volumes","time":"2024-12-20T10:38:21Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Removed 0 of 0 leftover networks","time":"2024-12-20T10:38:21Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Listening on port 9151","time":"2024-12-20T10:38:21Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Listening on port 9150","time":"2024-12-20T10:38:21Z"}
+{"component":"FLOW","instance":"","level":"error","msg":"Error getting workflow data: [WARNING][SITE] No site is registered. Please create a site in the frontend","time":"2024-12-20T10:38:21Z"}
+{"component":"FLOW","instance":"","level":"error","msg":"Error getting workflow data: [WARNING][SITE] No site is registered. Please create a site in the frontend","time":"2024-12-20T10:38:24Z"}
+{"component":"HTTP","instance":"","level":"debug","msg":"Set site received","time":"2024-12-20T10:38:27Z"}
+{"component":"FLOW","instance":"","level":"debug","msg":"1 projects","time":"2024-12-20T10:38:27Z"}
+{"component":"FLOW","instance":"[Instance: 17081]","level":"info","msg":"Info change for project 17081: stage: error, step: 0","time":"2024-12-20T10:38:27Z"}
+{"component":"FLOW","instance":"[Instance: 17081]","level":"error","msg":"Workflow is shutting down because of an error","time":"2024-12-20T10:38:27Z"}
+{"component":"DATA","instance":"17081","level":"debug","msg":"Updated project state for project 17081","time":"2024-12-20T10:38:27Z"}
+{"component":"TESTBED","instance":"","level":"info","msg":"Create new test","time":"2024-12-20T10:38:35Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Create volumes and containers...","time":"2024-12-20T10:38:35Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Create volume test_1_input_0_1734691115","time":"2024-12-20T10:38:35Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Create volume test_1_output_0_1734691115","time":"2024-12-20T10:38:35Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Move data to workspace from C:/Users/david/Desktop/Biostatistik/kmeans/fc-federated-k-means\\data/GSE129508","time":"2024-12-20T10:38:35Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Move data to workspace","time":"2024-12-20T10:38:35Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2024-12-20T10:38:35Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove application","time":"2024-12-20T10:38:37Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Intermediary container used for moving data from host to volume has been removed","time":"2024-12-20T10:38:38Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Move generic data to input volume from C:/Users/david/Desktop/Biostatistik/kmeans/fc-federated-k-means\\data","time":"2024-12-20T10:38:38Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Move data to workspace","time":"2024-12-20T10:38:38Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2024-12-20T10:38:38Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove application","time":"2024-12-20T10:38:39Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Intermediary container used for moving data from host to volume has been removed","time":"2024-12-20T10:38:41Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Start application","time":"2024-12-20T10:38:41Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2024-12-20T10:38:41Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Append app to list","time":"2024-12-20T10:38:42Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Create volume test_1_input_1_1734691122","time":"2024-12-20T10:38:42Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Create volume test_1_output_1_1734691122","time":"2024-12-20T10:38:42Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Move data to workspace from C:/Users/david/Desktop/Biostatistik/kmeans/fc-federated-k-means\\data/GSE149276","time":"2024-12-20T10:38:42Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Move data to workspace","time":"2024-12-20T10:38:42Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2024-12-20T10:38:42Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove application","time":"2024-12-20T10:38:44Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Intermediary container used for moving data from host to volume has been removed","time":"2024-12-20T10:38:45Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Move generic data to input volume from C:/Users/david/Desktop/Biostatistik/kmeans/fc-federated-k-means\\data","time":"2024-12-20T10:38:45Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Move data to workspace","time":"2024-12-20T10:38:45Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2024-12-20T10:38:45Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove application","time":"2024-12-20T10:38:47Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Intermediary container used for moving data from host to volume has been removed","time":"2024-12-20T10:38:48Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Start application","time":"2024-12-20T10:38:48Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2024-12-20T10:38:48Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Append app to list","time":"2024-12-20T10:38:50Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Link fc_fcfederatedkmeans_18332573 with global socket server","time":"2024-12-20T10:38:50Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Link fc_fcfederatedkmeans_792862759 with global socket server","time":"2024-12-20T10:38:50Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Start local socket server","time":"2024-12-20T10:38:50Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Start local socket server","time":"2024-12-20T10:38:50Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Link to global address","time":"2024-12-20T10:38:50Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Link to global address","time":"2024-12-20T10:38:50Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Received setup trigger","time":"2024-12-20T10:38:50Z"}
+{"component":"LOCAL","instance":"","level":"error","msg":"Got error during setup to http://:9000: Post \"http://:9000/setup\": dial tcp :9000: connect: connection refused","time":"2024-12-20T10:38:50Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Registered new participant controller","time":"2024-12-20T10:38:50Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Registered new coordinator controller","time":"2024-12-20T10:38:50Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Setup 52257403a99760dcfe8864b5b117faf03faf920bbd3c5bf2cd2f4c4c2fd0c3ae","time":"2024-12-20T10:38:51Z"}
+{"component":"LOCAL","instance":"","level":"error","msg":"Get \"http://:9000/status\": dial tcp :9000: connect: connection refused","time":"2024-12-20T10:38:51Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Setup triggered","time":"2024-12-20T10:38:51Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"2 apps and server created and running","time":"2024-12-20T10:38:51Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Shutdown","time":"2024-12-20T10:38:51Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Shutdown","time":"2024-12-20T10:38:51Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Stopping test id: 1","time":"2024-12-20T10:38:51Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Stopping container fc_fcfederatedkmeans_18332573","time":"2024-12-20T10:38:51Z"}
+{"component":"GLOBAL","instance":"","level":"error","msg":"Participant (ID: 4c2fbce682f5b4f4): relaying stopped due to: read tcp [::1]:9150-\u003e[::1]:55342: read: connection reset by peer","time":"2024-12-20T10:38:51Z"}
+{"component":"GLOBAL","instance":"","level":"error","msg":"Participant (ID: 87adcea9cb459601): relaying stopped due to: EOF","time":"2024-12-20T10:38:51Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Move data to host","time":"2024-12-20T10:38:51Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2024-12-20T10:38:51Z"}
+{"component":"LOCAL","instance":"","level":"error","msg":"Got error during setup to http://:9000: Post \"http://:9000/setup\": dial tcp :9000: connect: connection refused","time":"2024-12-20T10:38:52Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove application","time":"2024-12-20T10:38:53Z"}
+{"component":"DOCKER","instance":"","level":"debug","msg":"Intermediary container used for moving data from volume to host has been removed","time":"2024-12-20T10:38:54Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Saved output volume content to /data/tests/results_test_1_client_0_fc_fcfederatedkmeans_18332573.zip","time":"2024-12-20T10:38:54Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove volume test_1_output_0_1734691115","time":"2024-12-20T10:38:54Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Deleted volume test_1_output_0_1734691115","time":"2024-12-20T10:38:54Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove volume test_1_input_0_1734691115","time":"2024-12-20T10:38:54Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Deleted volume test_1_input_0_1734691115","time":"2024-12-20T10:38:54Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Stopping container fc_fcfederatedkmeans_792862759","time":"2024-12-20T10:38:54Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Move data to host","time":"2024-12-20T10:38:54Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2024-12-20T10:38:54Z"}
+{"component":"LOCAL","instance":"","level":"error","msg":"Got error during setup to http://:9000: Post \"http://:9000/setup\": dial tcp :9000: connect: connection refused","time":"2024-12-20T10:38:56Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove application","time":"2024-12-20T10:38:56Z"}
+{"component":"DOCKER","instance":"","level":"debug","msg":"Intermediary container used for moving data from volume to host has been removed","time":"2024-12-20T10:38:57Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Saved output volume content to /data/tests/results_test_1_client_1_fc_fcfederatedkmeans_792862759.zip","time":"2024-12-20T10:38:57Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove volume test_1_output_1_1734691122","time":"2024-12-20T10:38:57Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Deleted volume test_1_output_1_1734691122","time":"2024-12-20T10:38:57Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove volume test_1_input_1_1734691122","time":"2024-12-20T10:38:57Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Deleted volume test_1_input_1_1734691122","time":"2024-12-20T10:38:57Z"}
+{"component":"LOCAL","instance":"","level":"error","msg":"Got error during setup to http://:9000: Post \"http://:9000/setup\": dial tcp :9000: connect: connection refused","time":"2024-12-20T10:39:04Z"}
+{"component":"LOCAL","instance":"","level":"error","msg":"Got error during setup to http://:9000: Post \"http://:9000/setup\": dial tcp :9000: connect: connection refused","time":"2024-12-20T10:39:20Z"}
+{"component":"HTTP","instance":"","level":"debug","msg":"Set site received","time":"2024-12-20T10:39:32Z"}
+{"component":"LOCAL","instance":"","level":"error","msg":"Got error during setup to http://:9000: Post \"http://:9000/setup\": dial tcp :9000: connect: connection refused","time":"2024-12-20T10:39:52Z"}

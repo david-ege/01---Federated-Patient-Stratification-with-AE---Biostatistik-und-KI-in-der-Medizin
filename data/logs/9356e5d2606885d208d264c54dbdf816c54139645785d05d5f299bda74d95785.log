@@ -1,0 +1,165 @@
+2025-01-07 19:51:07,772 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-01-07 19:51:07,774 INFO supervisord started with pid 7
+2025-01-07 19:51:08,778 INFO spawned: 'app' with pid 8
+2025-01-07 19:51:08,780 INFO spawned: 'nginx' with pid 9
+2025-01-07 19:51:09,792 INFO success: app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-01-07 19:51:09,792 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+Bottle v0.13.2 server starting up (using WSGIRefServer())...
+Listening on http://localhost:5000/
+Hit Ctrl-C to quit.
+
+[CTRL] POST /setup
+[Time: 07.01.25 19:51:11] [Level: info] id: 28ad03c235b8cf48
+[Time: 07.01.25 19:51:11] [Level: info] coordinator: False
+[Time: 07.01.25 19:51:11] [Level: info] clients: ['ddd2198d228ffd6e', '28ad03c235b8cf48']
+[Time: 07.01.25 19:51:11] [Level: info] state: initial
+[Time: 07.01.25 19:51:11] [Level: info] [State: initial] Reading configuration file...
+[Time: 07.01.25 19:51:11] [Level: info] [State: initial] Initializing: Setting iteration to 0, setting max_iterations to 3...
+[Time: 07.01.25 19:51:11] [Level: info] [State: initial] Done reading configuration file.
+[Time: 07.01.25 19:51:11] [Level: info] [State: initial] Max Iterations: 10
+[Time: 07.01.25 19:51:11] [Level: info] [State: initial] Reading training data...
+127.0.0.1 - - [07/Jan/2025 19:51:11] "POST /api/setup HTTP/1.0" 200 0
+[Time: 07.01.25 19:51:11] [Level: info] transition: compute
+127.0.0.1 - - [07/Jan/2025 19:51:11] "GET /api/status HTTP/1.0" 200 155
+[Time: 07.01.25 19:51:12] [Level: info] state: compute
+[Time: 07.01.25 19:51:12] [Level: info] [State: compute] ITERATION 1
+[CTRL] POST /data
+127.0.0.1 - - [07/Jan/2025 19:51:12] "POST /api/data?client=ddd2198d228ffd6e&memo=None HTTP/1.0" 200 0
+[Time: 07.01.25 19:51:12] [Level: info] [State: compute] Loading global model...
+[Time: 07.01.25 19:51:12] [Level: info] [State: compute] Fitting model...
+[Time: 07.01.25 19:51:12] [Level: info] [State: compute] Scoring model...
+[Time: 07.01.25 19:51:12] [Level: info] [State: compute] Score is: 0.9954431072648999
+[Time: 07.01.25 19:51:12] [Level: info] [State: compute] Sent coefficient: 3.0201440874359 and intercept: 4.678053129811673
+[Time: 07.01.25 19:51:12] [Level: info] transition: compute
+[Time: 07.01.25 19:51:13] [Level: info] state: compute
+[Time: 07.01.25 19:51:13] [Level: info] [State: compute] ITERATION 2
+127.0.0.1 - - [07/Jan/2025 19:51:14] "GET /api/status HTTP/1.0" 200 164
+[CTRL] GET /data
+127.0.0.1 - - [07/Jan/2025 19:51:14] "GET /api/data HTTP/1.0" 200 129
+[CTRL] POST /data
+127.0.0.1 - - [07/Jan/2025 19:51:15] "POST /api/data?client=ddd2198d228ffd6e&memo=None HTTP/1.0" 200 0
+[Time: 07.01.25 19:51:15] [Level: info] [State: compute] Loading global model...
+[Time: 07.01.25 19:51:15] [Level: info] [State: compute] Fitting model...
+[Time: 07.01.25 19:51:15] [Level: info] [State: compute] Scoring model...
+[Time: 07.01.25 19:51:15] [Level: info] [State: compute] Score is: 0.9954431072648999
+[Time: 07.01.25 19:51:15] [Level: info] [State: compute] Sent coefficient: 3.0201440874359 and intercept: 4.678053129811673
+[Time: 07.01.25 19:51:15] [Level: info] transition: compute
+[Time: 07.01.25 19:51:16] [Level: info] state: compute
+[Time: 07.01.25 19:51:16] [Level: info] [State: compute] ITERATION 3
+127.0.0.1 - - [07/Jan/2025 19:51:17] "GET /api/status HTTP/1.0" 200 164
+[CTRL] GET /data
+127.0.0.1 - - [07/Jan/2025 19:51:17] "GET /api/data HTTP/1.0" 200 129
+[CTRL] POST /data
+127.0.0.1 - - [07/Jan/2025 19:51:18] "POST /api/data?client=ddd2198d228ffd6e&memo=None HTTP/1.0" 200 0
+[Time: 07.01.25 19:51:18] [Level: info] [State: compute] Loading global model...
+[Time: 07.01.25 19:51:18] [Level: info] [State: compute] Fitting model...
+[Time: 07.01.25 19:51:18] [Level: info] [State: compute] Scoring model...
+[Time: 07.01.25 19:51:18] [Level: info] [State: compute] Score is: 0.9954431072648999
+[Time: 07.01.25 19:51:18] [Level: info] [State: compute] Sent coefficient: 3.0201440874359 and intercept: 4.678053129811673
+[Time: 07.01.25 19:51:18] [Level: info] transition: compute
+[Time: 07.01.25 19:51:19] [Level: info] state: compute
+[Time: 07.01.25 19:51:19] [Level: info] [State: compute] ITERATION 4
+127.0.0.1 - - [07/Jan/2025 19:51:20] "GET /api/status HTTP/1.0" 200 164
+[CTRL] GET /data
+127.0.0.1 - - [07/Jan/2025 19:51:20] "GET /api/data HTTP/1.0" 200 129
+[CTRL] POST /data
+127.0.0.1 - - [07/Jan/2025 19:51:21] "POST /api/data?client=ddd2198d228ffd6e&memo=None HTTP/1.0" 200 0
+[Time: 07.01.25 19:51:21] [Level: info] [State: compute] Loading global model...
+[Time: 07.01.25 19:51:21] [Level: info] [State: compute] Fitting model...
+[Time: 07.01.25 19:51:21] [Level: info] [State: compute] Scoring model...
+[Time: 07.01.25 19:51:21] [Level: info] [State: compute] Score is: 0.9954431072648999
+[Time: 07.01.25 19:51:21] [Level: info] [State: compute] Sent coefficient: 3.0201440874359 and intercept: 4.678053129811673
+[Time: 07.01.25 19:51:21] [Level: info] transition: compute
+[Time: 07.01.25 19:51:22] [Level: info] state: compute
+[Time: 07.01.25 19:51:22] [Level: info] [State: compute] ITERATION 5
+127.0.0.1 - - [07/Jan/2025 19:51:23] "GET /api/status HTTP/1.0" 200 164
+[CTRL] GET /data
+127.0.0.1 - - [07/Jan/2025 19:51:23] "GET /api/data HTTP/1.0" 200 129
+[CTRL] POST /data
+127.0.0.1 - - [07/Jan/2025 19:51:24] "POST /api/data?client=ddd2198d228ffd6e&memo=None HTTP/1.0" 200 0
+[Time: 07.01.25 19:51:24] [Level: info] [State: compute] Loading global model...
+[Time: 07.01.25 19:51:24] [Level: info] [State: compute] Fitting model...
+[Time: 07.01.25 19:51:24] [Level: info] [State: compute] Scoring model...
+[Time: 07.01.25 19:51:24] [Level: info] [State: compute] Score is: 0.9954431072648999
+[Time: 07.01.25 19:51:24] [Level: info] [State: compute] Sent coefficient: 3.0201440874359 and intercept: 4.678053129811673
+[Time: 07.01.25 19:51:24] [Level: info] transition: compute
+[Time: 07.01.25 19:51:25] [Level: info] state: compute
+[Time: 07.01.25 19:51:25] [Level: info] [State: compute] ITERATION 6
+127.0.0.1 - - [07/Jan/2025 19:51:26] "GET /api/status HTTP/1.0" 200 164
+[CTRL] GET /data
+127.0.0.1 - - [07/Jan/2025 19:51:26] "GET /api/data HTTP/1.0" 200 129
+[CTRL] POST /data
+127.0.0.1 - - [07/Jan/2025 19:51:27] "POST /api/data?client=ddd2198d228ffd6e&memo=None HTTP/1.0" 200 0
+[Time: 07.01.25 19:51:27] [Level: info] [State: compute] Loading global model...
+[Time: 07.01.25 19:51:27] [Level: info] [State: compute] Fitting model...
+[Time: 07.01.25 19:51:27] [Level: info] [State: compute] Scoring model...
+[Time: 07.01.25 19:51:27] [Level: info] [State: compute] Score is: 0.9954431072648999
+[Time: 07.01.25 19:51:27] [Level: info] [State: compute] Sent coefficient: 3.0201440874359 and intercept: 4.678053129811673
+[Time: 07.01.25 19:51:27] [Level: info] transition: compute
+[Time: 07.01.25 19:51:28] [Level: info] state: compute
+[Time: 07.01.25 19:51:28] [Level: info] [State: compute] ITERATION 7
+127.0.0.1 - - [07/Jan/2025 19:51:29] "GET /api/status HTTP/1.0" 200 164
+[CTRL] GET /data
+127.0.0.1 - - [07/Jan/2025 19:51:29] "GET /api/data HTTP/1.0" 200 129
+[CTRL] POST /data
+127.0.0.1 - - [07/Jan/2025 19:51:30] "POST /api/data?client=ddd2198d228ffd6e&memo=None HTTP/1.0" 200 0
+[Time: 07.01.25 19:51:30] [Level: info] [State: compute] Loading global model...
+[Time: 07.01.25 19:51:30] [Level: info] [State: compute] Fitting model...
+[Time: 07.01.25 19:51:30] [Level: info] [State: compute] Scoring model...
+[Time: 07.01.25 19:51:30] [Level: info] [State: compute] Score is: 0.9954431072648999
+[Time: 07.01.25 19:51:30] [Level: info] [State: compute] Sent coefficient: 3.0201440874359 and intercept: 4.678053129811673
+[Time: 07.01.25 19:51:30] [Level: info] transition: compute
+[Time: 07.01.25 19:51:31] [Level: info] state: compute
+[Time: 07.01.25 19:51:31] [Level: info] [State: compute] ITERATION 8
+127.0.0.1 - - [07/Jan/2025 19:51:32] "GET /api/status HTTP/1.0" 200 164
+[CTRL] GET /data
+127.0.0.1 - - [07/Jan/2025 19:51:32] "GET /api/data HTTP/1.0" 200 129
+[CTRL] POST /data
+127.0.0.1 - - [07/Jan/2025 19:51:33] "POST /api/data?client=ddd2198d228ffd6e&memo=None HTTP/1.0" 200 0
+[Time: 07.01.25 19:51:33] [Level: info] [State: compute] Loading global model...
+[Time: 07.01.25 19:51:33] [Level: info] [State: compute] Fitting model...
+[Time: 07.01.25 19:51:33] [Level: info] [State: compute] Scoring model...
+[Time: 07.01.25 19:51:33] [Level: info] [State: compute] Score is: 0.9954431072648999
+[Time: 07.01.25 19:51:33] [Level: info] [State: compute] Sent coefficient: 3.0201440874359 and intercept: 4.678053129811673
+[Time: 07.01.25 19:51:33] [Level: info] transition: compute
+[Time: 07.01.25 19:51:34] [Level: info] state: compute
+[Time: 07.01.25 19:51:34] [Level: info] [State: compute] ITERATION 9
+127.0.0.1 - - [07/Jan/2025 19:51:35] "GET /api/status HTTP/1.0" 200 164
+[CTRL] GET /data
+127.0.0.1 - - [07/Jan/2025 19:51:35] "GET /api/data HTTP/1.0" 200 129
+[CTRL] POST /data
+127.0.0.1 - - [07/Jan/2025 19:51:36] "POST /api/data?client=ddd2198d228ffd6e&memo=None HTTP/1.0" 200 0
+[Time: 07.01.25 19:51:36] [Level: info] [State: compute] Loading global model...
+[Time: 07.01.25 19:51:36] [Level: info] [State: compute] Fitting model...
+[Time: 07.01.25 19:51:36] [Level: info] [State: compute] Scoring model...
+[Time: 07.01.25 19:51:36] [Level: info] [State: compute] Score is: 0.9954431072648999
+[Time: 07.01.25 19:51:36] [Level: info] [State: compute] Sent coefficient: 3.0201440874359 and intercept: 4.678053129811673
+[Time: 07.01.25 19:51:36] [Level: info] transition: compute
+[Time: 07.01.25 19:51:37] [Level: info] state: compute
+[Time: 07.01.25 19:51:37] [Level: info] [State: compute] ITERATION 10
+127.0.0.1 - - [07/Jan/2025 19:51:38] "GET /api/status HTTP/1.0" 200 164
+[CTRL] GET /data
+127.0.0.1 - - [07/Jan/2025 19:51:38] "GET /api/data HTTP/1.0" 200 129
+[CTRL] POST /data
+127.0.0.1 - - [07/Jan/2025 19:51:39] "POST /api/data?client=ddd2198d228ffd6e&memo=None HTTP/1.0" 200 0
+[Time: 07.01.25 19:51:39] [Level: info] [State: compute] Loading global model...
+[Time: 07.01.25 19:51:39] [Level: info] [State: compute] Fitting model...
+[Time: 07.01.25 19:51:39] [Level: info] [State: compute] Scoring model...
+[Time: 07.01.25 19:51:39] [Level: info] [State: compute] Score is: 0.9954431072648999
+[Time: 07.01.25 19:51:39] [Level: info] [State: compute] Sent coefficient: 3.0201440874359 and intercept: 4.678053129811673
+[Time: 07.01.25 19:51:39] [Level: info] transition: compute
+[Time: 07.01.25 19:51:40] [Level: info] state: compute
+[Time: 07.01.25 19:51:40] [Level: info] [State: compute] ITERATION 11
+127.0.0.1 - - [07/Jan/2025 19:51:41] "GET /api/status HTTP/1.0" 200 165
+[CTRL] GET /data
+127.0.0.1 - - [07/Jan/2025 19:51:41] "GET /api/data HTTP/1.0" 200 129
+[CTRL] POST /data
+127.0.0.1 - - [07/Jan/2025 19:51:42] "POST /api/data?client=ddd2198d228ffd6e&memo=None HTTP/1.0" 200 0
+[Time: 07.01.25 19:51:42] [Level: info] transition: write
+[Time: 07.01.25 19:51:43] [Level: info] state: write
+[Time: 07.01.25 19:51:43] [Level: info] [State: write] Predicting data...
+[Time: 07.01.25 19:51:43] [Level: info] transition: terminal
+127.0.0.1 - - [07/Jan/2025 19:51:44] "GET /api/status HTTP/1.0" 200 156
+127.0.0.1 - - [07/Jan/2025 19:51:47] "GET /api/status HTTP/1.0" 200 156
+127.0.0.1 - - [07/Jan/2025 19:51:50] "GET /api/status HTTP/1.0" 200 156
+127.0.0.1 - - [07/Jan/2025 19:51:53] "GET /api/status HTTP/1.0" 200 156

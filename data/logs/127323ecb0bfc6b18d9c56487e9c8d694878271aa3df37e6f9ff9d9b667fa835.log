@@ -1,0 +1,41 @@
+2025-01-08 11:43:30,057 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-01-08 11:43:30,061 INFO supervisord started with pid 7
+2025-01-08 11:43:31,064 INFO spawned: 'app' with pid 8
+2025-01-08 11:43:31,067 INFO spawned: 'nginx' with pid 9
+Traceback (most recent call last):
+  File "/app/main.py", line 8, in <module>
+    import states
+  File "/app/states.py", line 36
+    self.log(f'Initializing: Setting iteration to 0, setting max_iterations to {config['max_iter']}...')
+                                                                                        ^
+SyntaxError: invalid syntax
+2025-01-08 11:43:31,747 WARN exited: app (exit status 1; not expected)
+2025-01-08 11:43:32,751 INFO spawned: 'app' with pid 33
+2025-01-08 11:43:32,751 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+Traceback (most recent call last):
+  File "/app/main.py", line 8, in <module>
+    import states
+  File "/app/states.py", line 36
+    self.log(f'Initializing: Setting iteration to 0, setting max_iterations to {config['max_iter']}...')
+                                                                                        ^
+SyntaxError: invalid syntax
+2025-01-08 11:43:33,015 WARN exited: app (exit status 1; not expected)
+2025-01-08 11:43:35,019 INFO spawned: 'app' with pid 45
+Traceback (most recent call last):
+  File "/app/main.py", line 8, in <module>
+    import states
+  File "/app/states.py", line 36
+    self.log(f'Initializing: Setting iteration to 0, setting max_iterations to {config['max_iter']}...')
+                                                                                        ^
+SyntaxError: invalid syntax
+2025-01-08 11:43:35,346 WARN exited: app (exit status 1; not expected)
+2025-01-08 11:43:38,353 INFO spawned: 'app' with pid 57
+Traceback (most recent call last):
+  File "/app/main.py", line 8, in <module>
+    import states
+  File "/app/states.py", line 36
+    self.log(f'Initializing: Setting iteration to 0, setting max_iterations to {config['max_iter']}...')
+                                                                                        ^
+SyntaxError: invalid syntax
+2025-01-08 11:43:38,567 WARN exited: app (exit status 1; not expected)
+2025-01-08 11:43:39,568 INFO gave up: app entered FATAL state, too many start retries too quickly

@@ -1,0 +1,82 @@
+2025-01-06 13:18:35,331 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-01-06 13:18:35,336 INFO supervisord started with pid 7
+2025-01-06 13:18:36,340 INFO spawned: 'app' with pid 8
+2025-01-06 13:18:36,343 INFO spawned: 'nginx' with pid 9
+2025-01-06 13:18:37,398 INFO success: app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-01-06 13:18:37,398 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+Bottle v0.13.2 server starting up (using WSGIRefServer())...
+Listening on http://localhost:5000/
+Hit Ctrl-C to quit.
+
+[CTRL] POST /setup
+[Time: 06.01.25 13:18:41] [Level: info] id: 92a4d45fbd6a55d2
+[Time: 06.01.25 13:18:41] [Level: info] coordinator: True
+[Time: 06.01.25 13:18:41] [Level: info] clients: ['92a4d45fbd6a55d2', '0a0ce8c94d3e4c63']
+127.0.0.1 - - [06/Jan/2025 13:18:41] "POST /api/setup HTTP/1.0" 200 0
+[Time: 06.01.25 13:18:41] [Level: info] state: initial
+[Time: 06.01.25 13:18:41] [Level: info] [State: initial] Reading configuration file...
+[Time: 06.01.25 13:18:41] [Level: info] [State: initial] Initializing: Setting iteration to 0, setting max_iterations to 3...
+[Time: 06.01.25 13:18:41] [Level: info] [State: initial] Done reading configuration file.
+[Time: 06.01.25 13:18:41] [Level: info] [State: initial] Max Iterations: 10
+[Time: 06.01.25 13:18:41] [Level: info] transition: compute
+127.0.0.1 - - [06/Jan/2025 13:18:41] "GET /api/status HTTP/1.0" 200 155
+[Time: 06.01.25 13:18:42] [Level: info] state: compute
+[Time: 06.01.25 13:18:42] [Level: info] [State: compute] ITERATION 1
+[Time: 06.01.25 13:18:42] [Level: info] transition: aggregate
+[Time: 06.01.25 13:18:43] [Level: info] state: aggregate
+[Time: 06.01.25 13:18:43] [Level: info] transition: compute
+[Time: 06.01.25 13:18:44] [Level: info] state: compute
+[Time: 06.01.25 13:18:44] [Level: info] [State: compute] ITERATION 2
+[Time: 06.01.25 13:18:44] [Level: info] transition: aggregate
+127.0.0.1 - - [06/Jan/2025 13:18:44] "GET /api/status HTTP/1.0" 200 157
+[Time: 06.01.25 13:18:45] [Level: info] state: aggregate
+[Time: 06.01.25 13:18:45] [Level: info] transition: compute
+[Time: 06.01.25 13:18:46] [Level: info] state: compute
+[Time: 06.01.25 13:18:46] [Level: info] [State: compute] ITERATION 3
+[Time: 06.01.25 13:18:46] [Level: info] transition: aggregate
+[Time: 06.01.25 13:18:47] [Level: info] state: aggregate
+[Time: 06.01.25 13:18:47] [Level: info] transition: compute
+127.0.0.1 - - [06/Jan/2025 13:18:47] "GET /api/status HTTP/1.0" 200 155
+[Time: 06.01.25 13:18:48] [Level: info] state: compute
+[Time: 06.01.25 13:18:48] [Level: info] [State: compute] ITERATION 4
+[Time: 06.01.25 13:18:48] [Level: info] transition: aggregate
+[Time: 06.01.25 13:18:49] [Level: info] state: aggregate
+[Time: 06.01.25 13:18:49] [Level: info] transition: compute
+[Time: 06.01.25 13:18:50] [Level: info] state: compute
+[Time: 06.01.25 13:18:50] [Level: info] [State: compute] ITERATION 5
+[Time: 06.01.25 13:18:50] [Level: info] transition: aggregate
+127.0.0.1 - - [06/Jan/2025 13:18:50] "GET /api/status HTTP/1.0" 200 157
+[Time: 06.01.25 13:18:51] [Level: info] state: aggregate
+[Time: 06.01.25 13:18:51] [Level: info] transition: compute
+[Time: 06.01.25 13:18:52] [Level: info] state: compute
+[Time: 06.01.25 13:18:52] [Level: info] [State: compute] ITERATION 6
+[Time: 06.01.25 13:18:52] [Level: info] transition: aggregate
+[Time: 06.01.25 13:18:53] [Level: info] state: aggregate
+[Time: 06.01.25 13:18:53] [Level: info] transition: compute
+127.0.0.1 - - [06/Jan/2025 13:18:53] "GET /api/status HTTP/1.0" 200 155
+[Time: 06.01.25 13:18:54] [Level: info] state: compute
+[Time: 06.01.25 13:18:54] [Level: info] [State: compute] ITERATION 7
+[Time: 06.01.25 13:18:54] [Level: info] transition: aggregate
+[Time: 06.01.25 13:18:55] [Level: info] state: aggregate
+[Time: 06.01.25 13:18:55] [Level: info] transition: compute
+[Time: 06.01.25 13:18:56] [Level: info] state: compute
+[Time: 06.01.25 13:18:56] [Level: info] [State: compute] ITERATION 8
+[Time: 06.01.25 13:18:56] [Level: info] transition: aggregate
+127.0.0.1 - - [06/Jan/2025 13:18:56] "GET /api/status HTTP/1.0" 200 157
+[Time: 06.01.25 13:18:57] [Level: info] state: aggregate
+[Time: 06.01.25 13:18:57] [Level: info] transition: compute
+[Time: 06.01.25 13:18:58] [Level: info] state: compute
+[Time: 06.01.25 13:18:58] [Level: info] [State: compute] ITERATION 9
+[Time: 06.01.25 13:18:58] [Level: info] transition: aggregate
+[Time: 06.01.25 13:18:59] [Level: info] state: aggregate
+[Time: 06.01.25 13:18:59] [Level: info] transition: compute
+127.0.0.1 - - [06/Jan/2025 13:18:59] "GET /api/status HTTP/1.0" 200 155
+[Time: 06.01.25 13:19:00] [Level: info] state: compute
+[Time: 06.01.25 13:19:00] [Level: info] [State: compute] ITERATION 10
+[Time: 06.01.25 13:19:00] [Level: info] transition: write
+[Time: 06.01.25 13:19:01] [Level: info] state: write
+[Time: 06.01.25 13:19:01] [Level: info] transition: terminal
+127.0.0.1 - - [06/Jan/2025 13:19:02] "GET /api/status HTTP/1.0" 200 156
+127.0.0.1 - - [06/Jan/2025 13:19:05] "GET /api/status HTTP/1.0" 200 156
+127.0.0.1 - - [06/Jan/2025 13:19:08] "GET /api/status HTTP/1.0" 200 156
+127.0.0.1 - - [06/Jan/2025 13:19:11] "GET /api/status HTTP/1.0" 200 154
