@@ -1,0 +1,6 @@
+data: localData.csv
+metadata: labelc3.csv
+sep: ';'
+max_iter: 5
+target_value: target
+pred: pred.csv

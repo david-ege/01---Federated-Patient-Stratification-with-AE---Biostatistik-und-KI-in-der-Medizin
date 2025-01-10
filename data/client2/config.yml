@@ -1,6 +1,6 @@
-data: c2_1_balanced_intensities_data_no_batch.tsv
-metadata: 1_balanced_all_metadata.tsv
-sep: ','
+data: localData.csv
+metadata: labelc2.csv
+sep: ';'
 max_iter: 5
 target_value: target
 pred: pred.csv
