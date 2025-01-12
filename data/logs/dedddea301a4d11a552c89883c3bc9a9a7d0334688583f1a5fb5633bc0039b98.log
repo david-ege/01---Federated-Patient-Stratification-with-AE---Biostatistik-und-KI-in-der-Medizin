@@ -1,0 +1,779 @@
+2025-01-12 12:08:30,577 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-01-12 12:08:30,583 INFO supervisord started with pid 7
+2025-01-12 12:08:31,587 INFO spawned: 'nginx' with pid 10
+2025-01-12 12:08:31,589 INFO spawned: 'app' with pid 11
+2025-01-12 12:08:32,616 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-01-12 12:08:32,616 INFO success: app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+Bottle v0.13.2 server starting up (using WSGIRefServer())...
+Listening on http://localhost:5000/
+Hit Ctrl-C to quit.
+
+[CTRL] POST /setup
+[Time: 12.01.25 12:08:38] [Level: info] id: 1245e957de2b3c68
+[Time: 12.01.25 12:08:38] [Level: info] coordinator: False
+[Time: 12.01.25 12:08:38] [Level: info] clients: ['1245e957de2b3c68', '2a515a407710bb34', '6a4ef86890e1e584']
+[Time: 12.01.25 12:08:38] [Level: info] state: initial
+[Time: 12.01.25 12:08:38] [Level: info] [State: initial] Reading configuration file...
+[Time: 12.01.25 12:08:38] [Level: info] [State: initial] Initializing: Setting iteration to 0, setting max_iterations...
+[Time: 12.01.25 12:08:38] [Level: info] [State: initial] Done reading configuration file.
+[Time: 12.01.25 12:08:38] [Level: info] [State: initial] Max Iterations: 5
+127.0.0.1 - - [12/Jan/2025 12:08:38] "POST /api/setup HTTP/1.0" 200 0
+[Time: 12.01.25 12:08:38] [Level: info] [State: initial] Reading training data...
+127.0.0.1 - - [12/Jan/2025 12:08:38] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:08:40] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:08:42] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:08:42] [Level: info] [State: initial] Initializing pre-trained model...
+[Time: 12.01.25 12:08:42] [Level: info] [State: initial] INITIAL input_dim: $6001
+[CTRL] POST /data
+127.0.0.1 - - [12/Jan/2025 12:08:45] "POST /api/data?client=2a515a407710bb34&memo=None HTTP/1.0" 200 0
+127.0.0.1 - - [12/Jan/2025 12:08:45] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:08:46] [Level: info] [State: initial] Initializing cluster centers...
+127.0.0.1 - - [12/Jan/2025 12:08:47] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:08:48] [Level: info] transition: compute
+127.0.0.1 - - [12/Jan/2025 12:08:49] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:08:49] [Level: info] state: compute
+[Time: 12.01.25 12:08:49] [Level: info] [State: compute] ITERATION 1
+[Time: 12.01.25 12:08:49] [Level: info] [State: compute] receiving weights...
+[Time: 12.01.25 12:08:49] [Level: info] [State: compute] Loading global weights for model...
+[Time: 12.01.25 12:08:49] [Level: info] [State: compute] Updated model with received weights.
+[Time: 12.01.25 12:08:49] [Level: info] [State: compute] Loading data...
+[Time: 12.01.25 12:08:49] [Level: info] [State: compute] Preparing model training...
+[Time: 12.01.25 12:08:49] [Level: info] [State: compute] Training model for one epoch...
+[Time: 12.01.25 12:08:51] [Level: info] [State: compute] Local training loss: 46.373050689697266
+[Time: 12.01.25 12:08:51] [Level: info] [State: compute] Training the decoder...
+127.0.0.1 - - [12/Jan/2025 12:08:51] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:08:53] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:08:55] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:08:57] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:08:59] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:09:01] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:09:03] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:09:03] [Level: info] [State: compute] Epoch 10, Total Loss: 4.417532444000244, KL Loss: 3.8444994743258576e-08, Recon Loss: 44.175323486328125
+127.0.0.1 - - [12/Jan/2025 12:09:05] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:09:07] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:09:09] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:09:11] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:09:13] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:09:15] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:09:16] [Level: info] [State: compute] Epoch 20, Total Loss: 2.1911234855651855, KL Loss: -4.917383389368979e-09, Recon Loss: 21.91123390197754
+127.0.0.1 - - [12/Jan/2025 12:09:17] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:09:19] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:09:21] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:09:23] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:09:25] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:09:27] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:09:28] [Level: info] [State: compute] Epoch 30, Total Loss: 0.7778623700141907, KL Loss: 4.76837147544984e-09, Recon Loss: 7.778623580932617
+127.0.0.1 - - [12/Jan/2025 12:09:29] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:09:31] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:09:33] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:09:35] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:09:37] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:09:39] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:09:41] [Level: info] [State: compute] Epoch 40, Total Loss: 0.48605018854141235, KL Loss: 2.9802322831784522e-09, Recon Loss: 4.860501766204834
+127.0.0.1 - - [12/Jan/2025 12:09:41] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:09:43] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:09:45] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:09:47] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:09:49] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:09:51] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:09:53] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:09:54] [Level: info] [State: compute] Epoch 50, Total Loss: 0.364947646856308, KL Loss: 8.046627364421965e-09, Recon Loss: 3.6494762897491455
+127.0.0.1 - - [12/Jan/2025 12:09:55] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:09:57] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:09:59] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:10:01] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:10:01] [Level: info] [State: compute] Epoch 60, Total Loss: 0.331538587808609, KL Loss: 7.748603536583687e-09, Recon Loss: 3.3153858184814453
+127.0.0.1 - - [12/Jan/2025 12:10:03] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:10:04] [Level: info] [State: compute] Epoch 70, Total Loss: 0.31950533390045166, KL Loss: 9.53674295089968e-09, Recon Loss: 3.1950533390045166
+127.0.0.1 - - [12/Jan/2025 12:10:05] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:10:07] [Level: info] [State: compute] Epoch 80, Total Loss: 0.3151662349700928, KL Loss: 1.043081288010228e-09, Recon Loss: 3.1516623497009277
+127.0.0.1 - - [12/Jan/2025 12:10:07] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:10:09] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:10:10] [Level: info] [State: compute] Epoch 90, Total Loss: 0.31364887952804565, KL Loss: 7.1525572131747595e-09, Recon Loss: 3.136488676071167
+127.0.0.1 - - [12/Jan/2025 12:10:11] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:10:11] [Level: info] [State: compute] Epoch 100, Total Loss: 0.3130735456943512, KL Loss: -4.4703482582342247e-10, Recon Loss: 3.130735397338867
+[Time: 12.01.25 12:10:11] [Level: info] [State: compute] Saving model and decoder...
+[Time: 12.01.25 12:10:11] [Level: info] [State: compute] Scoring model...
+[Time: 12.01.25 12:10:11] [Level: info] [State: compute] Adjusted Rand Index (ARI): 0.0
+[Time: 12.01.25 12:10:11] [Level: info] [State: compute] Sent updated weights to coordinator.
+[Time: 12.01.25 12:10:11] [Level: info] transition: compute
+[Time: 12.01.25 12:10:12] [Level: info] state: compute
+[Time: 12.01.25 12:10:12] [Level: info] [State: compute] ITERATION 2
+[Time: 12.01.25 12:10:12] [Level: info] [State: compute] receiving weights...
+127.0.0.1 - - [12/Jan/2025 12:10:13] "GET /api/status HTTP/1.0" 200 164
+[CTRL] GET /data
+127.0.0.1 - - [12/Jan/2025 12:10:13] "GET /api/data HTTP/1.0" 200 34213087
+127.0.0.1 - - [12/Jan/2025 12:10:17] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:10:19] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:10:21] "GET /api/status HTTP/1.0" 200 155
+[CTRL] POST /data
+127.0.0.1 - - [12/Jan/2025 12:10:22] "POST /api/data?client=2a515a407710bb34&memo=None HTTP/1.0" 200 0
+[Time: 12.01.25 12:10:22] [Level: info] [State: compute] Loading global weights for model...
+[Time: 12.01.25 12:10:23] [Level: info] [State: compute] Updated model with received weights.
+[Time: 12.01.25 12:10:23] [Level: info] [State: compute] Loading data...
+[Time: 12.01.25 12:10:23] [Level: info] [State: compute] Preparing model training...
+[Time: 12.01.25 12:10:23] [Level: info] [State: compute] Training model for one epoch...
+127.0.0.1 - - [12/Jan/2025 12:10:23] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:10:25] [Level: info] [State: compute] Local training loss: 4826480.0
+[Time: 12.01.25 12:10:25] [Level: info] [State: compute] Training the decoder...
+127.0.0.1 - - [12/Jan/2025 12:10:25] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:10:27] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:10:29] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:10:31] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:10:33] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:10:35] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:10:35] [Level: info] [State: compute] Epoch 10, Total Loss: 39.12477493286133, KL Loss: 1.0818243367793912e-07, Recon Loss: 391.24774169921875
+127.0.0.1 - - [12/Jan/2025 12:10:37] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:10:39] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:10:41] [Level: info] [State: compute] Epoch 20, Total Loss: 6.111481666564941, KL Loss: 3.1292437085994607e-08, Recon Loss: 61.11481475830078
+127.0.0.1 - - [12/Jan/2025 12:10:41] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:10:43] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:10:45] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:10:47] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:10:49] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:10:49] [Level: info] [State: compute] Epoch 30, Total Loss: 4.327298641204834, KL Loss: 2.0563602376455492e-08, Recon Loss: 43.272987365722656
+127.0.0.1 - - [12/Jan/2025 12:10:51] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:10:53] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:10:55] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:10:56] [Level: info] [State: compute] Epoch 40, Total Loss: 3.9226205348968506, KL Loss: 1.2367963542203597e-08, Recon Loss: 39.22620391845703
+127.0.0.1 - - [12/Jan/2025 12:10:57] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:10:59] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:11:01] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:11:03] [Level: info] [State: compute] Epoch 50, Total Loss: 2.0814898014068604, KL Loss: -4.76837147544984e-09, Recon Loss: 20.814897537231445
+127.0.0.1 - - [12/Jan/2025 12:11:03] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:11:05] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:11:07] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:11:09] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:11:11] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:11:13] [Level: info] [State: compute] Epoch 60, Total Loss: 0.7323068976402283, KL Loss: -5.364418242947977e-09, Recon Loss: 7.323068618774414
+127.0.0.1 - - [12/Jan/2025 12:11:13] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:11:15] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:11:17] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:11:19] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:11:21] [Level: info] [State: compute] Epoch 70, Total Loss: 0.4969831109046936, KL Loss: -1.639127722441458e-09, Recon Loss: 4.9698309898376465
+127.0.0.1 - - [12/Jan/2025 12:11:21] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:11:23] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:11:24] [Level: info] [State: compute] Epoch 80, Total Loss: 0.40851494669914246, KL Loss: -2.2351742678949904e-09, Recon Loss: 4.08514928817749
+127.0.0.1 - - [12/Jan/2025 12:11:25] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:11:26] [Level: info] [State: compute] Epoch 90, Total Loss: 0.36420589685440063, KL Loss: -2.2351742678949904e-09, Recon Loss: 3.642058849334717
+127.0.0.1 - - [12/Jan/2025 12:11:27] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:11:28] [Level: info] [State: compute] Epoch 100, Total Loss: 0.34897562861442566, KL Loss: -3.8743017682918435e-09, Recon Loss: 3.4897563457489014
+[Time: 12.01.25 12:11:28] [Level: info] [State: compute] Saving model and decoder...
+[Time: 12.01.25 12:11:28] [Level: info] [State: compute] Scoring model...
+[Time: 12.01.25 12:11:28] [Level: info] [State: compute] Adjusted Rand Index (ARI): -0.0016637154951788463
+[Time: 12.01.25 12:11:28] [Level: info] [State: compute] Sent updated weights to coordinator.
+[Time: 12.01.25 12:11:28] [Level: info] transition: compute
+[Time: 12.01.25 12:11:29] [Level: info] state: compute
+[Time: 12.01.25 12:11:29] [Level: info] [State: compute] ITERATION 3
+[Time: 12.01.25 12:11:29] [Level: info] [State: compute] receiving weights...
+127.0.0.1 - - [12/Jan/2025 12:11:29] "GET /api/status HTTP/1.0" 200 164
+[CTRL] GET /data
+127.0.0.1 - - [12/Jan/2025 12:11:31] "GET /api/data HTTP/1.0" 200 34213087
+127.0.0.1 - - [12/Jan/2025 12:11:33] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:11:35] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:11:37] "GET /api/status HTTP/1.0" 200 155
+[CTRL] POST /data
+127.0.0.1 - - [12/Jan/2025 12:11:39] "POST /api/data?client=2a515a407710bb34&memo=None HTTP/1.0" 200 0
+[Time: 12.01.25 12:11:39] [Level: info] [State: compute] Loading global weights for model...
+[Time: 12.01.25 12:11:39] [Level: info] [State: compute] Updated model with received weights.
+[Time: 12.01.25 12:11:39] [Level: info] [State: compute] Loading data...
+[Time: 12.01.25 12:11:39] [Level: info] [State: compute] Preparing model training...
+[Time: 12.01.25 12:11:39] [Level: info] [State: compute] Training model for one epoch...
+127.0.0.1 - - [12/Jan/2025 12:11:39] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:11:40] [Level: info] [State: compute] Local training loss: 3607292672.0
+[Time: 12.01.25 12:11:40] [Level: info] [State: compute] Training the decoder...
+127.0.0.1 - - [12/Jan/2025 12:11:42] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:11:44] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:11:46] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:11:48] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:11:49] [Level: info] [State: compute] Epoch 10, Total Loss: 4.442887783050537, KL Loss: -5.811452652437765e-09, Recon Loss: 44.42887496948242
+127.0.0.1 - - [12/Jan/2025 12:11:50] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:11:52] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:11:54] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:11:56] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:11:58] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:11:59] [Level: info] [State: compute] Epoch 20, Total Loss: 4.461822986602783, KL Loss: -1.3411045607369942e-09, Recon Loss: 44.618228912353516
+127.0.0.1 - - [12/Jan/2025 12:12:00] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:12:02] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:12:04] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:12:05] [Level: info] [State: compute] Epoch 30, Total Loss: 4.469403266906738, KL Loss: -3.278255444882916e-09, Recon Loss: 44.69403076171875
+127.0.0.1 - - [12/Jan/2025 12:12:06] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:12:08] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:12:10] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:12:12] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:12:13] [Level: info] [State: compute] Epoch 40, Total Loss: 4.472142696380615, KL Loss: 1.19209286886246e-09, Recon Loss: 44.72142791748047
+127.0.0.1 - - [12/Jan/2025 12:12:14] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:12:16] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:12:18] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:12:20] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:12:21] [Level: info] [State: compute] Epoch 50, Total Loss: 4.4730706214904785, KL Loss: 2.086162576020456e-09, Recon Loss: 44.73070526123047
+127.0.0.1 - - [12/Jan/2025 12:12:22] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:12:24] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:12:26] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:12:28] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:12:29] [Level: info] [State: compute] Epoch 60, Total Loss: 4.4733405113220215, KL Loss: -6.705522359595761e-09, Recon Loss: 44.73340606689453
+127.0.0.1 - - [12/Jan/2025 12:12:30] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:12:32] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:12:34] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:12:35] [Level: info] [State: compute] Epoch 70, Total Loss: 4.473372936248779, KL Loss: 4.917383389368979e-09, Recon Loss: 44.73373031616211
+127.0.0.1 - - [12/Jan/2025 12:12:36] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:12:38] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:12:38] [Level: info] [State: compute] Epoch 80, Total Loss: 4.473320484161377, KL Loss: -2.533197429599454e-09, Recon Loss: 44.73320388793945
+127.0.0.1 - - [12/Jan/2025 12:12:40] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:12:41] [Level: info] [State: compute] Epoch 90, Total Loss: 4.473235607147217, KL Loss: -1.7881393032936899e-09, Recon Loss: 44.732357025146484
+127.0.0.1 - - [12/Jan/2025 12:12:42] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:12:44] [Level: info] [State: compute] Epoch 100, Total Loss: 4.473138332366943, KL Loss: 1.7881393032936899e-09, Recon Loss: 44.73138427734375
+[Time: 12.01.25 12:12:44] [Level: info] [State: compute] Saving model and decoder...
+[Time: 12.01.25 12:12:44] [Level: info] [State: compute] Scoring model...
+[Time: 12.01.25 12:12:44] [Level: info] [State: compute] Adjusted Rand Index (ARI): 0.0
+[Time: 12.01.25 12:12:44] [Level: info] [State: compute] Sent updated weights to coordinator.
+[Time: 12.01.25 12:12:44] [Level: info] transition: compute
+127.0.0.1 - - [12/Jan/2025 12:12:44] "GET /api/status HTTP/1.0" 200 164
+[CTRL] GET /data
+127.0.0.1 - - [12/Jan/2025 12:12:44] "GET /api/data HTTP/1.0" 200 34213087
+[Time: 12.01.25 12:12:45] [Level: info] state: compute
+[Time: 12.01.25 12:12:45] [Level: info] [State: compute] ITERATION 4
+[Time: 12.01.25 12:12:45] [Level: info] [State: compute] receiving weights...
+127.0.0.1 - - [12/Jan/2025 12:12:48] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:12:50] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:12:52] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:12:54] "GET /api/status HTTP/1.0" 200 155
+[CTRL] POST /data
+127.0.0.1 - - [12/Jan/2025 12:12:55] "POST /api/data?client=2a515a407710bb34&memo=None HTTP/1.0" 200 0
+[Time: 12.01.25 12:12:55] [Level: info] [State: compute] Loading global weights for model...
+[Time: 12.01.25 12:12:55] [Level: info] [State: compute] Updated model with received weights.
+[Time: 12.01.25 12:12:55] [Level: info] [State: compute] Loading data...
+[Time: 12.01.25 12:12:55] [Level: info] [State: compute] Preparing model training...
+[Time: 12.01.25 12:12:55] [Level: info] [State: compute] Training model for one epoch...
+127.0.0.1 - - [12/Jan/2025 12:12:56] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:12:57] [Level: info] [State: compute] Local training loss: 70.46442413330078
+[Time: 12.01.25 12:12:57] [Level: info] [State: compute] Training the decoder...
+127.0.0.1 - - [12/Jan/2025 12:12:58] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:13:00] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:13:02] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:13:04] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:13:06] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:13:08] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:13:10] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:13:12] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:13:13] [Level: info] [State: compute] Epoch 10, Total Loss: 7.011267185211182, KL Loss: -1.4752149724017727e-08, Recon Loss: 70.1126708984375
+127.0.0.1 - - [12/Jan/2025 12:13:14] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:13:16] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:13:18] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:13:20] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:13:22] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:13:24] [Level: info] [State: compute] Epoch 20, Total Loss: 6.9986114501953125, KL Loss: -1.7881394143159923e-08, Recon Loss: 69.98611450195312
+127.0.0.1 - - [12/Jan/2025 12:13:24] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:13:26] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:13:28] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:13:30] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:13:32] [Level: info] [State: compute] Epoch 30, Total Loss: 6.983773231506348, KL Loss: -1.9967556497135774e-08, Recon Loss: 69.83773040771484
+127.0.0.1 - - [12/Jan/2025 12:13:32] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:13:34] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:13:36] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:13:38] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:13:39] [Level: info] [State: compute] Epoch 40, Total Loss: 6.968379974365234, KL Loss: -1.5497207073167374e-08, Recon Loss: 69.68379974365234
+127.0.0.1 - - [12/Jan/2025 12:13:40] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:13:42] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:13:44] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:13:46] [Level: info] [State: compute] Epoch 50, Total Loss: 6.952975749969482, KL Loss: -1.832842855264971e-08, Recon Loss: 69.52975463867188
+127.0.0.1 - - [12/Jan/2025 12:13:46] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:13:48] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:13:50] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:13:52] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:13:54] [Level: info] [State: compute] Epoch 60, Total Loss: 6.9377288818359375, KL Loss: -1.4454126784357868e-08, Recon Loss: 69.37728881835938
+127.0.0.1 - - [12/Jan/2025 12:13:54] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:13:56] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:13:58] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:14:00] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:14:02] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:14:03] [Level: info] [State: compute] Epoch 70, Total Loss: 6.922685146331787, KL Loss: -1.6838312077993578e-08, Recon Loss: 69.22685241699219
+127.0.0.1 - - [12/Jan/2025 12:14:04] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:14:06] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:14:08] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:14:10] [Level: info] [State: compute] Epoch 80, Total Loss: 6.907844543457031, KL Loss: -1.4752149724017727e-08, Recon Loss: 69.07844543457031
+127.0.0.1 - - [12/Jan/2025 12:14:10] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:14:12] [Level: info] [State: compute] Epoch 90, Total Loss: 6.893199443817139, KL Loss: -1.654028913833372e-08, Recon Loss: 68.93199157714844
+127.0.0.1 - - [12/Jan/2025 12:14:12] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:14:14] [Level: info] [State: compute] Epoch 100, Total Loss: 6.878734588623047, KL Loss: -1.654028913833372e-08, Recon Loss: 68.78734588623047
+[Time: 12.01.25 12:14:14] [Level: info] [State: compute] Saving model and decoder...
+[Time: 12.01.25 12:14:14] [Level: info] [State: compute] Scoring model...
+[Time: 12.01.25 12:14:14] [Level: info] [State: compute] Adjusted Rand Index (ARI): -0.0016637154951788463
+[Time: 12.01.25 12:14:14] [Level: info] [State: compute] Sent updated weights to coordinator.
+[Time: 12.01.25 12:14:14] [Level: info] transition: compute
+127.0.0.1 - - [12/Jan/2025 12:14:14] "GET /api/status HTTP/1.0" 200 164
+[CTRL] GET /data
+[Time: 12.01.25 12:14:15] [Level: info] state: compute
+[Time: 12.01.25 12:14:15] [Level: info] [State: compute] ITERATION 5
+[Time: 12.01.25 12:14:15] [Level: info] [State: compute] receiving weights...
+127.0.0.1 - - [12/Jan/2025 12:14:16] "GET /api/data HTTP/1.0" 200 34213087
+127.0.0.1 - - [12/Jan/2025 12:14:19] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:14:21] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:14:23] "GET /api/status HTTP/1.0" 200 155
+[CTRL] POST /data
+127.0.0.1 - - [12/Jan/2025 12:14:24] "POST /api/data?client=2a515a407710bb34&memo=None HTTP/1.0" 200 0
+[Time: 12.01.25 12:14:24] [Level: info] [State: compute] Loading global weights for model...
+[Time: 12.01.25 12:14:24] [Level: info] [State: compute] Updated model with received weights.
+[Time: 12.01.25 12:14:24] [Level: info] [State: compute] Loading data...
+[Time: 12.01.25 12:14:24] [Level: info] [State: compute] Preparing model training...
+[Time: 12.01.25 12:14:24] [Level: info] [State: compute] Training model for one epoch...
+127.0.0.1 - - [12/Jan/2025 12:14:25] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:14:25] [Level: info] [State: compute] Local training loss: 3171.762939453125
+[Time: 12.01.25 12:14:25] [Level: info] [State: compute] Training the decoder...
+127.0.0.1 - - [12/Jan/2025 12:14:27] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:14:29] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:14:31] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:14:33] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:14:34] [Level: info] [State: compute] Epoch 10, Total Loss: 313.5323791503906, KL Loss: 0.0, Recon Loss: 3135.32373046875
+127.0.0.1 - - [12/Jan/2025 12:14:35] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:14:37] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:14:39] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:14:41] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:14:43] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:14:43] [Level: info] [State: compute] Epoch 20, Total Loss: 308.8255310058594, KL Loss: 0.0, Recon Loss: 3088.255126953125
+127.0.0.1 - - [12/Jan/2025 12:14:45] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:14:47] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:14:49] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:14:50] [Level: info] [State: compute] Epoch 30, Total Loss: 304.0169372558594, KL Loss: 0.0, Recon Loss: 3040.169189453125
+127.0.0.1 - - [12/Jan/2025 12:14:51] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:14:53] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:14:55] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:14:56] [Level: info] [State: compute] Epoch 40, Total Loss: 299.453125, KL Loss: 0.0, Recon Loss: 2994.53125
+127.0.0.1 - - [12/Jan/2025 12:14:57] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:14:59] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:15:01] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:15:03] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:15:05] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:15:07] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:15:09] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:15:11] [Level: info] [State: compute] Epoch 50, Total Loss: 295.1751403808594, KL Loss: 0.0, Recon Loss: 2951.751220703125
+127.0.0.1 - - [12/Jan/2025 12:15:11] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:15:13] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:15:15] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:15:17] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:15:19] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:15:21] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:15:23] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:15:25] [Level: info] [State: compute] Epoch 60, Total Loss: 291.1538391113281, KL Loss: 0.0, Recon Loss: 2911.538330078125
+127.0.0.1 - - [12/Jan/2025 12:15:25] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:15:27] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:15:29] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:15:31] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:15:33] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:15:35] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:15:37] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:15:37] [Level: info] [State: compute] Epoch 70, Total Loss: 287.35076904296875, KL Loss: 0.0, Recon Loss: 2873.507568359375
+127.0.0.1 - - [12/Jan/2025 12:15:39] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:15:40] [Level: info] [State: compute] Epoch 80, Total Loss: 283.7322998046875, KL Loss: 0.0, Recon Loss: 2837.322998046875
+127.0.0.1 - - [12/Jan/2025 12:15:41] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:15:43] [Level: info] [State: compute] Epoch 90, Total Loss: 280.2713317871094, KL Loss: 0.0, Recon Loss: 2802.713134765625
+127.0.0.1 - - [12/Jan/2025 12:15:43] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:15:45] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 12:15:45] [Level: info] [State: compute] Epoch 100, Total Loss: 276.9467468261719, KL Loss: 0.0, Recon Loss: 2769.46728515625
+[Time: 12.01.25 12:15:45] [Level: info] [State: compute] Saving model and decoder...
+[Time: 12.01.25 12:15:45] [Level: info] [State: compute] Scoring model...
+[Time: 12.01.25 12:15:45] [Level: info] [State: compute] Adjusted Rand Index (ARI): 0.0
+[Time: 12.01.25 12:15:45] [Level: info] [State: compute] Sent updated weights to coordinator.
+[Time: 12.01.25 12:15:45] [Level: info] transition: compute
+[Time: 12.01.25 12:15:46] [Level: info] state: compute
+[Time: 12.01.25 12:15:46] [Level: info] [State: compute] ITERATION 6
+[Time: 12.01.25 12:15:46] [Level: info] [State: compute] receiving weights...
+127.0.0.1 - - [12/Jan/2025 12:15:47] "GET /api/status HTTP/1.0" 200 164
+[CTRL] GET /data
+127.0.0.1 - - [12/Jan/2025 12:15:48] "GET /api/data HTTP/1.0" 200 34213087
+127.0.0.1 - - [12/Jan/2025 12:15:52] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 12:15:54] "GET /api/status HTTP/1.0" 200 155
+[CTRL] POST /data
+127.0.0.1 - - [12/Jan/2025 12:15:54] "POST /api/data?client=2a515a407710bb34&memo=None HTTP/1.0" 200 0
+[Time: 12.01.25 12:15:54] [Level: info] transition: write
+[Time: 12.01.25 12:15:55] [Level: info] state: write
+[Time: 12.01.25 12:15:55] [Level: info] [State: write] Cluster data...
+127.0.0.1 - - [12/Jan/2025 12:15:56] "GET /api/status HTTP/1.0" 200 153
+[Time: 12.01.25 12:15:56] [Level: info] [State: write] Data before conversion: OrderedDict([('encoder.0.weight', tensor([[-0.8586,  0.7749,  0.4519,  ..., -0.4487,  0.4173, -0.6411],
+        [-0.1410, -0.8943, -0.5382,  ...,  0.1888, -1.0955, -0.2311],
+        [ 1.4251, -0.8965,  0.2700,  ..., -0.7362, -0.4160, -0.3205],
+        ...,
+        [-0.3593,  0.3766,  1.1307,  ...,  0.9668, -0.5179, -0.1271],
+        [ 0.3045,  0.2058,  0.1823,  ...,  0.2321, -1.0509,  0.0436],
+        [-1.0180, -0.5576, -0.6628,  ..., -0.3170,  0.2674,  0.1152]])), ('encoder.0.bias', tensor([-0.3206, -0.3107,  0.2582, -0.4453, -1.2021,  0.5200, -0.2004, -0.7683,
+        -0.8043,  0.4806, -0.1248, -1.0281,  0.2130, -0.7520, -0.2844,  0.0595,
+        -0.5805, -0.1957, -0.9678, -0.9770, -1.2585,  0.4278, -0.7775,  0.3083,
+         0.1585,  0.6375,  0.4994,  0.8666,  0.3088, -0.5643, -0.7509,  0.4967,
+        -0.3264, -0.8944,  0.0016,  0.8820, -0.0942, -0.0164, -0.0675, -0.0919,
+         0.5264, -0.6048, -0.1036,  0.8087, -0.4686, -1.1942, -0.3489, -0.5737,
+         0.7315, -0.7813, -0.6816, -0.2337,  0.0670, -0.8390,  0.1748, -0.1160,
+        -0.0242, -0.3868, -0.7968, -1.0815,  0.1254,  0.3353, -0.9669,  0.6512,
+        -0.0985,  0.8442, -0.7998, -1.1671, -1.3440,  0.2533,  0.8696, -0.8199,
+        -0.3708, -0.8902, -0.7750, -0.0423, -0.9494,  0.6434, -1.1102,  0.1481,
+         0.8438,  0.7095, -0.7872,  0.6028, -0.6868, -0.2207, -0.5199,  0.3182,
+         0.2479, -0.6851, -0.5162,  0.3078,  0.6981, -0.8439, -0.6233,  0.1322,
+        -0.3941, -0.9596,  0.2730, -0.7518,  0.4989, -1.0204, -0.8458, -0.0418,
+        -0.6642, -0.0869,  0.1419,  0.5463,  0.3733,  0.8453, -0.5280, -0.1529,
+        -0.2832,  0.0015, -0.4749,  0.7476, -0.4992, -0.3413, -0.6131,  0.7807,
+         0.1695, -1.0769, -0.9031, -0.0436, -0.1594, -0.4877, -0.4439, -0.2016,
+        -0.6700,  0.7039,  0.7912, -1.0028,  0.0082,  0.8189,  0.6013,  0.0227,
+        -0.1746, -0.1216, -0.0222, -0.5430,  0.6776, -1.1419, -0.3236, -0.4736,
+        -0.0393,  0.7862, -0.0625, -0.4133, -0.1965, -0.6736, -0.4294,  0.6664,
+        -0.5118, -0.0315, -0.4694, -0.3613,  0.7690,  0.5715, -0.4637, -1.2309,
+        -0.4803, -0.0124, -0.7557,  0.6276, -0.7545, -1.1303,  0.7068,  0.6485,
+         0.6937, -0.4008, -1.1640, -0.7300,  0.0240, -0.7073,  0.7486,  0.4900,
+         0.5350, -1.0225, -1.1513,  0.9313, -0.7360, -0.5629, -0.9823,  0.3893,
+         0.4812, -1.0125,  0.5799, -0.7139, -0.9583,  0.6129, -0.8448, -0.3575,
+        -0.7570, -1.1507,  0.9389,  0.8167, -0.1753, -0.1014, -0.3105, -0.5726,
+        -1.0607,  0.1376, -0.8496,  0.6022,  0.0638,  0.6525, -0.9542,  0.7776,
+        -0.1601,  0.1758, -0.5233, -0.8887, -0.9513,  0.4245, -0.7050,  0.1815,
+         0.4319, -0.0156, -0.7661,  0.1637, -0.7064, -0.1573,  0.6378,  0.0765,
+        -0.7613, -1.4865, -1.2473,  0.7641,  0.0092, -0.9092, -0.0977,  0.4690,
+        -0.4718,  0.1031,  0.1774, -0.0165, -1.1747, -0.3990,  0.0362, -0.0207,
+         1.1236,  0.5493, -0.5448, -0.1294, -0.0758, -0.0678,  0.2295, -0.4779,
+        -0.6975, -1.0198,  0.4473, -1.1001, -0.5690, -0.2494, -0.0740,  0.3341,
+        -0.4450,  0.6611, -0.8460,  0.4432,  0.7534, -0.5497,  0.2015, -0.9304,
+        -1.0234,  0.5818,  0.0525, -0.7389,  0.3117, -0.1882,  0.6105, -0.7494,
+         0.3109, -1.1903, -0.9429,  0.1801,  0.0126,  0.0666, -0.6548,  0.3154,
+        -1.1256,  0.2471, -0.8070, -0.8712,  0.3518, -0.4760,  0.1673, -0.7639,
+        -0.3712, -0.7825, -0.0712,  0.4195, -0.9016, -0.4096,  0.6804, -1.1893,
+        -1.2509, -0.6757, -1.1071,  0.8022, -0.5974,  0.5296, -0.0298, -0.4730,
+        -1.0583,  0.0254, -1.2033, -0.6310, -0.8814,  0.1757,  0.7588,  0.3264,
+        -0.0193, -0.9674,  0.6948,  0.4433,  0.1808, -0.6507, -1.0234, -0.9035,
+        -0.8659,  0.0146, -0.7066, -1.0644, -0.1205, -1.1919, -0.5884, -1.3858,
+         0.2675, -0.0905, -0.7903, -1.2172, -1.0598, -1.0687, -0.1846, -0.6754,
+        -0.3828, -0.6430,  0.4861,  0.4125, -1.2062, -1.2464, -0.7063, -0.6568,
+        -0.1461,  0.3739, -0.3904, -0.5456,  0.6909, -0.7133, -1.0743, -0.0920,
+        -0.9291,  0.7254,  0.5404, -0.8225, -0.1551,  0.4310, -0.7166,  0.3858,
+         0.3708, -0.8251, -0.3850,  0.0375, -0.8570,  0.3948, -0.7411, -0.3456,
+        -0.7413, -0.1127, -0.5412, -0.5926, -0.4559,  0.5947, -0.5675,  0.5907,
+        -0.6528,  0.3025, -1.1222,  0.1040, -0.1708,  0.4048, -0.0978,  0.6036,
+        -0.2216,  0.5191, -0.8945,  0.5189,  0.1873, -1.1423, -0.8943, -0.8674,
+         0.3192, -1.0234, -1.1152, -0.3219,  0.7006, -0.0047,  0.1308, -1.1295,
+        -0.0930,  0.2025,  0.1192,  0.2713, -0.5542, -1.1795, -0.6573,  0.3678,
+         0.2167,  0.1178,  0.7244, -0.7451, -0.9916, -1.1195, -0.0035, -0.1687,
+        -1.1731, -0.0987, -0.5988, -0.6876,  0.2861, -0.3426,  0.7476, -0.4885,
+        -1.0193, -1.0951, -0.7065, -0.6903, -1.0097,  0.4875, -1.2402, -0.3501,
+        -1.2028, -0.9084, -0.9204, -1.0493, -0.5318, -1.0370, -0.1050, -0.0081,
+         0.5410, -0.1434,  0.0259, -0.7361,  0.2536, -0.9732,  0.5802, -0.3294,
+        -1.1646, -1.1228,  0.5100, -1.0979,  0.0456, -0.1104, -0.1885,  0.0216,
+        -0.2644, -0.8377, -0.0139,  0.4973,  0.0979,  0.7015,  0.5231, -0.9475,
+        -0.9102, -1.1862,  0.4933, -0.4111,  0.0885, -0.8802, -1.1187,  0.3421,
+         0.6183,  0.5113,  0.7529,  0.9114,  0.0420, -1.1208, -0.5872, -0.0120,
+         0.3773, -0.6587,  0.9234, -0.0875,  0.3893,  0.2132, -0.7336,  0.5570,
+         0.6677, -1.0707, -0.9329,  0.5128,  0.6080, -0.2023, -1.1021,  0.2798,
+        -1.2298, -0.5676, -0.9282, -0.5887])), ('encoder.2.weight', tensor([[ 2.1941,  1.0106, -3.8631,  ...,  3.1360, -0.2241, -0.0751],
+        [ 2.6137,  1.9939, -2.9097,  ..., -3.7993, -2.5095, -1.0953],
+        [-3.4574, -0.3801, -0.8614,  ...,  0.4127,  2.9393,  3.2684],
+        ...,
+        [-3.1961, -0.5438, -2.7716,  ...,  2.4098,  0.1627,  2.0294],
+        [-1.4569,  0.3874,  2.0658,  ..., -2.0056,  0.9379, -1.4027],
+        [ 1.4134, -3.6055, -0.2037,  ..., -2.8796,  1.4706,  1.2287]])), ('encoder.2.bias', tensor([-1.2016e+00, -1.1552e+00,  5.6851e-02, -2.2255e+00, -2.0823e+00,
+        -2.5585e+00, -1.9416e-02, -2.7750e+00, -2.8040e+00,  3.6666e+00,
+        -1.8486e+00, -2.1892e+00,  7.0208e-01,  2.0950e+00, -6.5843e-01,
+        -1.9547e+00,  2.6854e+00, -7.0996e-01,  1.7741e+00, -2.2611e-01,
+        -4.2788e-01, -2.0351e+00,  1.3815e-01, -2.4488e+00, -8.3046e-01,
+         7.3718e-01,  2.2935e+00,  1.5196e+00,  1.7741e+00,  1.6791e+00,
+        -1.1804e+00,  3.2410e+00,  1.3274e+00, -1.1766e+00,  6.6075e-01,
+        -2.9393e+00,  6.5748e-01, -2.0735e-01, -7.2544e-01,  1.8253e+00,
+        -3.0786e-01,  3.1982e+00,  1.5640e+00,  2.1145e+00, -3.2292e+00,
+         1.1155e+00, -2.9099e+00, -9.6805e-01, -2.8731e-03,  7.6685e-01,
+         2.9355e-01,  2.4658e+00,  2.5334e-01,  1.3645e+00, -3.0824e+00,
+         3.1412e+00,  2.3224e+00,  2.4845e+00, -6.9893e-01, -4.7960e-01,
+         3.1561e+00,  1.0728e+00, -2.3572e+00, -9.6905e-01,  1.1763e+00,
+        -2.0925e+00,  1.4102e-02,  6.7417e-01, -2.0494e+00, -2.0361e+00,
+         3.4176e-01,  2.6299e+00, -9.8470e-01,  1.8563e+00, -2.4136e+00,
+        -2.6716e+00, -7.6397e-01,  6.0900e-01,  1.3907e+00, -3.4139e+00,
+         2.4420e-01, -9.5175e-01,  9.6363e-02, -1.1237e+00, -1.1355e+00,
+         2.5326e+00, -1.4545e+00, -1.9935e+00, -2.7365e+00,  2.2984e+00,
+         1.6938e+00,  1.1392e-01, -2.7870e+00, -7.1103e-01,  2.1051e+00,
+        -1.2683e+00, -3.2324e-02,  2.7238e-01,  2.8345e+00, -1.6256e+00,
+         1.4627e+00,  2.6593e+00, -3.0652e+00, -1.4051e+00, -3.7981e+00,
+        -6.5184e-01,  1.7104e+00,  3.0976e+00,  1.2460e+00, -1.6097e+00,
+         2.8328e-01, -3.7110e+00, -2.8563e+00, -3.3141e+00,  1.9587e+00,
+         2.7551e+00, -2.8866e+00,  8.1885e-01,  1.9585e-02, -9.6794e-01,
+         4.0044e-01, -2.8922e+00,  2.4648e+00,  2.0840e+00, -3.7480e+00,
+        -4.1033e+00, -2.7947e+00, -2.5418e+00, -5.4810e-01,  5.5517e-01,
+         7.0774e-01, -3.9050e+00,  2.3983e+00,  1.8537e+00,  1.0203e+00,
+        -1.0905e-01,  4.8273e-01, -2.1513e+00, -2.0491e+00,  7.9226e-01,
+         6.1721e-01,  1.5548e+00,  1.3033e+00,  7.9626e-01, -1.5305e+00,
+         5.1894e-01,  5.5639e-01, -4.6687e-01,  2.4120e+00,  1.2321e+00,
+         1.6126e+00,  2.0755e+00, -9.1862e-01, -3.6148e+00, -3.6711e+00,
+        -4.2345e-01,  1.2349e+00, -2.3510e+00,  3.1486e+00, -9.0648e-01,
+         6.1134e-02, -1.6521e+00,  2.3475e+00,  1.9870e+00,  1.1068e-01,
+         2.9472e-01, -2.5088e+00, -1.4696e+00, -3.4082e+00,  2.2293e-01,
+         2.7317e+00, -4.3382e-02, -2.0440e+00, -1.4890e+00, -2.8796e-01,
+         9.3942e-01, -1.6581e+00, -1.2956e+00, -3.2749e-01, -6.0119e-01,
+         2.1015e+00,  1.2745e+00, -1.3671e+00,  2.0317e+00, -1.1665e-01,
+        -8.6082e-01, -1.8653e+00,  2.3120e+00,  1.0848e-01, -1.3809e+00,
+         1.5010e+00, -1.9884e+00,  1.7699e+00, -3.5533e+00, -2.0866e+00,
+         2.2105e+00, -7.8727e-01,  2.0343e-01, -7.2056e-01, -3.7799e+00,
+         1.2671e+00, -2.9618e+00, -2.7097e+00,  3.3128e+00,  1.8695e+00,
+        -4.2699e+00, -9.0033e-01, -5.0059e-01, -1.7565e+00,  6.6301e-01,
+         1.2954e+00,  2.6494e-01,  3.4600e+00, -2.5365e-02, -2.1810e-01,
+        -3.2655e+00, -3.3584e+00, -1.9338e+00,  2.0141e+00, -6.4172e-02,
+        -9.4311e-01, -1.4221e-01, -2.5975e+00, -4.1691e+00, -1.8711e+00,
+        -4.3688e+00,  1.7518e+00,  2.5336e+00,  2.6753e+00, -1.0206e+00,
+        -7.9988e-01,  1.1141e+00, -1.6782e+00, -3.9072e+00, -7.2616e-02,
+         1.8692e+00,  2.5055e-01,  3.0859e-01, -7.4776e-01,  2.7874e+00,
+        -3.8299e+00, -1.2186e+00, -3.2195e+00, -3.5488e+00,  8.5868e-01,
+         2.5040e+00,  8.6489e-01,  3.1226e-01, -3.6312e-01, -3.9036e-01,
+         2.6774e+00, -1.5437e+00, -2.0197e+00, -4.8632e-01, -3.4653e+00,
+         1.7550e+00,  4.9876e-02,  1.2114e-01,  1.2989e+00, -2.1036e+00,
+         2.7687e+00, -1.8364e+00,  1.2255e+00,  1.3785e+00,  3.0228e+00,
+        -4.4944e-01,  1.8781e+00, -1.2616e+00, -1.9297e+00, -6.9933e-01,
+         2.7053e+00,  2.1551e+00,  3.1741e-01, -2.7449e+00, -5.2274e-01,
+         1.7959e+00, -3.9632e+00, -1.7584e+00,  1.6851e+00,  9.2104e-01,
+         3.0879e+00,  1.4094e+00, -2.2730e+00, -2.4140e+00, -2.4928e-01,
+         6.6422e-01,  1.8784e+00, -1.0132e+00, -1.1174e+00,  3.7902e-02,
+        -3.4929e+00, -5.8057e-01,  2.8204e+00, -9.3612e-01, -1.3731e+00,
+         1.7531e+00,  3.3499e+00, -8.3983e-01,  2.5962e+00, -1.4618e+00,
+         8.0637e-01,  1.6667e+00,  1.3568e+00, -2.0699e-02,  1.6170e+00,
+        -2.5372e+00, -1.0901e+00,  3.9150e-01, -7.1880e-01,  7.6098e-01,
+        -6.1618e-01, -1.9112e+00, -1.8703e+00, -3.7015e+00,  1.6674e+00,
+        -2.7328e+00,  3.3286e+00, -1.2402e+00,  2.7490e+00, -1.7750e+00,
+        -1.5527e+00,  3.1316e+00,  1.4100e+00,  2.3863e-01, -5.0412e-01,
+        -3.9190e+00,  1.7834e+00, -3.2681e+00, -2.4677e+00,  3.2947e-01,
+         3.3558e-01,  4.2894e+00, -7.3339e-01, -2.2293e+00, -6.7263e-01,
+        -8.8810e-01,  3.3810e+00, -1.4654e-01,  3.2318e-01,  1.0425e+00,
+         1.9852e+00, -1.1970e+00, -2.2118e+00, -2.2342e+00, -2.5916e+00,
+         1.6779e+00, -3.2269e+00,  4.3950e-01,  1.8840e+00, -3.0967e+00,
+         7.1074e-01, -2.3535e+00,  2.5701e+00,  3.0940e+00, -6.8182e-01,
+        -2.1756e+00,  3.6230e+00, -4.1573e+00, -2.9853e+00,  1.5609e+00,
+         5.3144e-01, -1.0431e+00, -1.3736e-01, -1.2989e+00, -9.4576e-01,
+        -2.1144e+00, -1.7383e+00,  3.3763e+00, -9.6636e-01, -7.8292e-01,
+        -2.1727e+00,  2.8690e+00,  1.2088e+00, -9.1180e-02,  2.9002e+00,
+        -1.8208e+00, -3.5015e+00,  3.2055e+00,  2.6188e+00,  2.1008e+00,
+        -2.7787e+00, -1.9734e+00,  3.6196e+00,  1.2324e+00,  7.9843e-01,
+         1.8577e+00,  2.1584e+00,  1.4520e+00,  3.0632e+00, -2.5361e+00,
+         1.1690e+00,  2.3680e+00, -9.2866e-01,  1.7807e+00, -1.9093e+00,
+        -1.1270e+00, -2.8075e+00,  1.8632e+00,  1.1171e+00, -4.2096e-01,
+         2.9522e+00,  2.9258e+00, -1.2736e-01,  1.0401e-01,  2.6179e+00,
+        -2.6683e+00,  2.5028e+00, -2.9929e+00, -4.1912e-02, -4.1076e+00,
+         2.9032e+00,  2.4178e+00,  1.6755e+00,  5.5125e-01,  1.9823e+00,
+        -1.2267e+00,  1.9965e-01, -2.8680e+00, -1.2951e+00, -2.1258e+00,
+        -9.5599e-01,  1.1827e+00,  2.3952e+00,  3.2338e-01,  2.9846e+00,
+        -1.1554e+00,  1.7781e+00,  1.6406e+00,  2.9999e+00,  1.7830e-01,
+         3.0225e+00,  1.1088e+00, -2.9412e+00, -2.5418e+00, -3.8702e+00,
+         2.6358e+00, -1.4705e+00, -3.5298e+00, -3.2263e-01,  5.8444e-01,
+        -3.8088e+00, -1.3877e+00, -5.6555e-01, -3.8111e+00,  5.2909e-03,
+         6.1297e-01, -1.3935e+00, -1.0262e+00, -2.5392e+00, -3.6140e+00,
+        -2.7701e+00, -9.1713e-01, -3.4859e+00, -1.4014e+00, -2.5008e+00,
+        -7.8797e-01, -3.0076e+00, -3.6775e+00,  2.2598e+00, -3.4374e+00,
+         7.7687e-01, -1.1714e+00,  2.4670e+00,  1.4675e+00,  2.2214e+00,
+        -6.9304e-01, -7.4266e-01, -3.3638e+00, -3.0698e+00,  3.2075e+00,
+         1.4943e+00, -1.8399e+00,  1.7148e+00, -3.3818e-01,  2.7783e+00,
+         1.3514e-01,  1.2592e+00,  1.7911e+00, -7.3632e-01, -1.1366e+00,
+         1.2065e+00, -2.1136e+00, -2.7081e+00,  2.6540e+00, -1.6028e+00,
+         1.2002e-01, -2.3719e+00, -3.1496e+00, -1.3129e+00,  2.0062e+00,
+        -3.1618e+00,  2.2456e+00,  1.2583e+00,  2.1598e+00,  4.5226e-01,
+         1.1869e+00, -4.8935e-01, -2.2550e+00, -1.1610e+00, -1.2451e+00])), ('encoder.4.weight', tensor([[-3.9907e+00, -3.5994e+00, -2.8266e+00,  ..., -2.0043e+00,
+          1.1126e+00,  4.1532e-01],
+        [ 2.7107e+00, -7.0485e-01, -7.9962e-01,  ...,  1.6683e-01,
+         -7.9776e-01, -1.8566e+00],
+        [-3.7380e-01,  1.5236e+00,  2.9596e+00,  ...,  1.5015e+00,
+         -1.8002e+00, -2.3885e+00],
+        ...,
+        [ 3.1962e-03, -6.6427e-01,  4.7942e-01,  ..., -2.3813e+00,
+          5.4355e-01,  3.1637e+00],
+        [ 2.4428e+00, -2.3754e+00, -3.1038e+00,  ...,  1.2136e+00,
+          1.4508e+00, -2.2246e-01],
+        [-3.9470e+00, -2.6300e+00, -4.2053e-01,  ..., -2.9403e+00,
+         -1.9408e+00,  1.0737e+00]])), ('encoder.4.bias', tensor([-0.5926,  2.2580, -2.2602,  ...,  0.5374, -3.8568,  2.0988])), ('encoder.6.weight', tensor([[-0.4457, -1.6430, -0.8627,  ...,  0.2585, -1.3111,  1.0270],
+        [-0.2334, -1.2905, -1.6176,  ..., -0.2025,  1.6227, -0.9561],
+        [-0.6182,  0.9047, -0.6722,  ...,  0.4275, -1.7469, -0.2560],
+        ...,
+        [ 0.2852,  2.1940, -0.4735,  ..., -1.1394,  0.9080,  0.5979],
+        [-1.3461,  0.2560,  0.7245,  ..., -0.7878,  1.2106, -1.2503],
+        [ 1.7910, -1.0520, -1.0668,  ..., -0.6310,  0.8795,  1.1983]])), ('encoder.6.bias', tensor([ 0.2272,  1.1157,  0.8538,  0.8518, -0.1613, -1.1310,  0.8744, -0.3158,
+         0.2860, -1.1356])), ('decoder.0.weight', tensor([[ 19.5915,   8.4047,  17.6489,  ...,  13.7121, -23.3371,   6.2264],
+        [  3.1906,  24.5339,  18.9861,  ...,   1.1168,  -9.4156, -13.0208],
+        [ -9.1188,  -0.5980,  15.3422,  ..., -16.7706,  -1.4438,   8.8400],
+        ...,
+        [ 17.0234,  14.2814, -10.8742,  ...,  -1.7186, -14.3050,  10.8125],
+        [-14.7930,  -8.0392,   3.6141,  ...,  16.7072,   3.2055,  13.4920],
+        [ -6.2961,  15.3570,  -9.4390,  ...,  -3.7038,   8.5123, -15.2176]])), ('decoder.0.bias', tensor([  7.0804,  18.8124, -20.4121,  ..., -11.1816,  10.0465,  10.5144])), ('decoder.2.weight', tensor([[-1.7304, -0.8342, -1.6617,  ...,  1.3923,  1.1037,  1.3612],
+        [-2.1338, -1.5195,  1.2626,  ...,  1.3169,  0.0682,  0.9831],
+        [ 1.1769,  1.3143, -0.0170,  ..., -1.3673, -0.0532,  0.9034],
+        ...,
+        [-1.2585,  1.2754,  0.8199,  ..., -0.1792,  1.2053, -1.1261],
+        [-1.2446,  1.4790,  0.0743,  ...,  0.9649, -0.1433, -0.9621],
+        [ 1.2381, -1.2114, -0.2365,  ..., -0.3513, -1.9772,  0.7923]])), ('decoder.2.bias', tensor([ 7.8303e-01,  1.4342e-01,  1.4874e-01, -2.0802e+00,  1.5147e+00,
+         3.1916e-01, -1.0197e-01, -1.4479e+00, -8.3747e-01, -7.8676e-01,
+        -4.1248e-01, -4.1625e-01, -1.3147e-01,  6.4863e-01,  7.1035e-02,
+        -2.1809e-01,  6.4063e-01, -5.9903e-01, -8.1915e-01, -1.7613e+00,
+        -1.6635e+00, -1.2118e+00, -5.9220e-01, -3.8863e-01, -5.1243e-01,
+         6.5980e-01,  1.4976e+00, -2.0945e+00, -1.5947e+00, -2.3456e+00,
+         3.7090e-01, -1.7468e+00, -9.0824e-01, -1.6494e+00, -1.9849e+00,
+        -1.7643e+00,  1.6894e+00, -2.1426e+00, -2.0281e+00, -1.6107e-03,
+         2.0868e-02,  1.0534e+00,  4.9664e-01, -1.4275e+00, -2.2410e-01,
+        -1.9150e+00, -1.3308e-01,  3.5307e-01,  1.9603e-01, -1.8429e-01,
+         8.0002e-01, -1.8956e+00,  1.2207e+00,  1.7110e+00,  1.8850e-01,
+         7.1486e-01, -1.1164e+00, -8.7876e-01, -1.1193e-01, -6.7199e-01,
+        -1.9193e+00,  6.2088e-01, -3.1742e-01,  9.5140e-01,  7.8740e-02,
+         2.7262e-01, -1.7215e+00, -8.0443e-02,  1.0709e+00,  1.1647e+00,
+        -1.8243e+00, -1.6335e-01, -7.0521e-01, -4.8975e-01,  5.4051e-01,
+        -1.2367e+00,  5.8154e-01,  1.7132e+00,  1.4237e+00, -1.3596e+00,
+        -3.5104e-01,  9.4084e-01,  1.5456e+00, -7.0201e-01,  1.6507e+00,
+         1.5002e+00, -8.5487e-01, -7.7028e-01,  8.5821e-01, -5.0889e-01,
+         4.2585e-01, -1.5899e+00, -8.8505e-01,  1.3522e+00,  1.0623e+00,
+         1.1534e+00,  1.0937e+00,  1.2003e+00, -1.1871e+00,  1.3515e-01,
+        -3.0038e-01,  1.3250e+00,  6.5531e-01, -7.5621e-01, -3.5523e-01,
+        -1.1897e-01,  6.6045e-01,  1.1050e+00,  1.4211e+00,  1.1913e+00,
+         1.2400e+00, -1.2713e+00,  1.0474e+00,  3.6675e-01, -1.2533e+00,
+        -2.9448e-01, -9.1807e-01,  1.2871e+00,  9.1180e-01, -1.2237e+00,
+        -1.4278e+00, -1.4421e+00, -1.4324e+00,  1.0184e+00, -1.8647e+00,
+        -5.1884e-01,  1.2528e+00,  9.4854e-02, -5.7303e-01,  4.4179e-01,
+        -3.8885e-01, -6.6829e-01, -1.8052e-01, -1.7911e+00,  7.2565e-01,
+        -1.3959e+00,  1.2140e-01, -7.1705e-01, -8.2588e-01,  5.7631e-01,
+         3.3160e-01, -1.4089e+00,  6.3802e-01,  1.5896e+00,  1.5852e+00,
+        -1.9982e-01, -1.5270e+00, -1.4918e+00, -4.7750e-01, -1.2855e+00,
+        -7.5776e-03,  9.3828e-02,  1.3275e+00,  1.5883e+00, -5.7366e-01,
+         5.1205e-01,  3.1117e-01, -7.3766e-01,  1.3872e+00,  1.4362e-01,
+        -1.2075e+00, -6.3078e-01, -1.0157e-01, -8.9325e-01,  1.1592e+00,
+         4.8586e-01,  7.6640e-01,  1.4568e+00, -3.0402e-01, -1.4273e+00,
+        -2.1202e-01, -1.0641e-01,  1.2660e+00, -4.9054e-01,  5.1320e-01,
+        -1.5481e-01,  7.9733e-01, -4.6650e-01,  9.0961e-01,  6.7503e-01,
+         1.0863e+00,  1.1441e+00,  9.9769e-02,  1.1445e+00, -8.8747e-01,
+         4.5972e-01,  1.0507e+00, -4.3619e-01,  5.4960e-01,  1.1101e+00,
+        -1.8669e+00, -5.0155e-01,  9.6175e-01,  1.3224e+00,  8.9981e-01,
+         6.3196e-01,  9.9979e-01,  1.3037e+00, -1.9556e+00,  8.3868e-01,
+         4.5703e-01, -1.4669e+00,  6.4397e-01,  1.6531e+00,  4.3965e-01,
+         1.2803e+00,  7.9137e-01, -4.2644e-01,  1.5013e-01,  4.5731e-01,
+        -2.1892e+00, -8.5514e-01, -1.4697e+00, -1.6635e+00,  1.1801e+00,
+         3.7633e-01, -1.4461e+00, -1.3906e+00, -1.2152e+00,  1.5469e+00,
+        -1.6194e+00, -1.1692e+00,  9.1540e-01, -1.9763e+00,  1.7780e-01,
+         1.4613e-01, -3.1416e-01, -3.8507e-01,  4.7616e-02, -3.2896e-01,
+        -6.5475e-01,  1.1042e+00,  2.0653e-01,  9.9927e-02, -2.2893e+00,
+        -1.9104e+00,  6.0947e-01,  7.2494e-02,  1.5122e+00, -1.2864e+00,
+        -9.4604e-01, -1.8486e+00,  7.4510e-02, -1.5674e+00,  1.2408e+00,
+        -1.1283e+00,  1.3963e+00,  5.0237e-01,  1.2251e+00, -7.1346e-01,
+        -1.4117e+00,  1.9436e-01,  1.7423e-01,  8.9878e-01,  5.5806e-01,
+        -7.6111e-01,  1.6091e+00,  9.3916e-01, -8.0372e-01, -2.8531e-01,
+         3.5428e-01, -1.6146e+00,  3.2207e-01,  6.1486e-01, -1.5538e-01,
+        -9.3814e-01, -6.2949e-01, -1.9147e+00,  1.2066e+00,  5.4568e-01,
+         6.0310e-01, -1.0479e+00,  1.7448e+00, -2.0970e+00, -9.8606e-01,
+        -6.8211e-01,  6.0989e-01, -5.7906e-02, -6.1786e-01,  1.4438e+00,
+         4.6871e-01, -1.9839e+00, -1.6959e+00,  8.6315e-01,  1.8296e-01,
+        -1.6447e-01, -7.3589e-01, -1.6985e+00,  1.8165e+00, -1.0665e+00,
+         1.3393e+00,  1.2550e-01, -8.5332e-01,  2.8732e-01,  1.4599e-01,
+        -1.3337e+00, -2.6738e-01,  1.4997e+00,  1.1453e-01, -1.3457e+00,
+        -1.3021e+00, -1.3441e+00, -2.2048e+00,  1.2506e+00,  8.5310e-01,
+        -1.6158e+00, -4.3617e-01, -6.1664e-01, -1.8828e+00,  9.6776e-01,
+        -3.1726e-02, -2.0299e-02, -8.5424e-01, -1.8739e+00, -7.0345e-01,
+         7.7848e-01,  1.2300e+00,  5.7006e-01, -1.9644e+00, -1.8338e+00,
+         2.0703e-01, -1.8232e+00, -8.3757e-02,  7.8295e-01, -9.6723e-01,
+        -2.1909e-01, -2.2733e-01, -7.9571e-01,  7.5285e-01,  6.5439e-01,
+        -2.1906e+00, -2.7797e-01,  1.1824e-01,  5.5313e-01,  1.8732e+00,
+         1.7628e-01, -1.9541e+00, -6.9933e-01,  3.7786e-01, -4.3986e-01,
+         1.7142e+00,  1.3351e+00, -8.3400e-01,  1.5026e+00, -1.8514e+00,
+        -2.1312e+00, -1.5090e-01, -9.4583e-02,  1.8719e+00,  1.0283e+00,
+         9.8322e-02, -1.5786e+00, -7.1720e-01,  1.3784e+00,  2.1235e-02,
+         1.5388e+00, -1.1419e+00,  4.3125e-01,  5.3607e-01, -7.7912e-01,
+         8.3154e-01,  1.0448e+00, -9.7571e-01, -2.9724e-01, -2.5707e-01,
+         1.6233e+00,  3.1481e-01, -1.3319e+00,  1.4257e+00, -1.6265e+00,
+        -1.7305e+00,  7.9853e-01,  1.7720e+00, -1.8810e-01,  7.9633e-01,
+         1.4611e+00,  4.6593e-01,  4.4005e-02,  8.5860e-01,  1.2037e+00,
+        -1.2374e+00, -6.3521e-01,  1.3169e+00,  1.0921e+00, -9.4790e-01,
+        -1.6643e+00, -8.3023e-01, -9.9726e-01, -1.0829e+00,  7.9770e-01,
+         1.4504e+00, -8.0981e-01, -1.6280e-01, -1.9840e+00, -1.4789e+00,
+        -1.6694e+00, -2.0663e+00, -1.5671e+00, -9.8243e-01, -1.6227e+00,
+         1.3435e+00, -1.6404e+00,  1.4582e+00,  1.4177e+00, -7.3372e-01,
+        -5.8444e-01, -6.9886e-01,  1.0934e+00, -2.7797e-01, -1.6173e+00,
+         1.3028e+00,  1.1402e-01, -2.4636e+00, -8.4469e-02, -3.4026e-01,
+        -8.0772e-01,  1.0863e+00,  1.6951e+00,  3.9193e-01,  9.5208e-01,
+        -4.5827e-01, -6.9015e-01, -1.2173e+00,  1.9127e-01,  1.0070e+00,
+         1.0959e+00,  3.5538e-01,  1.6760e+00,  9.6939e-01, -3.2949e-01,
+        -1.4587e-01,  8.4093e-01, -2.1773e+00,  2.1543e-01,  3.9247e-01,
+         7.6668e-01,  1.4599e-01,  9.8166e-01, -1.3549e+00, -1.2158e-01,
+         4.3472e-01, -1.9303e-01, -2.2128e-01,  1.3894e+00,  3.6828e-01,
+        -1.2966e+00,  1.1369e+00, -3.5055e-01, -5.3240e-01, -1.2217e+00,
+         1.5441e+00,  1.5120e+00, -9.7240e-01,  2.1452e-01,  1.3839e+00,
+        -1.7473e+00,  1.0346e+00, -1.8996e-02,  8.3987e-02,  1.5219e+00,
+        -2.2464e-01, -1.6312e+00, -1.6473e+00,  3.3555e-02, -4.0596e-01,
+        -1.4897e+00, -1.6801e+00,  1.0222e+00,  7.4522e-01,  2.0131e-01,
+        -8.2832e-02,  9.0305e-01,  1.1090e+00,  1.0726e+00,  2.4393e-01,
+        -2.0634e+00, -1.4434e-01,  1.5411e-01,  1.8271e+00, -5.4665e-01,
+         2.7081e-01, -1.2818e+00,  3.4773e-01,  8.1155e-02,  1.1393e+00,
+         1.3947e+00, -1.9166e+00, -1.2139e+00, -3.9438e-01, -2.7288e-01,
+        -1.9653e+00, -1.1592e+00,  9.0841e-01, -1.4845e-01, -5.5191e-01,
+         1.3163e+00, -1.4963e+00, -7.5854e-01,  1.3743e+00, -5.3281e-01])), ('decoder.4.weight', tensor([[ 3.2447,  1.6079, -2.4846,  ...,  0.5561,  2.1151,  2.2954],
+        [-0.9352,  3.7221, -1.0797,  ..., -0.8877,  2.5807, -0.5976],
+        [-0.3670, -2.9316,  0.6687,  ...,  2.9412, -1.8887,  0.4738],
+        ...,
+        [ 2.2282, -3.2956, -2.2401,  ...,  0.4933,  2.8642, -2.0800],
+        [ 2.2411, -3.9477,  2.1551,  ..., -2.2932,  0.6327,  1.7394],
+        [-2.8723, -1.0699, -1.3086,  ...,  0.1394, -1.8413,  1.3368]])), ('decoder.4.bias', tensor([-2.3248,  2.3313,  1.8303, -3.5520,  2.1789, -0.8847, -0.7900,  0.2717,
+        -0.4564, -2.1743, -3.8201, -1.2032, -2.5030,  2.7971, -2.5619, -4.0249,
+         0.3464, -3.5852,  1.4381, -2.7881,  2.5427,  1.0683,  1.5412, -4.5846,
+        -2.1910, -2.1280,  0.8865,  2.2458, -4.1750,  3.0225, -3.6460,  1.9230,
+         0.6537,  1.9910,  0.3913,  0.2888,  0.9827, -0.6524,  1.4118, -0.1098,
+        -2.1084,  1.0796, -2.2782, -0.9815, -2.5459, -2.8374,  1.0044, -0.6587,
+         0.6329, -0.2686, -1.8673, -1.4659,  0.6686,  3.0826, -4.4353,  0.7270,
+        -2.4193, -1.6557, -3.9815, -2.5108, -2.4208,  1.7231, -0.3058,  0.7406,
+        -2.5145, -2.0998, -1.7069,  0.4392,  2.4135,  1.1854, -1.7644,  2.9189,
+        -2.6214, -0.1556, -4.4692,  1.4591, -0.1475, -1.0437, -2.5797, -1.6408,
+         0.8209,  2.1945, -2.7834, -0.7030,  0.3536, -3.5577, -0.5094,  2.2156,
+         3.3154, -3.3302,  1.2639,  1.2396,  1.4738, -0.7092, -2.5809,  1.6369,
+         1.4652, -1.6470, -2.9080,  1.1909, -2.5310,  1.9830, -1.5808, -3.6969,
+        -3.3807,  0.6264, -0.2896, -2.8778, -1.5101, -3.6069, -2.2676, -2.7285,
+        -1.6870,  0.7769, -2.5538,  3.5833,  2.0501,  1.5175,  2.3810, -2.8883,
+         1.0038, -0.2581, -4.1607,  3.9705,  0.1778, -2.8553, -2.7055,  1.5824,
+        -3.4142,  3.6975, -0.2454, -0.8144, -2.6653,  0.2210, -3.8089,  0.8480,
+         2.3083, -3.5117,  2.4981, -3.2233,  0.5833, -4.0060, -0.4459, -2.3179,
+         1.2383,  0.8754, -1.4587, -0.4941,  1.8304, -0.1028,  1.4232,  0.1655,
+        -3.3539, -0.5640, -3.3164,  3.2269, -0.2956,  2.6481,  2.2777, -2.2034,
+        -1.9622, -0.4286,  0.0987, -3.3036, -3.8650, -3.0880, -1.9064, -2.6848,
+         0.5391,  1.8517,  2.1335, -1.8530,  3.1644,  1.4106,  1.3142,  0.7341,
+        -3.7043,  0.6448, -0.1069, -0.3557, -3.5426, -3.6603, -2.9882, -1.7736,
+         1.8221, -0.1825,  1.2837, -0.8478, -0.6864, -3.3761,  1.8801, -0.3569,
+        -4.2224,  1.0683,  2.3162,  1.7274,  0.0368, -4.0018, -2.2384,  1.1210,
+         1.8874, -1.4716, -1.2764,  1.7859,  3.4469,  2.8320,  0.5109,  1.4022,
+        -1.4804,  0.6836,  0.9863, -0.0206,  2.7360,  0.1865, -2.5242,  0.5870,
+         3.7875,  1.3386, -3.6320,  2.3934,  2.4702,  1.6382, -0.4423,  1.6104,
+        -1.4608,  0.6510, -3.3032,  1.8808, -2.0272, -0.6639, -0.6541,  2.0843,
+        -2.1336,  1.6888, -4.0596, -1.5787, -0.8794,  1.7201,  0.8737, -1.9988,
+        -1.6976,  0.2008, -0.0161,  0.2420,  2.0576, -2.9462,  1.2331,  1.8900,
+        -4.3880, -1.1639,  0.3048,  1.7334, -2.7944, -3.3013,  2.2127, -1.6029,
+         0.8626, -0.7802,  1.6180, -2.3049, -3.1637, -3.3693, -1.4006,  1.7479,
+        -4.2243, -1.1512, -1.6280, -2.6612, -1.5760, -0.9296, -1.5376, -1.4318,
+        -4.4028,  1.2716,  2.0176, -1.3771, -1.7170, -1.7600,  3.3818,  0.3377,
+        -2.0733, -0.8556,  3.2540, -1.7267,  2.1334, -3.3957,  0.5519,  1.8985,
+         0.1865,  2.2419, -0.8851,  0.9608, -1.6833,  2.0855, -3.1921,  3.3843,
+         0.4973, -3.7835,  0.6190, -1.2050, -2.1682, -3.1364,  1.5496, -1.2964,
+        -0.2239, -3.9736, -3.7302, -1.7559,  0.5827,  1.3674, -0.8768,  3.5338,
+         1.3642, -0.8206,  1.8631,  0.1737,  2.9430, -2.5017, -4.2489,  0.6147,
+         1.2794, -3.0483, -0.1169, -3.2801, -0.3907, -4.3134, -1.5937,  0.3257,
+        -2.4674, -0.5700, -0.1728,  0.8024,  1.2933, -0.2539,  2.1322, -2.1765,
+        -2.6085, -3.1603, -3.0615, -2.7986, -1.7083, -0.6021,  3.6924,  1.0745,
+         1.5980,  0.1145,  0.6861, -2.8680,  1.0552, -0.4781, -2.9486, -0.7025,
+        -1.8137,  1.8568, -2.1587, -3.4208, -2.7323,  0.7251,  0.6671, -3.3306,
+        -0.7960, -0.3630, -2.8838, -4.4341,  0.9958,  3.4089,  2.5703,  0.6260,
+        -3.0854,  1.5888, -1.1348, -0.1180,  2.0358,  0.4475, -1.3612, -0.8434,
+         2.5958,  0.9615, -0.2279,  3.3144, -5.3229,  1.1496, -2.1563, -0.3431,
+         0.7153,  3.3395, -1.2133, -1.0257, -1.5545,  3.0417, -2.8252,  2.4647,
+         1.3713, -2.5918, -1.4061, -0.3583,  2.8886, -3.2230, -0.6714, -1.4133,
+         2.4152,  0.0868, -2.9997, -3.4782,  1.8205,  0.6716, -2.7269, -2.7004,
+         0.1597,  2.6107,  1.0298, -3.7762,  0.3706, -4.4789,  0.4913,  1.5914,
+        -0.6518, -2.7874,  2.5021, -3.7456, -1.2888,  0.5824,  1.7345, -2.3458,
+        -1.4731,  0.6413, -1.3485, -4.5262, -4.3036, -0.2833,  2.8155,  0.9412,
+        -1.9171, -3.7321, -1.6408,  2.9704, -0.5773, -4.1430,  0.3301, -3.3890,
+        -1.1734,  1.4442,  1.8599,  0.7504,  2.4748,  2.0003,  1.6631, -3.8534,
+         0.5863, -2.8142,  0.7629, -3.7006, -1.3458, -0.8375,  0.9557,  0.3026,
+         2.5926, -2.1866,  2.0319,  2.7757, -2.1487, -2.0922, -3.4071,  1.7049,
+         0.3626,  1.5821,  3.5244, -2.7592,  2.2237, -3.6866,  2.0748, -1.0805,
+        -0.5676,  1.7743, -2.6561,  0.4030, -2.5745,  1.4680, -1.5390,  0.7442,
+        -3.4620, -0.0643,  0.4261, -3.3451, -3.1890, -1.6898, -2.7537,  3.3658,
+        -0.6597, -3.3779, -4.1859, -3.6677, -2.7533, -1.7010, -3.9439, -2.3521,
+         0.5965, -4.0680,  2.9267,  0.4209])), ('decoder.6.weight', tensor([[-1.7585,  5.7939, -0.1055,  ...,  4.5462, -3.5571,  5.0023],
+        [-0.6447, -1.2615,  1.0976,  ..., -2.6797,  0.8394,  1.4868],
+        [-2.2433,  2.3649, -3.5238,  ...,  2.9581, -0.0740, -0.1176],
+        ...,
+        [-1.4982,  1.3765,  2.5161,  ..., -3.8951, -0.0237, -2.5110],
+        [-3.4988, -0.6445, -3.0022,  ..., -0.3549,  2.4285, -0.5687],
+        [ 2.6171,  2.9694, -0.0703,  ..., -1.7334,  0.9953, -1.6001]])), ('decoder.6.bias', tensor([ 0.7742, -0.1708, -3.9796,  ..., -3.2925,  0.2012, -0.9012]))])
+[Time: 12.01.25 12:15:56] [Level: info] [State: write] Inconsistent lengths in state_dict: [500, 500, 500, 500, 2000, 2000, 10, 10, 2000, 2000, 500, 500, 500, 500, 6001, 6001]
+[Time: 12.01.25 12:15:56] [Level: info] Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/FeatureCloud/app/engine/app.py", line 252, in guarded_run
+    self.run()
+  File "/usr/local/lib/python3.8/site-packages/FeatureCloud/app/engine/app.py", line 271, in run
+    transition = self.current_state.run()
+  File "/app/states.py", line 262, in run
+    data[key] = data[key] + [None] * (max_length - len(data[key]))
+TypeError: unsupported operand type(s) for +: 'Tensor' and 'list'
+
