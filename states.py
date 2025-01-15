@@ -243,7 +243,7 @@ class WriteState(AppState):
         model = self.load('model')
         output_file = self.load('output_file')
         target_column = self.load('target_column')
-        pd.DataFrame(data=model.state_dict()).to_csv(f'{OUTPUT_DIR}/"state_dict')
+        torch.save(model.state_dict(), f'{OUTPUT_DIR}/"state_dict')
         # TODO: get final clusters
 
         with open(self.load('log_file'), 'w') as handle:
