@@ -1,0 +1,13 @@
+{"component":"MAIN","instance":"","level":"info","msg":"Controller start","time":"2025-01-29T13:39:51Z"}
+{"component":"MAIN","instance":"","level":"info","msg":"Mode: Dockerized (isolated)","time":"2025-01-29T13:39:51Z"}
+{"component":"MAIN","instance":"","level":"info","msg":"Configuration value 'HasGPU': false","time":"2025-01-29T13:39:51Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Removing leftover Docker entities for label: fc-controller-label","time":"2025-01-29T13:39:52Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Removed 0 of 0 leftover containers","time":"2025-01-29T13:39:52Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Removed 0 of 0 leftover volumes","time":"2025-01-29T13:39:52Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Removed 0 of 0 leftover networks","time":"2025-01-29T13:39:52Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Listening on port 9151","time":"2025-01-29T13:39:52Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Listening on port 9150","time":"2025-01-29T13:39:52Z"}
+{"component":"FLOW","instance":"","level":"debug","msg":"1 projects","time":"2025-01-29T13:39:52Z"}
+{"component":"FLOW","instance":"[Instance: 17081]","level":"info","msg":"Info change for project 17081: stage: error, step: 0","time":"2025-01-29T13:39:52Z"}
+{"component":"FLOW","instance":"[Instance: 17081]","level":"error","msg":"Workflow is shutting down because of an error","time":"2025-01-29T13:39:52Z"}
+{"component":"DATA","instance":"17081","level":"debug","msg":"Updated project state for project 17081","time":"2025-01-29T13:39:52Z"}

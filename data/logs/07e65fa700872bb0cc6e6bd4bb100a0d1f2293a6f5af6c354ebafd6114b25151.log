@@ -1,0 +1,21 @@
+2025-01-27 19:08:47,593 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-01-27 19:08:47,605 INFO supervisord started with pid 7
+2025-01-27 19:08:48,609 INFO spawned: 'nginx' with pid 10
+2025-01-27 19:08:48,614 INFO spawned: 'app' with pid 11
+2025-01-27 19:08:49,670 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-01-27 19:08:49,670 INFO success: app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+Bottle v0.13.2 server starting up (using WSGIRefServer())...
+Listening on http://localhost:5000/
+Hit Ctrl-C to quit.
+
+[CTRL] POST /setup
+[Time: 27.01.25 19:09:03] [Level: info] id: a324775fa3cb06b2
+[Time: 27.01.25 19:09:03] [Level: info] coordinator: False
+[Time: 27.01.25 19:09:03] [Level: info] clients: ['ae5e1e322b51cf6c', 'a324775fa3cb06b2', '0a6894f69aa41276']
+[Time: 27.01.25 19:09:03] [Level: info] state: initial
+[Time: 27.01.25 19:09:03] [Level: info] [State: initial] Reading configuration file...
+[Time: 27.01.25 19:09:03] [Level: info] [State: initial] Initializing: Setting iteration to 0, setting max_iterations...
+[Time: 27.01.25 19:09:03] [Level: info] [State: initial] Done reading configuration file.
+[Time: 27.01.25 19:09:03] [Level: info] [State: initial] Max Iterations: 5
+[Time: 27.01.25 19:09:03] [Level: info] [State: initial] Reading training data...
+127.0.0.1 - - [27/Jan/2025 19:09:03] "POST /api/setup HTTP/1.0" 200 0

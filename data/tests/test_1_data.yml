@@ -1,10 +1,11 @@
 id: 1
 image: vae
-createdat: 2025-01-08T18:43:56.611331622Z
+createdat: 2025-01-29T13:40:05.000271101Z
 relayaddress: localhost
 queryinterval: 2
 dirs:
 - client1
 - client2
+- client3
 gendir: ""
 resultdir: /data/tests

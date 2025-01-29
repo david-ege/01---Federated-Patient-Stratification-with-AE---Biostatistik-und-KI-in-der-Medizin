@@ -1,0 +1,49 @@
+2025-01-26 15:37:57,541 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-01-26 15:37:57,546 INFO supervisord started with pid 7
+2025-01-26 15:37:58,549 INFO spawned: 'nginx' with pid 10
+2025-01-26 15:37:58,552 INFO spawned: 'app' with pid 11
+2025-01-26 15:37:59,586 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-01-26 15:37:59,587 INFO success: app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+Bottle v0.13.2 server starting up (using WSGIRefServer())...
+Listening on http://localhost:5000/
+Hit Ctrl-C to quit.
+
+[CTRL] POST /setup
+[Time: 26.01.25 15:38:07] [Level: info] id: ecda30b9db570d42
+[Time: 26.01.25 15:38:07] [Level: info] coordinator: False
+[Time: 26.01.25 15:38:07] [Level: info] clients: ['42440320f423cc81', '657b66ea37349494', 'ecda30b9db570d42']
+[Time: 26.01.25 15:38:07] [Level: info] state: initial
+[Time: 26.01.25 15:38:07] [Level: info] [State: initial] Reading configuration file...
+[Time: 26.01.25 15:38:07] [Level: info] [State: initial] Initializing: Setting iteration to 0, setting max_iterations...
+[Time: 26.01.25 15:38:07] [Level: info] [State: initial] Done reading configuration file.
+[Time: 26.01.25 15:38:07] [Level: info] [State: initial] Max Iterations: 5
+[Time: 26.01.25 15:38:07] [Level: info] [State: initial] Reading training data...
+127.0.0.1 - - [26/Jan/2025 15:38:07] "POST /api/setup HTTP/1.0" 200 0
+127.0.0.1 - - [26/Jan/2025 15:38:07] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [26/Jan/2025 15:38:09] "GET /api/status HTTP/1.0" 200 155
+[Time: 26.01.25 15:38:11] [Level: info] [State: initial] Initializing pre-trained model...
+[Time: 26.01.25 15:38:11] [Level: info] [State: initial] INITIAL input_dim: $10565
+[Time: 26.01.25 15:38:11] [Level: info] Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/pandas/core/indexes/base.py", line 3653, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas/_libs/index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'condition'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/FeatureCloud/app/engine/app.py", line 252, in guarded_run
+    self.run()
+  File "/usr/local/lib/python3.8/site-packages/FeatureCloud/app/engine/app.py", line 271, in run
+    transition = self.current_state.run()
+  File "/app/states.py", line 76, in run
+    n_clusters = len(np.unique(df_meta_data["condition"].values))
+  File "/usr/local/lib/python3.8/site-packages/pandas/core/frame.py", line 3761, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/usr/local/lib/python3.8/site-packages/pandas/core/indexes/base.py", line 3655, in get_loc
+    raise KeyError(key) from err
+KeyError: 'condition'
+

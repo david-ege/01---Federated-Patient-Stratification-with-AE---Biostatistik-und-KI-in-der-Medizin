@@ -1,0 +1,42 @@
+2025-01-26 15:35:13,985 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-01-26 15:35:13,990 INFO supervisord started with pid 7
+2025-01-26 15:35:14,994 INFO spawned: 'nginx' with pid 10
+2025-01-26 15:35:15,003 INFO spawned: 'app' with pid 11
+2025-01-26 15:35:16,078 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-01-26 15:35:16,079 INFO success: app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+Bottle v0.13.2 server starting up (using WSGIRefServer())...
+Listening on http://localhost:5000/
+Hit Ctrl-C to quit.
+
+[CTRL] POST /setup
+[Time: 26.01.25 15:35:26] [Level: info] id: 66e135b4674adc7c
+[Time: 26.01.25 15:35:26] [Level: info] coordinator: False
+[Time: 26.01.25 15:35:26] [Level: info] clients: ['66e135b4674adc7c', 'd443340749c49a89', '057570977b551640']
+[Time: 26.01.25 15:35:26] [Level: info] state: initial
+[Time: 26.01.25 15:35:26] [Level: info] [State: initial] Reading configuration file...
+[Time: 26.01.25 15:35:26] [Level: info] [State: initial] Initializing: Setting iteration to 0, setting max_iterations...
+[Time: 26.01.25 15:35:26] [Level: info] [State: initial] Done reading configuration file.
+[Time: 26.01.25 15:35:26] [Level: info] [State: initial] Max Iterations: 5
+[Time: 26.01.25 15:35:26] [Level: info] [State: initial] Reading training data...
+127.0.0.1 - - [26/Jan/2025 15:35:26] "POST /api/setup HTTP/1.0" 200 0
+127.0.0.1 - - [26/Jan/2025 15:35:26] "GET /api/status HTTP/1.0" 200 155
+[Time: 26.01.25 15:35:26] [Level: info] Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/FeatureCloud/app/engine/app.py", line 252, in guarded_run
+    self.run()
+  File "/usr/local/lib/python3.8/site-packages/FeatureCloud/app/engine/app.py", line 271, in run
+    transition = self.current_state.run()
+  File "/app/states.py", line 61, in run
+    df = pd.read_csv(f'{INPUT_DIR}/{input_data}', sep = input_sep).apply(pd.to_numeric, errors='coerce')
+  File "/usr/local/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/usr/local/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/usr/local/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/usr/local/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1661, in _make_engine
+    self.handles = get_handle(
+  File "/usr/local/lib/python3.8/site-packages/pandas/io/common.py", line 859, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: '/mnt/input/realData.csv'
+
+127.0.0.1 - - [26/Jan/2025 15:35:28] "GET /api/status HTTP/1.0" 200 167

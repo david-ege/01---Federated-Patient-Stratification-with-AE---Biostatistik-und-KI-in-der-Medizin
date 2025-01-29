@@ -6,11 +6,10 @@ import pandas as pd
 import numpy as np
 from sklearn.cluster import KMeans
 from sklearn.metrics import adjusted_rand_score
-from Autoencoder_classes import Autoencoder, ClusteringLayer
+from Autoencoder_classes import Encoder, Decoder, GOAE, ClusteringLayer, extract_latent_space, orthogonality_loss
 import torch
 from torch import nn
 from torch.utils.data import DataLoader, TensorDataset
-
 
 INPUT_DIR = '/mnt/input'
 OUTPUT_DIR = '/mnt/output'
@@ -45,7 +44,9 @@ class InitialState(AppState):
         input_metadata = config['metadata']
         input_sep = config['sep']
         target_column = config['target_value']
+        epochs_per_iteration = config['epochs']
 
+        self.store('epochs', epochs_per_iteration)
         self.store('max_iterations', max_iterations)
         self.store('target_column', target_column)
         self.store('input_file', input_data)
@@ -59,46 +60,41 @@ class InitialState(AppState):
         self.log('Reading training data...')
 
         df_meta_data = pd.read_csv(f'{INPUT_DIR}/{input_metadata}', sep = input_sep)
-        df = pd.read_csv(f'{INPUT_DIR}/{input_data}', sep = input_sep).apply(pd.to_numeric, errors='coerce')
+        df = pd.read_csv(f'{INPUT_DIR}/{input_data}', sep = input_sep, index_col=0)
 
         self.store('dataframe', df)
         self.store('dataframe_metadata', df_meta_data)
 
         self.log('Initializing pre-trained model...')
-        proteomics_tensor = torch.tensor(df.values, dtype=torch.float32)
+
+
+        sample_data_normalized = df.reset_index(drop=True).to_numpy(dtype=np.float32)
+        sample_data_normalized = np.nan_to_num(sample_data_normalized)
+        proteomics_tensor = torch.tensor(sample_data_normalized, dtype=torch.float32)
 
         input_dim = proteomics_tensor.shape[1]
         self.log(f'INITIAL input_dim: ${input_dim}')
         latent_dim = 10
-
-        n_clusters = len(np.unique(df_meta_data["condition"].values))
+        hidden_dim_1 = 500
+        hidden_dim_2 = 2000
+        hidden_dim_3 = 500
+        n_clusters = 2
 
         # Initialize the autoencoder
-        autoencoder = Autoencoder(input_dim, latent_dim)
-        clustering_layer = ClusteringLayer(n_clusters, latent_dim)
+        autoencoder = GOAE(input_dim, latent_dim, hidden_dim_1=hidden_dim_1, hidden_dim_2=hidden_dim_2, hidden_dim_3=hidden_dim_3)
+        #clustering_layer = ClusteringLayer(n_clusters, latent_dim)
 
-        # Initialize optimizers
-        optimizer = torch.optim.Adam(autoencoder.parameters(), lr=1e-3)
-        optimizer_dec = torch.optim.Adam(
-            list(autoencoder.parameters()) + list(clustering_layer.parameters()), lr=1e-3
-        )
-        
         # Initialize k-means clustering
         self.log('Initializing cluster centers...')
 
-        with torch.no_grad():
-            latent_representations = autoencoder.encoder(proteomics_tensor).numpy()
-        kmeans = KMeans(n_clusters=n_clusters, n_init=20)
-        kmeans.fit(latent_representations)
-        initial_cluster_centers = torch.tensor(kmeans.cluster_centers_, dtype=torch.float32)
-        clustering_layer.cluster_centers.data = initial_cluster_centers
+
+        # Initialize optimizers
+        optimizer = torch.optim.Adam(autoencoder.parameters(), lr=1e-3)
 
         # Store initialized components
         self.store('model', autoencoder)
         self.store('optimizer', optimizer)
-        self.store('optimizer_dec', optimizer_dec)
         self.store('optimizer_state', optimizer.state_dict())
-        self.store('clustering_layer', clustering_layer)
         self.store('data_tensor', proteomics_tensor)
 
         if self.is_coordinator:
@@ -131,6 +127,7 @@ class ComputeState(AppState):
 
         self.log("Loading global weights for model...")
         model = self.load('model')
+        optimizer = self.load('optimizer')
         state_dict = {name: torch.tensor(param) for name, param in weights.items()}
         model.load_state_dict(state_dict)
         self.log('Updated model with received weights.')
@@ -143,54 +140,52 @@ class ComputeState(AppState):
         self.log('Preparing model training...')
         X_tensor = self.load('data_tensor')
 
-        train_epochs = 100
+        train_epochs = self.load('epochs')
 
-        y = df_meta_data["condition"].values
+        y = df_meta_data["Conditions"].values
 
         criterion = nn.MSELoss()
-        optimizer = torch.optim.Adam(model.parameters(), lr=1e-3)
+        
         optimizer.load_state_dict(self.load('optimizer_state'))
 
-        self.log('Training model for one epoch...')
-        for epoch in range(1):  
-            z, X_reconstructed = model(X_tensor)
-            loss = criterion(X_reconstructed, X_tensor)
-            optimizer.zero_grad()
-            loss.backward()
-            optimizer.step()
-            self.log(f'Local training loss: {loss.item()}')
-
-        clustering_layer = self.load('clustering_layer')
-        optimizer_dec = self.load('optimizer_dec')
-
-        self.log('Training the decoder...')
+        proteomics_ds = TensorDataset(X_tensor)
+        data_loader = DataLoader(proteomics_ds, batch_size=64, shuffle=True)
+        lambda_ortho = 0.1
+        self.log('Training model...')
         for epoch in range(train_epochs):  # Train DEC for 50 epochs
-            z, X_reconstructed = model(X_tensor)
-            q = clustering_layer(z)
-            p = target_distribution(q)
-            # KL Divergence Loss
-            kl_loss = torch.nn.functional.kl_div(q.log(), p, reduction='batchmean')
-            recon_loss = criterion(X_reconstructed, X_tensor)  # Optionally combine with reconstruction loss
-            loss = kl_loss + 0.1 * recon_loss
-            optimizer_dec.zero_grad()
-            loss.backward()
-            optimizer_dec.step()
+
+            total_loss = 0
+            for x_batch in data_loader:
+                x_batch = x_batch[0]
+            
+                # Forward pass
+                z, x_reconstructed = model(x_batch)
+                
+                # Loss
+                reconstruction_loss = criterion(x_reconstructed, x_batch)
+                ortho_loss = orthogonality_loss(z)
+                loss = reconstruction_loss + lambda_ortho * ortho_loss
+                
+                # Backward pass
+                optimizer.zero_grad()
+                loss.backward()
+                optimizer.step()
+                
+                total_loss += loss.item()
+                
             if (epoch + 1) % 10 == 0:
-                self.log(f"Epoch {epoch+1}, Total Loss: {loss.item()}, KL Loss: {kl_loss.item()}, Recon Loss: {recon_loss.item()}")
+                    self.log(f"Epoch {epoch+1}, Loss: {total_loss / len(data_loader)}")
+
+
+        clustering_layer = extract_latent_space(model, X_tensor)
+        kmeans = KMeans(n_clusters=2, random_state=22)
+        clusters = kmeans.fit_predict(clustering_layer)
 
         self.log('Saving model and decoder...')
         self.store('model', model)
-        self.store('optimizer_dec', optimizer_dec)
         self.store('optimizer_state', optimizer.state_dict())
-
-
-        self.log('Scoring model...')
-        with torch.no_grad():
-            z, _ = model(X_tensor)
-            q = clustering_layer(z)
-            cluster_assignments = torch.argmax(q, dim=1).numpy()
-        ari = adjusted_rand_score(y, cluster_assignments)
-        self.log(f'Adjusted Rand Index (ARI): {ari}')
+        self.store('clustering_layer', clustering_layer)
+        self.store('clusters', clusters)
 
         updated_weights = {name: param.data.cpu().numpy() for name, param in model.state_dict().items()}
 
@@ -217,7 +212,6 @@ class AggregateState(AppState):
                     for key, value in state_dict.items():
                         agg_weights[key] = agg_weights.get(key, 0) + value 
                         keys.append(key)
-            self.log(agg_weights)
             # Update global model with aggregated weights
             self.log('Updating global model...')
             global_model = self.load('model')
@@ -238,19 +232,17 @@ class WriteState(AppState):
         self.register_transition('terminal')
 
     def run(self):
-        self.log('Cluster data...')
-        df = pd.read_csv(f'{INPUT_DIR}/allData.csv', sep = ';')
+        
+        self.log('Saving final model...')
         model = self.load('model')
         output_file = self.load('output_file')
         target_column = self.load('target_column')
         torch.save(model.state_dict(), f'{OUTPUT_DIR}/"state_dict')
         # TODO: get final clusters
 
-        with open(self.load('log_file'), 'w') as handle:
-            handle.write('iterations:\t'+str(self.iteration_counter)+'\n')
-            handle.write('runtime:\t' + str(time.monotonic()-self.start_time)+'\n')
-            self.out = {self.load('').FINISHED: True}
+        #with open(self.load('log_file'), 'w') as handle:
+            #handle.write('iterations:\t'+str(self.iteration_counter)+'\n')
+            #handle.write('runtime:\t' + str(time.monotonic()-self.start_time)+'\n')
+            #self.out = {self.load('').FINISHED: True}
 
-            return TERMINAL_STATE
-        
-
+        return TERMINAL_STATE

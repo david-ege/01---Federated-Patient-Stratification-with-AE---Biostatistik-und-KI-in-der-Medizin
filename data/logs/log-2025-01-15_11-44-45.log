@@ -1,0 +1,4 @@
+{"component":"MAIN","instance":"","level":"info","msg":"Controller start","time":"2025-01-15T11:44:45Z"}
+{"component":"MAIN","instance":"","level":"info","msg":"Mode: Dockerized (isolated)","time":"2025-01-15T11:44:45Z"}
+{"component":"MAIN","instance":"","level":"info","msg":"Configuration value 'HasGPU': false","time":"2025-01-15T11:44:45Z"}
+{"component":"MAIN","instance":"","level":"error","msg":"Error response from daemon: network with name fc-controller-internal already exists","time":"2025-01-15T11:44:45Z"}

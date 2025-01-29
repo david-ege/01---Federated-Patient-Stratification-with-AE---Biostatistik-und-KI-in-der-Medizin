@@ -1,0 +1,112 @@
+2025-01-29 13:40:13,642 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-01-29 13:40:13,645 INFO supervisord started with pid 7
+2025-01-29 13:40:14,650 INFO spawned: 'nginx' with pid 10
+2025-01-29 13:40:14,656 INFO spawned: 'app' with pid 11
+2025-01-29 13:40:15,717 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-01-29 13:40:15,718 INFO success: app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+Bottle v0.13.2 server starting up (using WSGIRefServer())...
+Listening on http://localhost:5000/
+Hit Ctrl-C to quit.
+
+[CTRL] POST /setup
+[Time: 29.01.25 13:40:22] [Level: info] id: d921adb63f52a71e
+[Time: 29.01.25 13:40:22] [Level: info] coordinator: False
+[Time: 29.01.25 13:40:22] [Level: info] clients: ['a412be67ecc07d0c', '4bb11c51fd0042cf', 'd921adb63f52a71e']
+[Time: 29.01.25 13:40:22] [Level: info] state: initial
+[Time: 29.01.25 13:40:22] [Level: info] [State: initial] Reading configuration file...
+[Time: 29.01.25 13:40:22] [Level: info] [State: initial] Initializing: Setting iteration to 0, setting max_iterations...
+[Time: 29.01.25 13:40:22] [Level: info] [State: initial] Done reading configuration file.
+[Time: 29.01.25 13:40:22] [Level: info] [State: initial] Max Iterations: 5
+[Time: 29.01.25 13:40:22] [Level: info] [State: initial] Reading training data...
+127.0.0.1 - - [29/Jan/2025 13:40:22] "POST /api/setup HTTP/1.0" 200 0
+127.0.0.1 - - [29/Jan/2025 13:40:22] "GET /api/status HTTP/1.0" 200 155
+[Time: 29.01.25 13:40:23] [Level: info] [State: initial] Initializing pre-trained model...
+[Time: 29.01.25 13:40:23] [Level: info] [State: initial] INITIAL input_dim: $10564
+[Time: 29.01.25 13:40:23] [Level: info] [State: initial] Initializing cluster centers...
+127.0.0.1 - - [29/Jan/2025 13:40:24] "GET /api/status HTTP/1.0" 200 155
+[Time: 29.01.25 13:40:25] [Level: info] transition: compute
+127.0.0.1 - - [29/Jan/2025 13:40:26] "GET /api/status HTTP/1.0" 200 155
+[Time: 29.01.25 13:40:26] [Level: info] state: compute
+[Time: 29.01.25 13:40:26] [Level: info] [State: compute] ITERATION 1
+[Time: 29.01.25 13:40:26] [Level: info] [State: compute] receiving weights...
+127.0.0.1 - - [29/Jan/2025 13:40:28] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [29/Jan/2025 13:40:30] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [29/Jan/2025 13:40:32] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [29/Jan/2025 13:40:34] "GET /api/status HTTP/1.0" 200 155
+[CTRL] POST /data
+127.0.0.1 - - [29/Jan/2025 13:40:35] "POST /api/data?client=4bb11c51fd0042cf&memo=None HTTP/1.0" 200 0
+[Time: 29.01.25 13:40:35] [Level: info] [State: compute] Loading global weights for model...
+[Time: 29.01.25 13:40:36] [Level: info] [State: compute] Updated model with received weights.
+[Time: 29.01.25 13:40:36] [Level: info] [State: compute] Loading data...
+[Time: 29.01.25 13:40:36] [Level: info] [State: compute] Preparing model training...
+[Time: 29.01.25 13:40:36] [Level: info] [State: compute] Training model...
+127.0.0.1 - - [29/Jan/2025 13:40:36] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [29/Jan/2025 13:40:38] "GET /api/status HTTP/1.0" 200 155
+[Time: 29.01.25 13:40:39] [Level: info] [State: compute] Epoch 10, Loss: 1122.6474609375
+127.0.0.1 - - [29/Jan/2025 13:40:40] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [29/Jan/2025 13:40:42] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [29/Jan/2025 13:40:44] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [29/Jan/2025 13:40:46] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [29/Jan/2025 13:40:48] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [29/Jan/2025 13:40:50] "GET /api/status HTTP/1.0" 200 155
+[Time: 29.01.25 13:40:51] [Level: info] [State: compute] Epoch 20, Loss: 19.819154739379883
+127.0.0.1 - - [29/Jan/2025 13:40:52] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [29/Jan/2025 13:40:54] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [29/Jan/2025 13:40:56] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [29/Jan/2025 13:40:58] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [29/Jan/2025 13:41:00] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [29/Jan/2025 13:41:02] "GET /api/status HTTP/1.0" 200 155
+[Time: 29.01.25 13:41:04] [Level: info] [State: compute] Epoch 30, Loss: 6.248320579528809
+127.0.0.1 - - [29/Jan/2025 13:41:04] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [29/Jan/2025 13:41:06] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [29/Jan/2025 13:41:08] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [29/Jan/2025 13:41:10] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [29/Jan/2025 13:41:12] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [29/Jan/2025 13:41:14] "GET /api/status HTTP/1.0" 200 155
+[Time: 29.01.25 13:41:16] [Level: info] [State: compute] Epoch 40, Loss: 2.119309663772583
+127.0.0.1 - - [29/Jan/2025 13:41:16] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [29/Jan/2025 13:41:18] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [29/Jan/2025 13:41:20] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [29/Jan/2025 13:41:22] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [29/Jan/2025 13:41:24] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [29/Jan/2025 13:41:26] "GET /api/status HTTP/1.0" 200 155
+[Time: 29.01.25 13:41:27] [Level: info] [State: compute] Epoch 50, Loss: 1.561659812927246
+127.0.0.1 - - [29/Jan/2025 13:41:28] "GET /api/status HTTP/1.0" 200 155
+[Time: 29.01.25 13:41:30] [Level: info] [State: compute] Epoch 60, Loss: 1.3714022636413574
+127.0.0.1 - - [29/Jan/2025 13:41:30] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [29/Jan/2025 13:41:32] "GET /api/status HTTP/1.0" 200 155
+[Time: 29.01.25 13:41:33] [Level: info] [State: compute] Epoch 70, Loss: 1.2283565998077393
+127.0.0.1 - - [29/Jan/2025 13:41:34] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [29/Jan/2025 13:41:36] "GET /api/status HTTP/1.0" 200 155
+[Time: 29.01.25 13:41:37] [Level: info] [State: compute] Epoch 80, Loss: 1.1747876405715942
+127.0.0.1 - - [29/Jan/2025 13:41:38] "GET /api/status HTTP/1.0" 200 155
+[Time: 29.01.25 13:41:40] [Level: info] [State: compute] Epoch 90, Loss: 1.1001112461090088
+127.0.0.1 - - [29/Jan/2025 13:41:40] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [29/Jan/2025 13:41:42] "GET /api/status HTTP/1.0" 200 155
+[Time: 29.01.25 13:41:43] [Level: info] [State: compute] Epoch 100, Loss: 0.9971679449081421
+/usr/local/lib/python3.8/site-packages/sklearn/cluster/_kmeans.py:1416: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+[Time: 29.01.25 13:41:44] [Level: info] [State: compute] Saving model and decoder...
+[Time: 29.01.25 13:41:44] [Level: info] [State: compute] Sent updated weights to coordinator.
+[Time: 29.01.25 13:41:44] [Level: info] transition: compute
+127.0.0.1 - - [29/Jan/2025 13:41:44] "GET /api/status HTTP/1.0" 200 164
+[CTRL] GET /data
+[Time: 29.01.25 13:41:45] [Level: info] state: compute
+[Time: 29.01.25 13:41:45] [Level: info] [State: compute] ITERATION 2
+[Time: 29.01.25 13:41:45] [Level: info] [State: compute] receiving weights...
+127.0.0.1 - - [29/Jan/2025 13:41:47] "GET /api/data HTTP/1.0" 200 58363369
+127.0.0.1 - - [29/Jan/2025 13:41:53] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [29/Jan/2025 13:41:55] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [29/Jan/2025 13:41:57] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [29/Jan/2025 13:41:59] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [29/Jan/2025 13:42:01] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [29/Jan/2025 13:42:03] "GET /api/status HTTP/1.0" 200 155
+[CTRL] POST /data
+127.0.0.1 - - [29/Jan/2025 13:42:05] "POST /api/data?client=4bb11c51fd0042cf&memo=None HTTP/1.0" 200 0
+127.0.0.1 - - [29/Jan/2025 13:42:05] "GET /api/status HTTP/1.0" 200 155
+[Time: 29.01.25 13:42:05] [Level: info] [State: compute] Loading global weights for model...
+[Time: 29.01.25 13:42:06] [Level: info] [State: compute] Updated model with received weights.
+[Time: 29.01.25 13:42:06] [Level: info] [State: compute] Loading data...
+[Time: 29.01.25 13:42:06] [Level: info] [State: compute] Preparing model training...
+[Time: 29.01.25 13:42:06] [Level: info] [State: compute] Training model...
+127.0.0.1 - - [29/Jan/2025 13:42:07] "GET /api/status HTTP/1.0" 200 155

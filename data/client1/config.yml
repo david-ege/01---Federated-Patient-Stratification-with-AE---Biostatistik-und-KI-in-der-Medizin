@@ -1,6 +1,7 @@
-data: localData.csv
-metadata: labelc1.csv
+data: realdata.csv
+metadata: realmetadata.csv
 sep: ';'
 max_iter: 5
 target_value: target
 pred: pred.csv
+epochs: 100

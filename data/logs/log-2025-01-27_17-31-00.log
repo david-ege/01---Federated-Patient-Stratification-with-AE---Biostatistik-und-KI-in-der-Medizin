@@ -1,0 +1,402 @@
+{"component":"MAIN","instance":"","level":"info","msg":"Controller start","time":"2025-01-27T17:31:00Z"}
+{"component":"MAIN","instance":"","level":"info","msg":"Mode: Dockerized (isolated)","time":"2025-01-27T17:31:00Z"}
+{"component":"MAIN","instance":"","level":"info","msg":"Configuration value 'HasGPU': false","time":"2025-01-27T17:31:00Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Removing leftover Docker entities for label: fc-controller-label","time":"2025-01-27T17:31:01Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Removed 0 of 0 leftover containers","time":"2025-01-27T17:31:01Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Removed 0 of 41 leftover volumes","time":"2025-01-27T17:31:01Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Removed 0 of 0 leftover networks","time":"2025-01-27T17:31:01Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Listening on port 9151","time":"2025-01-27T17:31:01Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Listening on port 9150","time":"2025-01-27T17:31:01Z"}
+{"component":"FLOW","instance":"","level":"debug","msg":"1 projects","time":"2025-01-27T17:31:01Z"}
+{"component":"FLOW","instance":"[Instance: 17081]","level":"info","msg":"Info change for project 17081: stage: error, step: 0","time":"2025-01-27T17:31:01Z"}
+{"component":"FLOW","instance":"[Instance: 17081]","level":"error","msg":"Workflow is shutting down because of an error","time":"2025-01-27T17:31:01Z"}
+{"component":"DATA","instance":"17081","level":"debug","msg":"Updated project state for project 17081","time":"2025-01-27T17:31:01Z"}
+{"component":"TESTBED","instance":"","level":"info","msg":"Create new test","time":"2025-01-27T17:31:09Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Create volumes and containers...","time":"2025-01-27T17:31:09Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Create volume test_1_input_0_1737999069","time":"2025-01-27T17:31:09Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Create volume test_1_output_0_1737999069","time":"2025-01-27T17:31:09Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Move data to workspace from C:/Users/david/Desktop/Biostatistik/Autoencoder/vae\\data/client1","time":"2025-01-27T17:31:09Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Move data to workspace","time":"2025-01-27T17:31:09Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-01-27T17:31:09Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove application","time":"2025-01-27T17:31:11Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Intermediary container used for moving data from host to volume has been removed","time":"2025-01-27T17:31:13Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Move generic data to workspace skipped, no source provided","time":"2025-01-27T17:31:13Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Start application","time":"2025-01-27T17:31:13Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-01-27T17:31:13Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Append app to list","time":"2025-01-27T17:31:14Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Create volume test_1_input_1_1737999074","time":"2025-01-27T17:31:14Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Create volume test_1_output_1_1737999074","time":"2025-01-27T17:31:14Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Move data to workspace from C:/Users/david/Desktop/Biostatistik/Autoencoder/vae\\data/client2","time":"2025-01-27T17:31:14Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Move data to workspace","time":"2025-01-27T17:31:14Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-01-27T17:31:15Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove application","time":"2025-01-27T17:31:16Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Intermediary container used for moving data from host to volume has been removed","time":"2025-01-27T17:31:18Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Move generic data to workspace skipped, no source provided","time":"2025-01-27T17:31:18Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Start application","time":"2025-01-27T17:31:18Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-01-27T17:31:18Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Append app to list","time":"2025-01-27T17:31:20Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Create volume test_1_input_2_1737999080","time":"2025-01-27T17:31:20Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Create volume test_1_output_2_1737999080","time":"2025-01-27T17:31:20Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Move data to workspace from C:/Users/david/Desktop/Biostatistik/Autoencoder/vae\\data/client3","time":"2025-01-27T17:31:20Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Move data to workspace","time":"2025-01-27T17:31:20Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-01-27T17:31:20Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove application","time":"2025-01-27T17:31:22Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Intermediary container used for moving data from host to volume has been removed","time":"2025-01-27T17:31:23Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Move generic data to workspace skipped, no source provided","time":"2025-01-27T17:31:23Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Start application","time":"2025-01-27T17:31:23Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-01-27T17:31:23Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Append app to list","time":"2025-01-27T17:31:25Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Link fc_vae_343011168 with global socket server","time":"2025-01-27T17:31:25Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Link fc_vae_978547552 with global socket server","time":"2025-01-27T17:31:25Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Link fc_vae_741751719 with global socket server","time":"2025-01-27T17:31:25Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Start local socket server","time":"2025-01-27T17:31:25Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Start local socket server","time":"2025-01-27T17:31:25Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Start local socket server","time":"2025-01-27T17:31:25Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Link to global address","time":"2025-01-27T17:31:25Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Link to global address","time":"2025-01-27T17:31:25Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Link to global address","time":"2025-01-27T17:31:25Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Registered new participant controller","time":"2025-01-27T17:31:25Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Registered new participant controller","time":"2025-01-27T17:31:25Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Registered new coordinator controller","time":"2025-01-27T17:31:25Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Received setup trigger","time":"2025-01-27T17:31:25Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Received setup trigger","time":"2025-01-27T17:31:25Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Received setup trigger","time":"2025-01-27T17:31:25Z"}
+{"component":"LOCAL","instance":"","level":"error","msg":"Got error during setup to http://172.18.0.5:9000: Post \"http://172.18.0.5:9000/setup\": dial tcp 172.18.0.5:9000: connect: connection refused","time":"2025-01-27T17:31:25Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Setup d8bbf24055850f677c8d7b516903121dc0fc32f48a5ae253e86aa5e4f38e36ba","time":"2025-01-27T17:31:26Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Setup triggered","time":"2025-01-27T17:31:26Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"3 apps and server created and running","time":"2025-01-27T17:31:26Z"}
+{"component":"LOCAL","instance":"","level":"error","msg":"Got error code during setup: 502, 502 Bad Gateway","time":"2025-01-27T17:31:27Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"http://172.18.0.3:9000/status: Finished","time":"2025-01-27T17:31:28Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Participant (ID: 0cba99094b0a7ada) finished the current step","time":"2025-01-27T17:31:28Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"http://172.18.0.4:9000/status: Finished","time":"2025-01-27T17:31:28Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Participant (ID: 0b8f83443c7385b8) finished the current step","time":"2025-01-27T17:31:28Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Shutdown","time":"2025-01-27T17:31:29Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Shutdown","time":"2025-01-27T17:31:29Z"}
+{"component":"GLOBAL","instance":"","level":"error","msg":"Participant (ID: 4a75077563356100): relaying stopped due to: read tcp [::1]:9150-\u003e[::1]:49094: read: connection reset by peer","time":"2025-01-27T17:31:29Z"}
+{"component":"GLOBAL","instance":"","level":"error","msg":"Participant (ID: 0cba99094b0a7ada): relaying stopped due to: EOF","time":"2025-01-27T17:31:29Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Shutdown","time":"2025-01-27T17:31:29Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Stopping test id: 1","time":"2025-01-27T17:31:29Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Stopping container fc_vae_343011168","time":"2025-01-27T17:31:29Z"}
+{"component":"GLOBAL","instance":"","level":"error","msg":"Participant (ID: 0b8f83443c7385b8): relaying stopped due to: EOF","time":"2025-01-27T17:31:29Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Move data to host","time":"2025-01-27T17:31:29Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-01-27T17:31:29Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove application","time":"2025-01-27T17:31:31Z"}
+{"component":"DOCKER","instance":"","level":"debug","msg":"Intermediary container used for moving data from volume to host has been removed","time":"2025-01-27T17:31:32Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Saved output volume content to /data/tests/results_test_1_client_0_fc_vae_343011168.zip","time":"2025-01-27T17:31:32Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove volume test_1_output_0_1737999069","time":"2025-01-27T17:31:32Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Deleted volume test_1_output_0_1737999069","time":"2025-01-27T17:31:32Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove volume test_1_input_0_1737999069","time":"2025-01-27T17:31:32Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Deleted volume test_1_input_0_1737999069","time":"2025-01-27T17:31:32Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Stopping container fc_vae_978547552","time":"2025-01-27T17:31:32Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Move data to host","time":"2025-01-27T17:31:33Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-01-27T17:31:33Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove application","time":"2025-01-27T17:31:35Z"}
+{"component":"DOCKER","instance":"","level":"debug","msg":"Intermediary container used for moving data from volume to host has been removed","time":"2025-01-27T17:31:36Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Saved output volume content to /data/tests/results_test_1_client_1_fc_vae_978547552.zip","time":"2025-01-27T17:31:36Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove volume test_1_output_1_1737999074","time":"2025-01-27T17:31:36Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Deleted volume test_1_output_1_1737999074","time":"2025-01-27T17:31:36Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove volume test_1_input_1_1737999074","time":"2025-01-27T17:31:36Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Deleted volume test_1_input_1_1737999074","time":"2025-01-27T17:31:36Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Stopping container fc_vae_741751719","time":"2025-01-27T17:31:36Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Move data to host","time":"2025-01-27T17:31:36Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-01-27T17:31:37Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove application","time":"2025-01-27T17:31:38Z"}
+{"component":"DOCKER","instance":"","level":"debug","msg":"Intermediary container used for moving data from volume to host has been removed","time":"2025-01-27T17:31:39Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Saved output volume content to /data/tests/results_test_1_client_2_fc_vae_741751719.zip","time":"2025-01-27T17:31:39Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove volume test_1_output_2_1737999080","time":"2025-01-27T17:31:39Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Deleted volume test_1_output_2_1737999080","time":"2025-01-27T17:31:39Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove volume test_1_input_2_1737999080","time":"2025-01-27T17:31:39Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Deleted volume test_1_input_2_1737999080","time":"2025-01-27T17:31:39Z"}
+{"component":"TESTBED","instance":"","level":"info","msg":"Create new test","time":"2025-01-27T18:00:45Z"}
+{"component":"TESTBED","instance":"[Project: 2]","level":"info","msg":"Create volumes and containers...","time":"2025-01-27T18:00:45Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Create volume test_2_input_0_1738000845","time":"2025-01-27T18:00:45Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Create volume test_2_output_0_1738000845","time":"2025-01-27T18:00:45Z"}
+{"component":"TESTBED","instance":"[Project: 2]","level":"info","msg":"Move data to workspace from C:/Users/david/Desktop/Biostatistik/Autoencoder/vae\\data/client1","time":"2025-01-27T18:00:45Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Move data to workspace","time":"2025-01-27T18:00:45Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-01-27T18:00:45Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove application","time":"2025-01-27T18:00:48Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Intermediary container used for moving data from host to volume has been removed","time":"2025-01-27T18:00:50Z"}
+{"component":"TESTBED","instance":"[Project: 2]","level":"info","msg":"Move generic data to workspace skipped, no source provided","time":"2025-01-27T18:00:50Z"}
+{"component":"TESTBED","instance":"[Project: 2]","level":"info","msg":"Start application","time":"2025-01-27T18:00:50Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-01-27T18:00:50Z"}
+{"component":"TESTBED","instance":"[Project: 2]","level":"info","msg":"Append app to list","time":"2025-01-27T18:00:51Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Create volume test_2_input_1_1738000851","time":"2025-01-27T18:00:51Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Create volume test_2_output_1_1738000851","time":"2025-01-27T18:00:51Z"}
+{"component":"TESTBED","instance":"[Project: 2]","level":"info","msg":"Move data to workspace from C:/Users/david/Desktop/Biostatistik/Autoencoder/vae\\data/client2","time":"2025-01-27T18:00:51Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Move data to workspace","time":"2025-01-27T18:00:51Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-01-27T18:00:52Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove application","time":"2025-01-27T18:00:54Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Intermediary container used for moving data from host to volume has been removed","time":"2025-01-27T18:00:56Z"}
+{"component":"TESTBED","instance":"[Project: 2]","level":"info","msg":"Move generic data to workspace skipped, no source provided","time":"2025-01-27T18:00:56Z"}
+{"component":"TESTBED","instance":"[Project: 2]","level":"info","msg":"Start application","time":"2025-01-27T18:00:56Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-01-27T18:00:56Z"}
+{"component":"TESTBED","instance":"[Project: 2]","level":"info","msg":"Append app to list","time":"2025-01-27T18:00:58Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Create volume test_2_input_2_1738000858","time":"2025-01-27T18:00:58Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Create volume test_2_output_2_1738000858","time":"2025-01-27T18:00:58Z"}
+{"component":"TESTBED","instance":"[Project: 2]","level":"info","msg":"Move data to workspace from C:/Users/david/Desktop/Biostatistik/Autoencoder/vae\\data/client3","time":"2025-01-27T18:00:58Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Move data to workspace","time":"2025-01-27T18:00:58Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-01-27T18:00:59Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove application","time":"2025-01-27T18:01:01Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Intermediary container used for moving data from host to volume has been removed","time":"2025-01-27T18:01:02Z"}
+{"component":"TESTBED","instance":"[Project: 2]","level":"info","msg":"Move generic data to workspace skipped, no source provided","time":"2025-01-27T18:01:02Z"}
+{"component":"TESTBED","instance":"[Project: 2]","level":"info","msg":"Start application","time":"2025-01-27T18:01:02Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-01-27T18:01:02Z"}
+{"component":"TESTBED","instance":"[Project: 2]","level":"info","msg":"Append app to list","time":"2025-01-27T18:01:04Z"}
+{"component":"TESTBED","instance":"[Project: 2]","level":"info","msg":"Link fc_vae_185319527 with global socket server","time":"2025-01-27T18:01:04Z"}
+{"component":"TESTBED","instance":"[Project: 2]","level":"info","msg":"Link fc_vae_957076937 with global socket server","time":"2025-01-27T18:01:04Z"}
+{"component":"TESTBED","instance":"[Project: 2]","level":"info","msg":"Link fc_vae_616019479 with global socket server","time":"2025-01-27T18:01:04Z"}
+{"component":"TESTBED","instance":"[Project: 2]","level":"info","msg":"Start local socket server","time":"2025-01-27T18:01:04Z"}
+{"component":"TESTBED","instance":"[Project: 2]","level":"info","msg":"Start local socket server","time":"2025-01-27T18:01:04Z"}
+{"component":"TESTBED","instance":"[Project: 2]","level":"info","msg":"Start local socket server","time":"2025-01-27T18:01:04Z"}
+{"component":"TESTBED","instance":"[Project: 2]","level":"info","msg":"Link to global address","time":"2025-01-27T18:01:04Z"}
+{"component":"TESTBED","instance":"[Project: 2]","level":"info","msg":"Link to global address","time":"2025-01-27T18:01:04Z"}
+{"component":"TESTBED","instance":"[Project: 2]","level":"info","msg":"Link to global address","time":"2025-01-27T18:01:04Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Registered new participant controller","time":"2025-01-27T18:01:04Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Registered new coordinator controller","time":"2025-01-27T18:01:04Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Registered new participant controller","time":"2025-01-27T18:01:04Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Received setup trigger","time":"2025-01-27T18:01:04Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Received setup trigger","time":"2025-01-27T18:01:04Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Received setup trigger","time":"2025-01-27T18:01:04Z"}
+{"component":"LOCAL","instance":"","level":"error","msg":"Got error during setup to http://172.18.0.5:9000: Post \"http://172.18.0.5:9000/setup\": dial tcp 172.18.0.5:9000: connect: connection refused","time":"2025-01-27T18:01:04Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Setup 4395b623b00b2391dfd985108c16fb967ef98ed386749849e11bb30cd950842c","time":"2025-01-27T18:01:05Z"}
+{"component":"TESTBED","instance":"[Project: 2]","level":"info","msg":"Setup triggered","time":"2025-01-27T18:01:05Z"}
+{"component":"TESTBED","instance":"[Project: 2]","level":"info","msg":"3 apps and server created and running","time":"2025-01-27T18:01:05Z"}
+{"component":"LOCAL","instance":"","level":"error","msg":"Got error code during setup: 502, 502 Bad Gateway","time":"2025-01-27T18:01:06Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"http://172.18.0.4:9000/status: Finished","time":"2025-01-27T18:01:09Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Shutdown","time":"2025-01-27T18:01:09Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Shutdown","time":"2025-01-27T18:01:09Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Participant (ID: bdb115e0a3b93cc8) finished the current step","time":"2025-01-27T18:01:09Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"http://172.18.0.3:9000/status: Finished","time":"2025-01-27T18:01:09Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Shutdown","time":"2025-01-27T18:01:09Z"}
+{"component":"GLOBAL","instance":"","level":"error","msg":"Participant (ID: bdb115e0a3b93cc8): relaying stopped due to: EOF","time":"2025-01-27T18:01:09Z"}
+{"component":"GLOBAL","instance":"","level":"error","msg":"Participant (ID: c7b146834e6aaa36): relaying stopped due to: EOF","time":"2025-01-27T18:01:09Z"}
+{"component":"TESTBED","instance":"[Project: 2]","level":"info","msg":"Stopping test id: 2","time":"2025-01-27T18:01:09Z"}
+{"component":"TESTBED","instance":"[Project: 2]","level":"info","msg":"Stopping container fc_vae_185319527","time":"2025-01-27T18:01:09Z"}
+{"component":"GLOBAL","instance":"","level":"error","msg":"Participant (ID: e2134fe2c01468bf): relaying stopped due to: read tcp [::1]:9150-\u003e[::1]:53760: read: connection reset by peer","time":"2025-01-27T18:01:09Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Move data to host","time":"2025-01-27T18:01:09Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-01-27T18:01:10Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove application","time":"2025-01-27T18:01:12Z"}
+{"component":"DOCKER","instance":"","level":"debug","msg":"Intermediary container used for moving data from volume to host has been removed","time":"2025-01-27T18:01:13Z"}
+{"component":"TESTBED","instance":"[Project: 2]","level":"info","msg":"Saved output volume content to /data/tests/results_test_2_client_0_fc_vae_185319527.zip","time":"2025-01-27T18:01:13Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove volume test_2_output_0_1738000845","time":"2025-01-27T18:01:13Z"}
+{"component":"TESTBED","instance":"[Project: 2]","level":"info","msg":"Deleted volume test_2_output_0_1738000845","time":"2025-01-27T18:01:13Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove volume test_2_input_0_1738000845","time":"2025-01-27T18:01:13Z"}
+{"component":"TESTBED","instance":"[Project: 2]","level":"info","msg":"Deleted volume test_2_input_0_1738000845","time":"2025-01-27T18:01:13Z"}
+{"component":"TESTBED","instance":"[Project: 2]","level":"info","msg":"Stopping container fc_vae_957076937","time":"2025-01-27T18:01:13Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Move data to host","time":"2025-01-27T18:01:13Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-01-27T18:01:14Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove application","time":"2025-01-27T18:01:16Z"}
+{"component":"DOCKER","instance":"","level":"debug","msg":"Intermediary container used for moving data from volume to host has been removed","time":"2025-01-27T18:01:17Z"}
+{"component":"TESTBED","instance":"[Project: 2]","level":"info","msg":"Saved output volume content to /data/tests/results_test_2_client_1_fc_vae_957076937.zip","time":"2025-01-27T18:01:17Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove volume test_2_output_1_1738000851","time":"2025-01-27T18:01:17Z"}
+{"component":"TESTBED","instance":"[Project: 2]","level":"info","msg":"Deleted volume test_2_output_1_1738000851","time":"2025-01-27T18:01:17Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove volume test_2_input_1_1738000851","time":"2025-01-27T18:01:17Z"}
+{"component":"TESTBED","instance":"[Project: 2]","level":"info","msg":"Deleted volume test_2_input_1_1738000851","time":"2025-01-27T18:01:17Z"}
+{"component":"TESTBED","instance":"[Project: 2]","level":"info","msg":"Stopping container fc_vae_616019479","time":"2025-01-27T18:01:17Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Move data to host","time":"2025-01-27T18:01:18Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-01-27T18:01:18Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove application","time":"2025-01-27T18:01:20Z"}
+{"component":"DOCKER","instance":"","level":"debug","msg":"Intermediary container used for moving data from volume to host has been removed","time":"2025-01-27T18:01:21Z"}
+{"component":"TESTBED","instance":"[Project: 2]","level":"info","msg":"Saved output volume content to /data/tests/results_test_2_client_2_fc_vae_616019479.zip","time":"2025-01-27T18:01:21Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove volume test_2_output_2_1738000858","time":"2025-01-27T18:01:21Z"}
+{"component":"TESTBED","instance":"[Project: 2]","level":"info","msg":"Deleted volume test_2_output_2_1738000858","time":"2025-01-27T18:01:21Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove volume test_2_input_2_1738000858","time":"2025-01-27T18:01:21Z"}
+{"component":"TESTBED","instance":"[Project: 2]","level":"info","msg":"Deleted volume test_2_input_2_1738000858","time":"2025-01-27T18:01:21Z"}
+{"component":"HTTP","instance":"","level":"debug","msg":"Set site received","time":"2025-01-27T18:03:50Z"}
+{"component":"TESTBED","instance":"","level":"info","msg":"Create new test","time":"2025-01-27T18:38:12Z"}
+{"component":"TESTBED","instance":"[Project: 3]","level":"info","msg":"Create volumes and containers...","time":"2025-01-27T18:38:12Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Create volume test_3_input_0_1738003092","time":"2025-01-27T18:38:12Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Create volume test_3_output_0_1738003092","time":"2025-01-27T18:38:12Z"}
+{"component":"TESTBED","instance":"[Project: 3]","level":"info","msg":"Move data to workspace from C:/Users/david/Desktop/Biostatistik/Autoencoder/vae\\data/client1","time":"2025-01-27T18:38:12Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Move data to workspace","time":"2025-01-27T18:38:12Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-01-27T18:38:12Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove application","time":"2025-01-27T18:38:16Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Intermediary container used for moving data from host to volume has been removed","time":"2025-01-27T18:38:19Z"}
+{"component":"TESTBED","instance":"[Project: 3]","level":"info","msg":"Move generic data to workspace skipped, no source provided","time":"2025-01-27T18:38:19Z"}
+{"component":"TESTBED","instance":"[Project: 3]","level":"info","msg":"Start application","time":"2025-01-27T18:38:19Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-01-27T18:38:19Z"}
+{"component":"TESTBED","instance":"[Project: 3]","level":"info","msg":"Append app to list","time":"2025-01-27T18:38:20Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Create volume test_3_input_1_1738003100","time":"2025-01-27T18:38:20Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Create volume test_3_output_1_1738003100","time":"2025-01-27T18:38:20Z"}
+{"component":"TESTBED","instance":"[Project: 3]","level":"info","msg":"Move data to workspace from C:/Users/david/Desktop/Biostatistik/Autoencoder/vae\\data/client2","time":"2025-01-27T18:38:20Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Move data to workspace","time":"2025-01-27T18:38:20Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-01-27T18:38:21Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove application","time":"2025-01-27T18:38:24Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Intermediary container used for moving data from host to volume has been removed","time":"2025-01-27T18:38:30Z"}
+{"component":"TESTBED","instance":"[Project: 3]","level":"info","msg":"Move generic data to workspace skipped, no source provided","time":"2025-01-27T18:38:30Z"}
+{"component":"TESTBED","instance":"[Project: 3]","level":"info","msg":"Start application","time":"2025-01-27T18:38:30Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-01-27T18:38:30Z"}
+{"component":"TESTBED","instance":"[Project: 3]","level":"info","msg":"Append app to list","time":"2025-01-27T18:38:33Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Create volume test_3_input_2_1738003113","time":"2025-01-27T18:38:33Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Create volume test_3_output_2_1738003113","time":"2025-01-27T18:38:33Z"}
+{"component":"TESTBED","instance":"[Project: 3]","level":"info","msg":"Move data to workspace from C:/Users/david/Desktop/Biostatistik/Autoencoder/vae\\data/client3","time":"2025-01-27T18:38:33Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Move data to workspace","time":"2025-01-27T18:38:33Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-01-27T18:38:34Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove application","time":"2025-01-27T18:38:38Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Intermediary container used for moving data from host to volume has been removed","time":"2025-01-27T18:38:46Z"}
+{"component":"TESTBED","instance":"[Project: 3]","level":"info","msg":"Move generic data to workspace skipped, no source provided","time":"2025-01-27T18:38:46Z"}
+{"component":"TESTBED","instance":"[Project: 3]","level":"info","msg":"Start application","time":"2025-01-27T18:38:46Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-01-27T18:38:46Z"}
+{"component":"TESTBED","instance":"[Project: 3]","level":"info","msg":"Append app to list","time":"2025-01-27T18:38:48Z"}
+{"component":"TESTBED","instance":"[Project: 3]","level":"info","msg":"Link fc_vae_106408904 with global socket server","time":"2025-01-27T18:38:48Z"}
+{"component":"TESTBED","instance":"[Project: 3]","level":"info","msg":"Link fc_vae_493834014 with global socket server","time":"2025-01-27T18:38:48Z"}
+{"component":"TESTBED","instance":"[Project: 3]","level":"info","msg":"Link fc_vae_494033889 with global socket server","time":"2025-01-27T18:38:48Z"}
+{"component":"TESTBED","instance":"[Project: 3]","level":"info","msg":"Start local socket server","time":"2025-01-27T18:38:48Z"}
+{"component":"TESTBED","instance":"[Project: 3]","level":"info","msg":"Start local socket server","time":"2025-01-27T18:38:48Z"}
+{"component":"TESTBED","instance":"[Project: 3]","level":"info","msg":"Start local socket server","time":"2025-01-27T18:38:48Z"}
+{"component":"TESTBED","instance":"[Project: 3]","level":"info","msg":"Link to global address","time":"2025-01-27T18:38:48Z"}
+{"component":"TESTBED","instance":"[Project: 3]","level":"info","msg":"Link to global address","time":"2025-01-27T18:38:48Z"}
+{"component":"TESTBED","instance":"[Project: 3]","level":"info","msg":"Link to global address","time":"2025-01-27T18:38:48Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Registered new coordinator controller","time":"2025-01-27T18:38:48Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Registered new participant controller","time":"2025-01-27T18:38:48Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Registered new participant controller","time":"2025-01-27T18:38:48Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Received setup trigger","time":"2025-01-27T18:38:48Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Received setup trigger","time":"2025-01-27T18:38:48Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Received setup trigger","time":"2025-01-27T18:38:48Z"}
+{"component":"LOCAL","instance":"","level":"error","msg":"Got error during setup to http://172.18.0.5:9000: Post \"http://172.18.0.5:9000/setup\": dial tcp 172.18.0.5:9000: connect: connection refused","time":"2025-01-27T18:38:48Z"}
+{"component":"LOCAL","instance":"","level":"error","msg":"Got error code during setup: 502, 502 Bad Gateway","time":"2025-01-27T18:38:48Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Setup 54d332f99ef5bf6bc262730306319f5c9ada9809c71c8096a8438cb2fc87a15b","time":"2025-01-27T18:38:49Z"}
+{"component":"TESTBED","instance":"[Project: 3]","level":"info","msg":"Setup triggered","time":"2025-01-27T18:38:49Z"}
+{"component":"TESTBED","instance":"[Project: 3]","level":"info","msg":"3 apps and server created and running","time":"2025-01-27T18:38:49Z"}
+{"component":"LOCAL","instance":"","level":"error","msg":"Got error code during setup: 502, 502 Bad Gateway","time":"2025-01-27T18:38:50Z"}
+{"component":"LOCAL","instance":"","level":"error","msg":"Got error code during setup: 502, 502 Bad Gateway","time":"2025-01-27T18:38:50Z"}
+{"component":"LOCAL","instance":"","level":"error","msg":"Got error code during setup: 502, 502 Bad Gateway","time":"2025-01-27T18:38:54Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"http://172.18.0.3:9000/status: Finished","time":"2025-01-27T18:38:55Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Participant (ID: b6473e421fd36e0c) finished the current step","time":"2025-01-27T18:38:55Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Shutdown","time":"2025-01-27T18:38:56Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Shutdown","time":"2025-01-27T18:38:56Z"}
+{"component":"GLOBAL","instance":"","level":"error","msg":"Participant (ID: b6473e421fd36e0c): relaying stopped due to: EOF","time":"2025-01-27T18:38:56Z"}
+{"component":"TESTBED","instance":"[Project: 3]","level":"info","msg":"Stopping test id: 3","time":"2025-01-27T18:38:56Z"}
+{"component":"TESTBED","instance":"[Project: 3]","level":"info","msg":"Stopping container fc_vae_106408904","time":"2025-01-27T18:38:56Z"}
+{"component":"GLOBAL","instance":"","level":"error","msg":"Participant (ID: 22879769846b31ae): relaying stopped due to: read tcp [::1]:9150-\u003e[::1]:38270: read: connection reset by peer","time":"2025-01-27T18:38:56Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Move data to host","time":"2025-01-27T18:38:57Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-01-27T18:38:57Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove application","time":"2025-01-27T18:38:59Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"http://172.18.0.4:9000/status: Finished","time":"2025-01-27T18:39:00Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Participant (ID: 516cf7a8151ce98b) finished the current step","time":"2025-01-27T18:39:00Z"}
+{"component":"DOCKER","instance":"","level":"debug","msg":"Intermediary container used for moving data from volume to host has been removed","time":"2025-01-27T18:39:00Z"}
+{"component":"TESTBED","instance":"[Project: 3]","level":"info","msg":"Saved output volume content to /data/tests/results_test_3_client_0_fc_vae_106408904.zip","time":"2025-01-27T18:39:00Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove volume test_3_output_0_1738003092","time":"2025-01-27T18:39:00Z"}
+{"component":"TESTBED","instance":"[Project: 3]","level":"info","msg":"Deleted volume test_3_output_0_1738003092","time":"2025-01-27T18:39:00Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove volume test_3_input_0_1738003092","time":"2025-01-27T18:39:00Z"}
+{"component":"TESTBED","instance":"[Project: 3]","level":"info","msg":"Deleted volume test_3_input_0_1738003092","time":"2025-01-27T18:39:00Z"}
+{"component":"TESTBED","instance":"[Project: 3]","level":"info","msg":"Stopping container fc_vae_493834014","time":"2025-01-27T18:39:00Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Move data to host","time":"2025-01-27T18:39:01Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-01-27T18:39:01Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove application","time":"2025-01-27T18:39:03Z"}
+{"component":"DOCKER","instance":"","level":"debug","msg":"Intermediary container used for moving data from volume to host has been removed","time":"2025-01-27T18:39:04Z"}
+{"component":"TESTBED","instance":"[Project: 3]","level":"info","msg":"Saved output volume content to /data/tests/results_test_3_client_1_fc_vae_493834014.zip","time":"2025-01-27T18:39:04Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove volume test_3_output_1_1738003100","time":"2025-01-27T18:39:04Z"}
+{"component":"TESTBED","instance":"[Project: 3]","level":"info","msg":"Deleted volume test_3_output_1_1738003100","time":"2025-01-27T18:39:04Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove volume test_3_input_1_1738003100","time":"2025-01-27T18:39:04Z"}
+{"component":"TESTBED","instance":"[Project: 3]","level":"info","msg":"Deleted volume test_3_input_1_1738003100","time":"2025-01-27T18:39:04Z"}
+{"component":"TESTBED","instance":"[Project: 3]","level":"info","msg":"Stopping container fc_vae_494033889","time":"2025-01-27T18:39:04Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Move data to host","time":"2025-01-27T18:39:05Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-01-27T18:39:05Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove application","time":"2025-01-27T18:39:07Z"}
+{"component":"DOCKER","instance":"","level":"debug","msg":"Intermediary container used for moving data from volume to host has been removed","time":"2025-01-27T18:39:08Z"}
+{"component":"TESTBED","instance":"[Project: 3]","level":"info","msg":"Saved output volume content to /data/tests/results_test_3_client_2_fc_vae_494033889.zip","time":"2025-01-27T18:39:08Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove volume test_3_output_2_1738003113","time":"2025-01-27T18:39:08Z"}
+{"component":"TESTBED","instance":"[Project: 3]","level":"info","msg":"Deleted volume test_3_output_2_1738003113","time":"2025-01-27T18:39:08Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove volume test_3_input_2_1738003113","time":"2025-01-27T18:39:08Z"}
+{"component":"TESTBED","instance":"[Project: 3]","level":"info","msg":"Deleted volume test_3_input_2_1738003113","time":"2025-01-27T18:39:08Z"}
+{"component":"LOCAL","instance":"","level":"error","msg":"Get \"http://172.18.0.4:9000/status\": dial tcp 172.18.0.4:9000: i/o timeout","time":"2025-01-27T18:39:32Z"}
+{"component":"TESTBED","instance":"","level":"info","msg":"Create new test","time":"2025-01-27T19:08:26Z"}
+{"component":"TESTBED","instance":"[Project: 4]","level":"info","msg":"Create volumes and containers...","time":"2025-01-27T19:08:26Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Create volume test_4_input_0_1738004906","time":"2025-01-27T19:08:26Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Create volume test_4_output_0_1738004906","time":"2025-01-27T19:08:26Z"}
+{"component":"TESTBED","instance":"[Project: 4]","level":"info","msg":"Move data to workspace from C:/Users/david/Desktop/Biostatistik/Autoencoder/vae\\data/client1","time":"2025-01-27T19:08:26Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Move data to workspace","time":"2025-01-27T19:08:26Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-01-27T19:08:26Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove application","time":"2025-01-27T19:08:29Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Intermediary container used for moving data from host to volume has been removed","time":"2025-01-27T19:08:32Z"}
+{"component":"TESTBED","instance":"[Project: 4]","level":"info","msg":"Move generic data to workspace skipped, no source provided","time":"2025-01-27T19:08:32Z"}
+{"component":"TESTBED","instance":"[Project: 4]","level":"info","msg":"Start application","time":"2025-01-27T19:08:32Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-01-27T19:08:32Z"}
+{"component":"TESTBED","instance":"[Project: 4]","level":"info","msg":"Append app to list","time":"2025-01-27T19:08:33Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Create volume test_4_input_1_1738004913","time":"2025-01-27T19:08:33Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Create volume test_4_output_1_1738004913","time":"2025-01-27T19:08:33Z"}
+{"component":"TESTBED","instance":"[Project: 4]","level":"info","msg":"Move data to workspace from C:/Users/david/Desktop/Biostatistik/Autoencoder/vae\\data/client2","time":"2025-01-27T19:08:33Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Move data to workspace","time":"2025-01-27T19:08:33Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-01-27T19:08:34Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove application","time":"2025-01-27T19:08:36Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Intermediary container used for moving data from host to volume has been removed","time":"2025-01-27T19:08:39Z"}
+{"component":"TESTBED","instance":"[Project: 4]","level":"info","msg":"Move generic data to workspace skipped, no source provided","time":"2025-01-27T19:08:39Z"}
+{"component":"TESTBED","instance":"[Project: 4]","level":"info","msg":"Start application","time":"2025-01-27T19:08:39Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-01-27T19:08:39Z"}
+{"component":"TESTBED","instance":"[Project: 4]","level":"info","msg":"Append app to list","time":"2025-01-27T19:08:41Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Create volume test_4_input_2_1738004921","time":"2025-01-27T19:08:41Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Create volume test_4_output_2_1738004921","time":"2025-01-27T19:08:41Z"}
+{"component":"TESTBED","instance":"[Project: 4]","level":"info","msg":"Move data to workspace from C:/Users/david/Desktop/Biostatistik/Autoencoder/vae\\data/client3","time":"2025-01-27T19:08:41Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Move data to workspace","time":"2025-01-27T19:08:41Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-01-27T19:08:42Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove application","time":"2025-01-27T19:08:44Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Intermediary container used for moving data from host to volume has been removed","time":"2025-01-27T19:08:46Z"}
+{"component":"TESTBED","instance":"[Project: 4]","level":"info","msg":"Move generic data to workspace skipped, no source provided","time":"2025-01-27T19:08:46Z"}
+{"component":"TESTBED","instance":"[Project: 4]","level":"info","msg":"Start application","time":"2025-01-27T19:08:46Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-01-27T19:08:46Z"}
+{"component":"TESTBED","instance":"[Project: 4]","level":"info","msg":"Append app to list","time":"2025-01-27T19:08:48Z"}
+{"component":"TESTBED","instance":"[Project: 4]","level":"info","msg":"Link fc_vae_125778460 with global socket server","time":"2025-01-27T19:08:48Z"}
+{"component":"TESTBED","instance":"[Project: 4]","level":"info","msg":"Link fc_vae_888076826 with global socket server","time":"2025-01-27T19:08:48Z"}
+{"component":"TESTBED","instance":"[Project: 4]","level":"info","msg":"Link fc_vae_466851734 with global socket server","time":"2025-01-27T19:08:48Z"}
+{"component":"TESTBED","instance":"[Project: 4]","level":"info","msg":"Start local socket server","time":"2025-01-27T19:08:48Z"}
+{"component":"TESTBED","instance":"[Project: 4]","level":"info","msg":"Start local socket server","time":"2025-01-27T19:08:48Z"}
+{"component":"TESTBED","instance":"[Project: 4]","level":"info","msg":"Start local socket server","time":"2025-01-27T19:08:48Z"}
+{"component":"TESTBED","instance":"[Project: 4]","level":"info","msg":"Link to global address","time":"2025-01-27T19:08:48Z"}
+{"component":"TESTBED","instance":"[Project: 4]","level":"info","msg":"Link to global address","time":"2025-01-27T19:08:48Z"}
+{"component":"TESTBED","instance":"[Project: 4]","level":"info","msg":"Link to global address","time":"2025-01-27T19:08:48Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Registered new participant controller","time":"2025-01-27T19:08:48Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Registered new coordinator controller","time":"2025-01-27T19:08:48Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Registered new participant controller","time":"2025-01-27T19:08:48Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Received setup trigger","time":"2025-01-27T19:08:48Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Received setup trigger","time":"2025-01-27T19:08:48Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Received setup trigger","time":"2025-01-27T19:08:48Z"}
+{"component":"LOCAL","instance":"","level":"error","msg":"Got error during setup to http://172.18.0.5:9000: Post \"http://172.18.0.5:9000/setup\": dial tcp 172.18.0.5:9000: connect: connection refused","time":"2025-01-27T19:08:48Z"}
+{"component":"LOCAL","instance":"","level":"error","msg":"Got error code during setup: 502, 502 Bad Gateway","time":"2025-01-27T19:08:48Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Setup 31b8d78069905f5075a994e93fc1c9151bc748a6cfe11ecbef04b110c967657a","time":"2025-01-27T19:08:49Z"}
+{"component":"TESTBED","instance":"[Project: 4]","level":"info","msg":"Setup triggered","time":"2025-01-27T19:08:49Z"}
+{"component":"TESTBED","instance":"[Project: 4]","level":"info","msg":"3 apps and server created and running","time":"2025-01-27T19:08:49Z"}
+{"component":"LOCAL","instance":"","level":"error","msg":"Got error code during setup: 502, 502 Bad Gateway","time":"2025-01-27T19:08:50Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"http://172.18.0.3:9000/status: Finished","time":"2025-01-27T19:08:53Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Participant (ID: 0a6894f69aa41276) finished the current step","time":"2025-01-27T19:08:53Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Shutdown","time":"2025-01-27T19:08:54Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Shutdown","time":"2025-01-27T19:08:54Z"}
+{"component":"GLOBAL","instance":"","level":"error","msg":"Participant (ID: 0a6894f69aa41276): relaying stopped due to: EOF","time":"2025-01-27T19:08:54Z"}
+{"component":"LOCAL","instance":"","level":"error","msg":"Got error code during setup: 502, 502 Bad Gateway","time":"2025-01-27T19:08:54Z"}
+{"component":"TESTBED","instance":"[Project: 4]","level":"info","msg":"Stopping test id: 4","time":"2025-01-27T19:08:54Z"}
+{"component":"TESTBED","instance":"[Project: 4]","level":"info","msg":"Stopping container fc_vae_125778460","time":"2025-01-27T19:08:54Z"}
+{"component":"GLOBAL","instance":"","level":"error","msg":"Participant (ID: a324775fa3cb06b2): relaying stopped due to: read tcp [::1]:9150-\u003e[::1]:53308: read: connection reset by peer","time":"2025-01-27T19:08:54Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Move data to host","time":"2025-01-27T19:08:55Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-01-27T19:08:55Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"http://172.18.0.4:9000/status: Finished","time":"2025-01-27T19:08:57Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Participant (ID: ae5e1e322b51cf6c) finished the current step","time":"2025-01-27T19:08:57Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove application","time":"2025-01-27T19:08:57Z"}
+{"component":"DOCKER","instance":"","level":"debug","msg":"Intermediary container used for moving data from volume to host has been removed","time":"2025-01-27T19:08:58Z"}
+{"component":"TESTBED","instance":"[Project: 4]","level":"info","msg":"Saved output volume content to /data/tests/results_test_4_client_0_fc_vae_125778460.zip","time":"2025-01-27T19:08:58Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove volume test_4_output_0_1738004906","time":"2025-01-27T19:08:58Z"}
+{"component":"TESTBED","instance":"[Project: 4]","level":"info","msg":"Deleted volume test_4_output_0_1738004906","time":"2025-01-27T19:08:58Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove volume test_4_input_0_1738004906","time":"2025-01-27T19:08:58Z"}
+{"component":"TESTBED","instance":"[Project: 4]","level":"info","msg":"Deleted volume test_4_input_0_1738004906","time":"2025-01-27T19:08:58Z"}
+{"component":"TESTBED","instance":"[Project: 4]","level":"info","msg":"Stopping container fc_vae_888076826","time":"2025-01-27T19:08:58Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Move data to host","time":"2025-01-27T19:08:59Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-01-27T19:08:59Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove application","time":"2025-01-27T19:09:02Z"}
+{"component":"DOCKER","instance":"","level":"debug","msg":"Intermediary container used for moving data from volume to host has been removed","time":"2025-01-27T19:09:03Z"}
+{"component":"TESTBED","instance":"[Project: 4]","level":"info","msg":"Saved output volume content to /data/tests/results_test_4_client_1_fc_vae_888076826.zip","time":"2025-01-27T19:09:03Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove volume test_4_output_1_1738004913","time":"2025-01-27T19:09:03Z"}
+{"component":"TESTBED","instance":"[Project: 4]","level":"info","msg":"Deleted volume test_4_output_1_1738004913","time":"2025-01-27T19:09:03Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove volume test_4_input_1_1738004913","time":"2025-01-27T19:09:03Z"}
+{"component":"TESTBED","instance":"[Project: 4]","level":"info","msg":"Deleted volume test_4_input_1_1738004913","time":"2025-01-27T19:09:03Z"}
+{"component":"TESTBED","instance":"[Project: 4]","level":"info","msg":"Stopping container fc_vae_466851734","time":"2025-01-27T19:09:03Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Move data to host","time":"2025-01-27T19:09:03Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-01-27T19:09:04Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove application","time":"2025-01-27T19:09:06Z"}
+{"component":"DOCKER","instance":"","level":"debug","msg":"Intermediary container used for moving data from volume to host has been removed","time":"2025-01-27T19:09:07Z"}
+{"component":"TESTBED","instance":"[Project: 4]","level":"info","msg":"Saved output volume content to /data/tests/results_test_4_client_2_fc_vae_466851734.zip","time":"2025-01-27T19:09:07Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove volume test_4_output_2_1738004921","time":"2025-01-27T19:09:07Z"}
+{"component":"TESTBED","instance":"[Project: 4]","level":"info","msg":"Deleted volume test_4_output_2_1738004921","time":"2025-01-27T19:09:07Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove volume test_4_input_2_1738004921","time":"2025-01-27T19:09:07Z"}
+{"component":"TESTBED","instance":"[Project: 4]","level":"info","msg":"Deleted volume test_4_input_2_1738004921","time":"2025-01-27T19:09:07Z"}
+{"component":"LOCAL","instance":"","level":"error","msg":"Get \"http://172.18.0.4:9000/status\": dial tcp 172.18.0.4:9000: i/o timeout","time":"2025-01-27T19:09:29Z"}
+{"component":"HTTP","instance":"","level":"debug","msg":"Set site received","time":"2025-01-27T19:09:29Z"}
+{"component":"HTTP","instance":"","level":"debug","msg":"Set site received","time":"2025-01-27T19:10:09Z"}

@@ -1,0 +1,428 @@
+2025-01-12 11:23:33,670 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-01-12 11:23:33,672 INFO supervisord started with pid 7
+2025-01-12 11:23:34,676 INFO spawned: 'nginx' with pid 10
+2025-01-12 11:23:34,679 INFO spawned: 'app' with pid 11
+2025-01-12 11:23:35,721 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-01-12 11:23:35,721 INFO success: app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+Bottle v0.13.2 server starting up (using WSGIRefServer())...
+Listening on http://localhost:5000/
+Hit Ctrl-C to quit.
+
+[CTRL] POST /setup
+[Time: 12.01.25 11:23:40] [Level: info] id: 30ec0503a6586d70
+[Time: 12.01.25 11:23:40] [Level: info] coordinator: False
+[Time: 12.01.25 11:23:40] [Level: info] clients: ['dbb5d0331ec17870', 'a6f1bb64e40f4189', '30ec0503a6586d70']
+[Time: 12.01.25 11:23:40] [Level: info] state: initial
+[Time: 12.01.25 11:23:40] [Level: info] [State: initial] Reading configuration file...
+[Time: 12.01.25 11:23:40] [Level: info] [State: initial] Initializing: Setting iteration to 0, setting max_iterations...
+[Time: 12.01.25 11:23:40] [Level: info] [State: initial] Done reading configuration file.
+[Time: 12.01.25 11:23:40] [Level: info] [State: initial] Max Iterations: 5
+[Time: 12.01.25 11:23:40] [Level: info] [State: initial] Reading training data...
+127.0.0.1 - - [12/Jan/2025 11:23:40] "POST /api/setup HTTP/1.0" 200 0
+127.0.0.1 - - [12/Jan/2025 11:23:40] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:23:41] [Level: info] [State: initial] Initializing pre-trained model...
+[Time: 12.01.25 11:23:41] [Level: info] [State: initial] INITIAL input_dim: $6001
+127.0.0.1 - - [12/Jan/2025 11:23:42] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:23:43] [Level: info] [State: initial] Initializing cluster centers...
+[Time: 12.01.25 11:23:43] [Level: info] transition: compute
+127.0.0.1 - - [12/Jan/2025 11:23:44] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:23:44] [Level: info] state: compute
+[Time: 12.01.25 11:23:44] [Level: info] [State: compute] ITERATION 1
+[Time: 12.01.25 11:23:44] [Level: info] [State: compute] receiving weights...
+127.0.0.1 - - [12/Jan/2025 11:23:46] "GET /api/status HTTP/1.0" 200 155
+[CTRL] POST /data
+127.0.0.1 - - [12/Jan/2025 11:23:47] "POST /api/data?client=a6f1bb64e40f4189&memo=None HTTP/1.0" 200 0
+[Time: 12.01.25 11:23:47] [Level: info] [State: compute] Loading global weights for model...
+[Time: 12.01.25 11:23:47] [Level: info] [State: compute] Updated model with received weights.
+[Time: 12.01.25 11:23:47] [Level: info] [State: compute] Loading data...
+[Time: 12.01.25 11:23:47] [Level: info] [State: compute] Preparing model training...
+[Time: 12.01.25 11:23:47] [Level: info] [State: compute] Training model for one epoch...
+127.0.0.1 - - [12/Jan/2025 11:23:48] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:23:48] [Level: info] [State: compute] Local training loss: 19.75348472595215
+[Time: 12.01.25 11:23:48] [Level: info] [State: compute] Training the decoder...
+127.0.0.1 - - [12/Jan/2025 11:23:50] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:23:51] [Level: info] [State: compute] Epoch 10, Total Loss: 1.8905466794967651, KL Loss: -2.086162576020456e-09, Recon Loss: 18.905466079711914
+127.0.0.1 - - [12/Jan/2025 11:23:52] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:23:54] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:23:56] [Level: info] [State: compute] Epoch 20, Total Loss: 1.4543331861495972, KL Loss: -2.086162576020456e-09, Recon Loss: 14.543331146240234
+127.0.0.1 - - [12/Jan/2025 11:23:56] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:23:58] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:24:00] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:24:02] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:24:03] [Level: info] [State: compute] Epoch 30, Total Loss: 0.6214427947998047, KL Loss: -1.19209286886246e-09, Recon Loss: 6.214427947998047
+127.0.0.1 - - [12/Jan/2025 11:24:04] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:24:06] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:24:08] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:24:09] [Level: info] [State: compute] Epoch 40, Total Loss: 0.4068182110786438, KL Loss: 7.450580596923828e-09, Recon Loss: 4.068181991577148
+127.0.0.1 - - [12/Jan/2025 11:24:10] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:24:12] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:24:14] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:24:16] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:24:18] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:24:19] [Level: info] [State: compute] Epoch 50, Total Loss: 0.3437134921550751, KL Loss: 9.834766778737958e-09, Recon Loss: 3.4371347427368164
+127.0.0.1 - - [12/Jan/2025 11:24:20] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:24:22] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:24:24] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:24:26] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:24:27] [Level: info] [State: compute] Epoch 60, Total Loss: 0.3259447515010834, KL Loss: 2.533197429599454e-09, Recon Loss: 3.2594475746154785
+127.0.0.1 - - [12/Jan/2025 11:24:28] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:24:30] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:24:32] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:24:34] [Level: info] [State: compute] Epoch 70, Total Loss: 0.3195308446884155, KL Loss: 8.046627364421965e-09, Recon Loss: 3.1953084468841553
+127.0.0.1 - - [12/Jan/2025 11:24:34] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:24:36] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:24:38] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:24:40] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:24:42] [Level: info] [State: compute] Epoch 80, Total Loss: 0.3175327479839325, KL Loss: -1.0579824127887605e-08, Recon Loss: 3.1753275394439697
+127.0.0.1 - - [12/Jan/2025 11:24:42] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:24:44] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:24:46] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:24:48] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:24:50] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:24:50] [Level: info] [State: compute] Epoch 90, Total Loss: 0.31674864888191223, KL Loss: 5.9604645663569045e-09, Recon Loss: 3.1674864292144775
+127.0.0.1 - - [12/Jan/2025 11:24:52] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:24:53] [Level: info] [State: compute] Epoch 100, Total Loss: 0.31654033064842224, KL Loss: 0.0, Recon Loss: 3.165403366088867
+[Time: 12.01.25 11:24:53] [Level: info] [State: compute] Saving model and decoder...
+[Time: 12.01.25 11:24:53] [Level: info] [State: compute] Scoring model...
+[Time: 12.01.25 11:24:53] [Level: info] [State: compute] Adjusted Rand Index (ARI): 0.0
+[Time: 12.01.25 11:24:53] [Level: info] [State: compute] Sent updated weights to coordinator.
+[Time: 12.01.25 11:24:53] [Level: info] transition: compute
+[Time: 12.01.25 11:24:54] [Level: info] state: compute
+[Time: 12.01.25 11:24:54] [Level: info] [State: compute] ITERATION 2
+[Time: 12.01.25 11:24:54] [Level: info] [State: compute] receiving weights...
+127.0.0.1 - - [12/Jan/2025 11:24:54] "GET /api/status HTTP/1.0" 200 164
+[CTRL] GET /data
+127.0.0.1 - - [12/Jan/2025 11:24:57] "GET /api/data HTTP/1.0" 200 34213087
+127.0.0.1 - - [12/Jan/2025 11:24:59] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:25:01] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:25:03] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:25:05] "GET /api/status HTTP/1.0" 200 155
+[CTRL] POST /data
+127.0.0.1 - - [12/Jan/2025 11:25:06] "POST /api/data?client=a6f1bb64e40f4189&memo=None HTTP/1.0" 200 0
+[Time: 12.01.25 11:25:06] [Level: info] [State: compute] Loading global weights for model...
+[Time: 12.01.25 11:25:06] [Level: info] [State: compute] Updated model with received weights.
+[Time: 12.01.25 11:25:06] [Level: info] [State: compute] Loading data...
+[Time: 12.01.25 11:25:06] [Level: info] [State: compute] Preparing model training...
+[Time: 12.01.25 11:25:06] [Level: info] [State: compute] Training model for one epoch...
+[Time: 12.01.25 11:25:07] [Level: info] [State: compute] Local training loss: 4122629.25
+[Time: 12.01.25 11:25:07] [Level: info] [State: compute] Training the decoder...
+127.0.0.1 - - [12/Jan/2025 11:25:08] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:25:10] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:25:12] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:25:14] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:25:16] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:25:18] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:25:18] [Level: info] [State: compute] Epoch 10, Total Loss: 52.857666015625, KL Loss: 2.533197429599454e-09, Recon Loss: 528.57666015625
+127.0.0.1 - - [12/Jan/2025 11:25:20] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:25:22] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:25:24] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:25:25] [Level: info] [State: compute] Epoch 20, Total Loss: 2.0581114292144775, KL Loss: 1.609325472884393e-08, Recon Loss: 20.581113815307617
+127.0.0.1 - - [12/Jan/2025 11:25:26] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:25:28] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:25:30] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:25:32] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:25:34] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:25:34] [Level: info] [State: compute] Epoch 30, Total Loss: 1.8646087646484375, KL Loss: 9.53674295089968e-09, Recon Loss: 18.646087646484375
+127.0.0.1 - - [12/Jan/2025 11:25:36] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:25:38] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:25:40] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:25:42] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:25:44] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:25:46] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:25:46] [Level: info] [State: compute] Epoch 40, Total Loss: 1.718347430229187, KL Loss: 3.8743017682918435e-09, Recon Loss: 17.183473587036133
+127.0.0.1 - - [12/Jan/2025 11:25:48] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:25:50] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:25:52] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:25:54] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:25:56] [Level: info] [State: compute] Epoch 50, Total Loss: 1.4871848821640015, KL Loss: 1.9371508841459217e-09, Recon Loss: 14.871848106384277
+127.0.0.1 - - [12/Jan/2025 11:25:56] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:25:58] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:26:00] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:26:02] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:26:04] [Level: info] [State: compute] Epoch 60, Total Loss: 0.5072085857391357, KL Loss: 3.8743017682918435e-09, Recon Loss: 5.072085857391357
+127.0.0.1 - - [12/Jan/2025 11:26:04] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:26:06] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:26:08] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:26:10] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:26:12] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:26:14] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:26:16] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:26:18] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:26:18] [Level: info] [State: compute] Epoch 70, Total Loss: 0.4011654853820801, KL Loss: 2.086162576020456e-09, Recon Loss: 4.011654853820801
+127.0.0.1 - - [12/Jan/2025 11:26:20] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:26:22] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:26:24] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:26:26] [Level: info] [State: compute] Epoch 80, Total Loss: 0.3605939447879791, KL Loss: 1.9371508841459217e-09, Recon Loss: 3.6059393882751465
+127.0.0.1 - - [12/Jan/2025 11:26:26] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:26:28] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:26:28] [Level: info] [State: compute] Epoch 90, Total Loss: 0.3428720235824585, KL Loss: -2.533197429599454e-09, Recon Loss: 3.428720235824585
+127.0.0.1 - - [12/Jan/2025 11:26:30] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:26:31] [Level: info] [State: compute] Epoch 100, Total Loss: 0.33049437403678894, KL Loss: -3.725290298461914e-09, Recon Loss: 3.304943561553955
+[Time: 12.01.25 11:26:31] [Level: info] [State: compute] Saving model and decoder...
+[Time: 12.01.25 11:26:31] [Level: info] [State: compute] Scoring model...
+[Time: 12.01.25 11:26:31] [Level: info] [State: compute] Adjusted Rand Index (ARI): 0.0
+[Time: 12.01.25 11:26:31] [Level: info] [State: compute] Sent updated weights to coordinator.
+[Time: 12.01.25 11:26:31] [Level: info] transition: compute
+127.0.0.1 - - [12/Jan/2025 11:26:32] "GET /api/status HTTP/1.0" 200 164
+[CTRL] GET /data
+[Time: 12.01.25 11:26:32] [Level: info] state: compute
+[Time: 12.01.25 11:26:32] [Level: info] [State: compute] ITERATION 3
+[Time: 12.01.25 11:26:32] [Level: info] [State: compute] receiving weights...
+127.0.0.1 - - [12/Jan/2025 11:26:35] "GET /api/data HTTP/1.0" 200 34213087
+127.0.0.1 - - [12/Jan/2025 11:26:37] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:26:39] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:26:41] "GET /api/status HTTP/1.0" 200 155
+[CTRL] POST /data
+127.0.0.1 - - [12/Jan/2025 11:26:43] "POST /api/data?client=a6f1bb64e40f4189&memo=None HTTP/1.0" 200 0
+127.0.0.1 - - [12/Jan/2025 11:26:43] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:26:43] [Level: info] [State: compute] Loading global weights for model...
+[Time: 12.01.25 11:26:44] [Level: info] [State: compute] Updated model with received weights.
+[Time: 12.01.25 11:26:44] [Level: info] [State: compute] Loading data...
+[Time: 12.01.25 11:26:44] [Level: info] [State: compute] Preparing model training...
+[Time: 12.01.25 11:26:44] [Level: info] [State: compute] Training model for one epoch...
+127.0.0.1 - - [12/Jan/2025 11:26:45] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:26:46] [Level: info] [State: compute] Local training loss: 837841600.0
+[Time: 12.01.25 11:26:46] [Level: info] [State: compute] Training the decoder...
+127.0.0.1 - - [12/Jan/2025 11:26:47] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:26:49] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:26:51] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:26:53] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:26:55] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:26:57] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:26:59] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:27:01] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:27:03] [Level: info] [State: compute] Epoch 10, Total Loss: 1.8542355298995972, KL Loss: 4.470348535789981e-09, Recon Loss: 18.542354583740234
+127.0.0.1 - - [12/Jan/2025 11:27:03] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:27:05] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:27:07] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:27:09] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:27:11] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:27:13] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:27:15] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:27:16] [Level: info] [State: compute] Epoch 20, Total Loss: 1.8629801273345947, KL Loss: -7.00354574334483e-09, Recon Loss: 18.62980079650879
+127.0.0.1 - - [12/Jan/2025 11:27:17] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:27:19] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:27:21] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:27:23] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:27:25] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:27:27] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:27:28] [Level: info] [State: compute] Epoch 30, Total Loss: 1.8640283346176147, KL Loss: -1.9371508841459217e-09, Recon Loss: 18.640283584594727
+127.0.0.1 - - [12/Jan/2025 11:27:29] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:27:31] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:27:33] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:27:35] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:27:37] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:27:39] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:27:41] [Level: info] [State: compute] Epoch 40, Total Loss: 1.8613499402999878, KL Loss: -5.364418242947977e-09, Recon Loss: 18.61349868774414
+127.0.0.1 - - [12/Jan/2025 11:27:41] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:27:43] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:27:45] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:27:47] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:27:49] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:27:51] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:27:52] [Level: info] [State: compute] Epoch 50, Total Loss: 1.8570953607559204, KL Loss: 4.470348535789981e-09, Recon Loss: 18.570953369140625
+127.0.0.1 - - [12/Jan/2025 11:27:53] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:27:55] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:27:57] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:27:59] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:28:02] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:28:04] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:28:05] [Level: info] [State: compute] Epoch 60, Total Loss: 1.8521174192428589, KL Loss: -6.705522359595761e-09, Recon Loss: 18.52117347717285
+127.0.0.1 - - [12/Jan/2025 11:28:06] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:28:08] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:28:10] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:28:12] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:28:13] [Level: info] [State: compute] Epoch 70, Total Loss: 1.8467553853988647, KL Loss: -1.9371508841459217e-09, Recon Loss: 18.467554092407227
+127.0.0.1 - - [12/Jan/2025 11:28:14] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:28:16] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:28:18] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:28:20] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:28:21] [Level: info] [State: compute] Epoch 80, Total Loss: 1.8411601781845093, KL Loss: -2.533197429599454e-09, Recon Loss: 18.411602020263672
+127.0.0.1 - - [12/Jan/2025 11:28:22] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:28:24] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:28:24] [Level: info] [State: compute] Epoch 90, Total Loss: 1.8354120254516602, KL Loss: -4.470348535789981e-09, Recon Loss: 18.3541202545166
+127.0.0.1 - - [12/Jan/2025 11:28:26] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:28:26] [Level: info] [State: compute] Epoch 100, Total Loss: 1.8295665979385376, KL Loss: -2.533197429599454e-09, Recon Loss: 18.295665740966797
+[Time: 12.01.25 11:28:26] [Level: info] [State: compute] Saving model and decoder...
+[Time: 12.01.25 11:28:26] [Level: info] [State: compute] Scoring model...
+[Time: 12.01.25 11:28:27] [Level: info] [State: compute] Adjusted Rand Index (ARI): 0.0
+[Time: 12.01.25 11:28:27] [Level: info] [State: compute] Sent updated weights to coordinator.
+[Time: 12.01.25 11:28:27] [Level: info] transition: compute
+[Time: 12.01.25 11:28:28] [Level: info] state: compute
+[Time: 12.01.25 11:28:28] [Level: info] [State: compute] ITERATION 4
+[Time: 12.01.25 11:28:28] [Level: info] [State: compute] receiving weights...
+127.0.0.1 - - [12/Jan/2025 11:28:28] "GET /api/status HTTP/1.0" 200 164
+[CTRL] GET /data
+127.0.0.1 - - [12/Jan/2025 11:28:28] "GET /api/data HTTP/1.0" 200 34213087
+127.0.0.1 - - [12/Jan/2025 11:28:32] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:28:34] "GET /api/status HTTP/1.0" 200 155
+[CTRL] POST /data
+127.0.0.1 - - [12/Jan/2025 11:28:36] "POST /api/data?client=a6f1bb64e40f4189&memo=None HTTP/1.0" 200 0
+127.0.0.1 - - [12/Jan/2025 11:28:36] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:28:36] [Level: info] [State: compute] Loading global weights for model...
+[Time: 12.01.25 11:28:36] [Level: info] [State: compute] Updated model with received weights.
+[Time: 12.01.25 11:28:36] [Level: info] [State: compute] Loading data...
+[Time: 12.01.25 11:28:36] [Level: info] [State: compute] Preparing model training...
+[Time: 12.01.25 11:28:36] [Level: info] [State: compute] Training model for one epoch...
+127.0.0.1 - - [12/Jan/2025 11:28:38] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:28:38] [Level: info] [State: compute] Local training loss: 42.805057525634766
+[Time: 12.01.25 11:28:38] [Level: info] [State: compute] Training the decoder...
+127.0.0.1 - - [12/Jan/2025 11:28:40] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:28:42] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:28:44] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:28:44] [Level: info] [State: compute] Epoch 10, Total Loss: 4.106657028198242, KL Loss: -2.2798776200261273e-08, Recon Loss: 41.06657028198242
+127.0.0.1 - - [12/Jan/2025 11:28:46] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:28:48] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:28:50] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:28:52] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:28:54] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:28:54] [Level: info] [State: compute] Epoch 20, Total Loss: 3.88158917427063, KL Loss: -2.324581060975106e-08, Recon Loss: 38.81589126586914
+127.0.0.1 - - [12/Jan/2025 11:28:56] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:28:58] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:29:00] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:29:02] [Level: info] [State: compute] Epoch 30, Total Loss: 3.672470808029175, KL Loss: -2.6226043559063328e-08, Recon Loss: 36.724708557128906
+127.0.0.1 - - [12/Jan/2025 11:29:02] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:29:04] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:29:06] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:29:08] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:29:10] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:29:11] [Level: info] [State: compute] Epoch 40, Total Loss: 3.4875123500823975, KL Loss: -2.2798776200261273e-08, Recon Loss: 34.8751220703125
+127.0.0.1 - - [12/Jan/2025 11:29:12] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:29:14] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:29:16] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:29:18] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:29:19] [Level: info] [State: compute] Epoch 50, Total Loss: 3.322751760482788, KL Loss: -2.2053718851111626e-08, Recon Loss: 33.227516174316406
+127.0.0.1 - - [12/Jan/2025 11:29:20] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:29:22] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:29:24] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:29:26] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:29:28] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:29:29] [Level: info] [State: compute] Epoch 60, Total Loss: 3.173311948776245, KL Loss: -2.1755695911451767e-08, Recon Loss: 31.733118057250977
+127.0.0.1 - - [12/Jan/2025 11:29:30] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:29:32] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:29:34] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:29:36] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:29:38] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:29:39] [Level: info] [State: compute] Epoch 70, Total Loss: 3.0355453491210938, KL Loss: -2.0563602376455492e-08, Recon Loss: 30.355453491210938
+127.0.0.1 - - [12/Jan/2025 11:29:40] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:29:42] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:29:44] [Level: info] [State: compute] Epoch 80, Total Loss: 2.907013177871704, KL Loss: -2.2947787670091202e-08, Recon Loss: 29.070131301879883
+127.0.0.1 - - [12/Jan/2025 11:29:44] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:29:46] [Level: info] [State: compute] Epoch 90, Total Loss: 2.786111831665039, KL Loss: -2.5182963270253822e-08, Recon Loss: 27.86111831665039
+127.0.0.1 - - [12/Jan/2025 11:29:46] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:29:48] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:29:49] [Level: info] [State: compute] Epoch 100, Total Loss: 2.6717822551727295, KL Loss: -2.2947787670091202e-08, Recon Loss: 26.717823028564453
+[Time: 12.01.25 11:29:49] [Level: info] [State: compute] Saving model and decoder...
+[Time: 12.01.25 11:29:49] [Level: info] [State: compute] Scoring model...
+[Time: 12.01.25 11:29:49] [Level: info] [State: compute] Adjusted Rand Index (ARI): -0.0011244305170587231
+[Time: 12.01.25 11:29:49] [Level: info] [State: compute] Sent updated weights to coordinator.
+[Time: 12.01.25 11:29:49] [Level: info] transition: compute
+[Time: 12.01.25 11:29:50] [Level: info] state: compute
+[Time: 12.01.25 11:29:50] [Level: info] [State: compute] ITERATION 5
+[Time: 12.01.25 11:29:50] [Level: info] [State: compute] receiving weights...
+127.0.0.1 - - [12/Jan/2025 11:29:50] "GET /api/status HTTP/1.0" 200 164
+[CTRL] GET /data
+127.0.0.1 - - [12/Jan/2025 11:29:50] "GET /api/data HTTP/1.0" 200 34213087
+127.0.0.1 - - [12/Jan/2025 11:29:54] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:29:56] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:29:58] "GET /api/status HTTP/1.0" 200 155
+[CTRL] POST /data
+127.0.0.1 - - [12/Jan/2025 11:29:59] "POST /api/data?client=a6f1bb64e40f4189&memo=None HTTP/1.0" 200 0
+[Time: 12.01.25 11:29:59] [Level: info] [State: compute] Loading global weights for model...
+[Time: 12.01.25 11:29:59] [Level: info] [State: compute] Updated model with received weights.
+[Time: 12.01.25 11:29:59] [Level: info] [State: compute] Loading data...
+[Time: 12.01.25 11:29:59] [Level: info] [State: compute] Preparing model training...
+[Time: 12.01.25 11:29:59] [Level: info] [State: compute] Training model for one epoch...
+127.0.0.1 - - [12/Jan/2025 11:30:00] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:30:01] [Level: info] [State: compute] Local training loss: 1787.0137939453125
+[Time: 12.01.25 11:30:01] [Level: info] [State: compute] Training the decoder...
+127.0.0.1 - - [12/Jan/2025 11:30:02] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:30:04] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:30:06] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:30:08] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:30:10] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:30:12] [Level: info] [State: compute] Epoch 10, Total Loss: 170.17581176757812, KL Loss: 0.0, Recon Loss: 1701.758056640625
+127.0.0.1 - - [12/Jan/2025 11:30:12] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:30:14] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:30:16] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:30:18] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:30:20] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:30:22] [Level: info] [State: compute] Epoch 20, Total Loss: 159.22718811035156, KL Loss: 0.0, Recon Loss: 1592.2718505859375
+127.0.0.1 - - [12/Jan/2025 11:30:22] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:30:24] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:30:26] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:30:28] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:30:30] [Level: info] [State: compute] Epoch 30, Total Loss: 149.21133422851562, KL Loss: 0.0, Recon Loss: 1492.11328125
+127.0.0.1 - - [12/Jan/2025 11:30:30] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:30:32] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:30:34] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:30:36] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:30:36] [Level: info] [State: compute] Epoch 40, Total Loss: 140.40428161621094, KL Loss: 0.0, Recon Loss: 1404.042724609375
+127.0.0.1 - - [12/Jan/2025 11:30:38] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:30:40] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:30:42] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:30:44] [Level: info] [State: compute] Epoch 50, Total Loss: 132.6179656982422, KL Loss: 0.0, Recon Loss: 1326.1795654296875
+127.0.0.1 - - [12/Jan/2025 11:30:44] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:30:46] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:30:48] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:30:50] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:30:51] [Level: info] [State: compute] Epoch 60, Total Loss: 125.640380859375, KL Loss: 0.0, Recon Loss: 1256.40380859375
+127.0.0.1 - - [12/Jan/2025 11:30:52] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:30:54] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:30:56] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:30:58] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:31:00] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:31:02] [Level: info] [State: compute] Epoch 70, Total Loss: 119.30728912353516, KL Loss: 0.0, Recon Loss: 1193.0728759765625
+127.0.0.1 - - [12/Jan/2025 11:31:02] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:31:04] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:31:06] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:31:08] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:31:10] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:31:12] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:31:14] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:31:15] [Level: info] [State: compute] Epoch 80, Total Loss: 113.49971008300781, KL Loss: 0.0, Recon Loss: 1134.9970703125
+127.0.0.1 - - [12/Jan/2025 11:31:16] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:31:18] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:31:20] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:31:22] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:31:24] [Level: info] [State: compute] Epoch 90, Total Loss: 108.13146209716797, KL Loss: 0.0, Recon Loss: 1081.3145751953125
+127.0.0.1 - - [12/Jan/2025 11:31:24] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:31:26] [Level: info] [State: compute] Epoch 100, Total Loss: 103.13862609863281, KL Loss: 0.0, Recon Loss: 1031.38623046875
+[Time: 12.01.25 11:31:26] [Level: info] [State: compute] Saving model and decoder...
+[Time: 12.01.25 11:31:26] [Level: info] [State: compute] Scoring model...
+[Time: 12.01.25 11:31:26] [Level: info] [State: compute] Adjusted Rand Index (ARI): 0.0
+[Time: 12.01.25 11:31:26] [Level: info] [State: compute] Sent updated weights to coordinator.
+127.0.0.1 - - [12/Jan/2025 11:31:26] "GET /api/status HTTP/1.0" 200 155
+[Time: 12.01.25 11:31:26] [Level: info] transition: compute
+[Time: 12.01.25 11:31:27] [Level: info] state: compute
+[Time: 12.01.25 11:31:27] [Level: info] [State: compute] ITERATION 6
+[Time: 12.01.25 11:31:27] [Level: info] [State: compute] receiving weights...
+127.0.0.1 - - [12/Jan/2025 11:31:28] "GET /api/status HTTP/1.0" 200 164
+[CTRL] GET /data
+127.0.0.1 - - [12/Jan/2025 11:31:30] "GET /api/data HTTP/1.0" 200 34213087
+127.0.0.1 - - [12/Jan/2025 11:31:32] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [12/Jan/2025 11:31:34] "GET /api/status HTTP/1.0" 200 155
+[CTRL] POST /data
+127.0.0.1 - - [12/Jan/2025 11:31:36] "POST /api/data?client=a6f1bb64e40f4189&memo=None HTTP/1.0" 200 0
+[Time: 12.01.25 11:31:36] [Level: info] transition: write
+127.0.0.1 - - [12/Jan/2025 11:31:36] "GET /api/status HTTP/1.0" 200 153
+[Time: 12.01.25 11:31:37] [Level: info] state: write
+[Time: 12.01.25 11:31:37] [Level: info] [State: write] Cluster data...
+[Time: 12.01.25 11:31:38] [Level: info] Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/FeatureCloud/app/engine/app.py", line 252, in guarded_run
+    self.run()
+  File "/usr/local/lib/python3.8/site-packages/FeatureCloud/app/engine/app.py", line 271, in run
+    transition = self.current_state.run()
+  File "/app/states.py", line 246, in run
+    pd.DataFrame(data=model.state_dict()).to_csv(f'{OUTPUT_DIR}/"state_dict')
+  File "/usr/local/lib/python3.8/site-packages/pandas/core/frame.py", line 709, in __init__
+    mgr = dict_to_mgr(data, index, columns, dtype=dtype, copy=copy, typ=manager)
+  File "/usr/local/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 481, in dict_to_mgr
+    return arrays_to_mgr(arrays, columns, index, dtype=dtype, typ=typ, consolidate=copy)
+  File "/usr/local/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 115, in arrays_to_mgr
+    index = _extract_index(arrays)
+  File "/usr/local/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 655, in _extract_index
+    raise ValueError("All arrays must be of the same length")
+ValueError: All arrays must be of the same length
+
+127.0.0.1 - - [12/Jan/2025 11:31:38] "GET /api/status HTTP/1.0" 200 160
