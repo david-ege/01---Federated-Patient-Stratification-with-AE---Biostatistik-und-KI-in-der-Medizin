@@ -215,7 +215,6 @@ class AggregateState(AppState):
             # Update global model with aggregated weights
             self.log('Updating global model...')
             global_model = self.load('model')
-            #self.log(global_model)
             for name, param in global_model.state_dict().items():
                 param.data = torch.tensor(agg_weights[name].mean())
 
