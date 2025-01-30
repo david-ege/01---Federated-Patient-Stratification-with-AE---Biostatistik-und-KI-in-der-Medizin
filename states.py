@@ -208,15 +208,15 @@ class AggregateState(AppState):
             agg_weights = {}
             keys = []
             for state_dict in state_dict_list:
-                    self.log(state_dict)
+                    #self.log(state_dict)
                     for key, value in state_dict.items():
-                        agg_weights[key] = agg_weights.get(key, 0) + value 
+                        agg_weights[key] = agg_weights.get(key, 0) + ( value / len(state_dict_list))
                         keys.append(key)
             # Update global model with aggregated weights
             self.log('Updating global model...')
             global_model = self.load('model')
-            for name, param in global_model.state_dict().items():
-                param.data = torch.tensor(agg_weights[name].mean())
+            #for name, param in global_model.state_dict().items():
+            #    param.data = torch.tensor(agg_weights[name].mean())
 
             self.store('model', global_model)
             done = self.load('iteration') >= self.load('max_iterations')
