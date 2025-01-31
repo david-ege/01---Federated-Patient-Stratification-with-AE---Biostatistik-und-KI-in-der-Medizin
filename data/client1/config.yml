@@ -1,5 +1,5 @@
-data: realdata.csv
-metadata: realmetadata.csv
+data: 10splitrealdata.csv
+metadata: 10splitrealmetadata.csv
 sep: ';'
 max_iter: 5
 target_value: target

@@ -1,0 +1,18 @@
+id: 2
+image: vae
+createdat: 2025-01-31T12:34:40.87575775Z
+relayaddress: localhost
+queryinterval: 2
+dirs:
+- client1
+- client2
+- client3
+- client4
+- client5
+- client6
+- client7
+- client8
+- client9
+- client10
+gendir: ""
+resultdir: /data/tests
