@@ -1,0 +1,1206 @@
+2025-02-01 17:04:15,280 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-02-01 17:04:15,284 INFO supervisord started with pid 7
+2025-02-01 17:04:16,286 INFO spawned: 'nginx' with pid 10
+2025-02-01 17:04:16,288 INFO spawned: 'app' with pid 11
+2025-02-01 17:04:17,421 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-02-01 17:04:17,421 INFO success: app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+Bottle v0.13.2 server starting up (using WSGIRefServer())...
+Listening on http://localhost:5000/
+Hit Ctrl-C to quit.
+
+[CTRL] POST /setup
+[Time: 01.02.25 17:04:35] [Level: info] id: 488702e09d427381
+[Time: 01.02.25 17:04:35] [Level: info] coordinator: True
+[Time: 01.02.25 17:04:35] [Level: info] clients: ['488702e09d427381', '0a29a8dc4a373d37', 'dc643d695aafd7fe', '9a88d5787ac0da7b', 'a0d769a2060e360c']
+[Time: 01.02.25 17:04:35] [Level: info] state: initial
+127.0.0.1 - - [01/Feb/2025 17:04:35] "POST /api/setup HTTP/1.0" 200 0
+[Time: 01.02.25 17:04:35] [Level: info] [State: initial] Reading configuration file...
+[Time: 01.02.25 17:04:35] [Level: info] [State: initial] Initializing: Setting iteration to 0, setting max_iterations...
+[Time: 01.02.25 17:04:35] [Level: info] [State: initial] Done reading configuration file.
+[Time: 01.02.25 17:04:35] [Level: info] [State: initial] Max Iterations: 5
+[Time: 01.02.25 17:04:35] [Level: info] [State: initial] Reading training data...
+127.0.0.1 - - [01/Feb/2025 17:04:35] "GET /api/status HTTP/1.0" 200 155
+[Time: 01.02.25 17:04:35] [Level: info] [State: initial] Initializing pre-trained model...
+[Time: 01.02.25 17:04:35] [Level: info] [State: initial] INITIAL input_dim: $10564
+[Time: 01.02.25 17:04:36] [Level: info] [State: initial] Initializing cluster centers...
+127.0.0.1 - - [01/Feb/2025 17:04:37] "GET /api/status HTTP/1.0" 200 155
+[Time: 01.02.25 17:04:38] [Level: info] [State: initial] Broadcasting initial weights to the clients...
+[Time: 01.02.25 17:04:38] [Level: info] transition: compute
+[Time: 01.02.25 17:04:39] [Level: info] state: compute
+[Time: 01.02.25 17:04:39] [Level: info] [State: compute] ITERATION 1
+[Time: 01.02.25 17:04:39] [Level: info] [State: compute] receiving weights...
+[Time: 01.02.25 17:04:39] [Level: info] [State: compute] Loading global weights for model...
+127.0.0.1 - - [01/Feb/2025 17:04:39] "GET /api/status HTTP/1.0" 200 156
+[CTRL] GET /data
+[Time: 01.02.25 17:04:39] [Level: info] [State: compute] Updated model with received weights.
+[Time: 01.02.25 17:04:39] [Level: info] [State: compute] Loading data...
+[Time: 01.02.25 17:04:39] [Level: info] [State: compute] Preparing model training...
+[Time: 01.02.25 17:04:39] [Level: info] [State: compute] Training model...
+127.0.0.1 - - [01/Feb/2025 17:04:39] "GET /api/data HTTP/1.0" 200 58363374
+[Time: 01.02.25 17:04:40] [Level: info] [State: compute] Epoch 10, Loss: 899.76904296875
+[Time: 01.02.25 17:04:42] [Level: info] [State: compute] Epoch 20, Loss: 109.03856658935547
+[Time: 01.02.25 17:04:43] [Level: info] [State: compute] Epoch 30, Loss: 13.477570533752441
+[Time: 01.02.25 17:04:44] [Level: info] [State: compute] Epoch 40, Loss: 7.590295791625977
+127.0.0.1 - - [01/Feb/2025 17:04:46] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:04:48] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:04:50] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:04:52] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:04:54] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:04:56] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:04:58] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:05:00] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:05:02] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:05:04] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:05:06] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:05:08] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:05:10] "GET /api/status HTTP/1.0" 200 155
+[Time: 01.02.25 17:05:12] [Level: info] [State: compute] Epoch 50, Loss: 1.7091596126556396
+127.0.0.1 - - [01/Feb/2025 17:05:12] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:05:14] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:05:16] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:05:18] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:05:20] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:05:22] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:05:24] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:05:26] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:05:28] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:05:30] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:05:32] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:05:34] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:05:36] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:05:38] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:05:40] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:05:42] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:05:44] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:05:46] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:05:48] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:05:50] "GET /api/status HTTP/1.0" 200 155
+[Time: 01.02.25 17:05:51] [Level: info] [State: compute] Epoch 60, Loss: 1.2122842073440552
+127.0.0.1 - - [01/Feb/2025 17:05:52] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:05:54] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:05:56] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:05:58] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:06:00] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:06:02] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:06:04] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:06:06] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:06:08] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:06:10] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:06:12] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:06:14] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:06:16] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:06:18] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:06:20] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:06:22] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:06:24] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:06:26] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:06:28] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:06:30] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:06:32] "GET /api/status HTTP/1.0" 200 155
+[Time: 01.02.25 17:06:34] [Level: info] [State: compute] Epoch 70, Loss: 1.147042989730835
+127.0.0.1 - - [01/Feb/2025 17:06:34] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:06:36] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:06:38] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:06:41] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:06:43] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:06:45] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:06:47] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:06:49] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:06:51] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:06:53] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:06:55] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:06:57] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:06:59] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:07:01] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:07:03] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:07:05] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:07:07] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:07:09] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:07:11] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:07:13] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:07:15] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:07:17] "GET /api/status HTTP/1.0" 200 155
+[Time: 01.02.25 17:07:18] [Level: info] [State: compute] Epoch 80, Loss: 1.1148611307144165
+127.0.0.1 - - [01/Feb/2025 17:07:19] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:07:21] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:07:23] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:07:25] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:07:27] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:07:29] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:07:31] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:07:33] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:07:35] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:07:37] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:07:39] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:07:41] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:07:43] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:07:45] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:07:47] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:07:49] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:07:51] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:07:53] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:07:55] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:07:57] "GET /api/status HTTP/1.0" 200 155
+[Time: 01.02.25 17:07:59] [Level: info] [State: compute] Epoch 90, Loss: 1.1013782024383545
+127.0.0.1 - - [01/Feb/2025 17:07:59] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:08:01] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:08:03] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:08:05] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:08:07] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:08:09] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:08:11] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:08:13] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:08:15] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:08:17] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:08:19] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:08:21] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:08:23] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:08:25] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:08:27] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:08:29] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:08:31] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:08:33] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:08:35] "GET /api/status HTTP/1.0" 200 155
+[Time: 01.02.25 17:08:36] [Level: info] [State: compute] Epoch 100, Loss: 1.0927684307098389
+/usr/local/lib/python3.8/site-packages/sklearn/cluster/_kmeans.py:1416: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+[Time: 01.02.25 17:08:37] [Level: info] [State: compute] Saving model and decoder...
+[Time: 01.02.25 17:08:37] [Level: info] [State: compute] Sent updated weights to coordinator.
+[Time: 01.02.25 17:08:37] [Level: info] transition: aggregate
+127.0.0.1 - - [01/Feb/2025 17:08:37] "GET /api/status HTTP/1.0" 200 157
+[Time: 01.02.25 17:08:38] [Level: info] state: aggregate
+[Time: 01.02.25 17:08:38] [Level: info] [State: aggregate] Waitig for local models...
+127.0.0.1 - - [01/Feb/2025 17:08:39] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:08:41] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:08:43] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:08:45] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:08:47] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:08:49] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:08:51] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:08:53] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:08:55] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:08:57] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:08:59] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:09:01] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:09:03] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:09:05] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:09:07] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:09:09] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:09:11] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:09:13] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:09:15] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:09:17] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:09:19] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:09:21] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:09:23] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:09:26] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:09:28] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:09:30] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:09:32] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:09:34] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:09:36] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:09:38] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:09:40] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:09:42] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:09:44] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:09:46] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:09:48] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:09:50] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:09:52] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:09:54] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:09:56] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:09:58] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:10:00] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:10:02] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:10:04] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:10:06] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:10:08] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:10:10] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:10:12] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:10:14] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:10:16] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:10:18] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:10:20] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:10:22] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:10:24] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:10:26] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:10:28] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:10:30] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:10:32] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:10:34] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:10:36] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:10:38] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:10:40] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:10:42] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:10:44] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:10:46] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:10:48] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:10:50] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:10:52] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:10:54] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:10:56] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:10:58] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:11:00] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:11:02] "GET /api/status HTTP/1.0" 200 157
+[CTRL] POST /data
+127.0.0.1 - - [01/Feb/2025 17:11:03] "POST /api/data?client=9a88d5787ac0da7b&memo=GATHERROUND1 HTTP/1.0" 200 0
+127.0.0.1 - - [01/Feb/2025 17:11:04] "GET /api/status HTTP/1.0" 200 157
+[CTRL] POST /data
+127.0.0.1 - - [01/Feb/2025 17:11:05] "POST /api/data?client=a0d769a2060e360c&memo=GATHERROUND1 HTTP/1.0" 200 0
+[CTRL] POST /data
+127.0.0.1 - - [01/Feb/2025 17:11:05] "POST /api/data?client=dc643d695aafd7fe&memo=GATHERROUND1 HTTP/1.0" 200 0
+127.0.0.1 - - [01/Feb/2025 17:11:06] "GET /api/status HTTP/1.0" 200 157
+[CTRL] POST /data
+127.0.0.1 - - [01/Feb/2025 17:11:07] "POST /api/data?client=0a29a8dc4a373d37&memo=GATHERROUND1 HTTP/1.0" 200 0
+[Time: 01.02.25 17:11:07] [Level: info] [State: aggregate] Updating global model...
+[Time: 01.02.25 17:11:07] [Level: info] [State: aggregate] Broadcasting model...
+[Time: 01.02.25 17:11:07] [Level: info] transition: compute
+127.0.0.1 - - [01/Feb/2025 17:11:08] "GET /api/status HTTP/1.0" 200 158
+[CTRL] GET /data
+[Time: 01.02.25 17:11:08] [Level: info] state: compute
+[Time: 01.02.25 17:11:08] [Level: info] [State: compute] ITERATION 2
+[Time: 01.02.25 17:11:08] [Level: info] [State: compute] receiving weights...
+[Time: 01.02.25 17:11:08] [Level: info] [State: compute] Loading global weights for model...
+[Time: 01.02.25 17:11:08] [Level: info] [State: compute] Updated model with received weights.
+[Time: 01.02.25 17:11:08] [Level: info] [State: compute] Loading data...
+[Time: 01.02.25 17:11:08] [Level: info] [State: compute] Preparing model training...
+[Time: 01.02.25 17:11:08] [Level: info] [State: compute] Training model...
+127.0.0.1 - - [01/Feb/2025 17:11:11] "GET /api/data HTTP/1.0" 200 58363408
+[Time: 01.02.25 17:11:12] [Level: info] [State: compute] Epoch 10, Loss: 1.5158575773239136
+127.0.0.1 - - [01/Feb/2025 17:11:17] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:11:19] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:11:21] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:11:23] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:11:25] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:11:27] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:11:29] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:11:32] "GET /api/status HTTP/1.0" 200 155
+[Time: 01.02.25 17:11:32] [Level: info] [State: compute] Epoch 20, Loss: 1.229678750038147
+127.0.0.1 - - [01/Feb/2025 17:11:34] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:11:36] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:11:38] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:11:40] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:11:42] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:11:44] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:11:46] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:11:48] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:11:50] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:11:52] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:11:54] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:11:56] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:11:58] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:12:00] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:12:02] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:12:04] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:12:06] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:12:08] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:12:10] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:12:12] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:12:14] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:12:16] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:12:18] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:12:20] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:12:22] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:12:24] "GET /api/status HTTP/1.0" 200 155
+[Time: 01.02.25 17:12:25] [Level: info] [State: compute] Epoch 30, Loss: 1.1712679862976074
+127.0.0.1 - - [01/Feb/2025 17:12:26] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:12:28] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:12:30] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:12:32] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:12:34] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:12:36] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:12:38] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:12:40] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:12:42] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:12:44] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:12:46] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:12:48] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:12:50] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:12:52] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:12:54] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:12:56] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:12:58] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:13:00] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:13:02] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:13:04] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:13:06] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:13:08] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:13:10] "GET /api/status HTTP/1.0" 200 155
+[Time: 01.02.25 17:13:11] [Level: info] [State: compute] Epoch 40, Loss: 1.1564139127731323
+127.0.0.1 - - [01/Feb/2025 17:13:12] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:13:14] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:13:16] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:13:18] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:13:20] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:13:22] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:13:24] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:13:26] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:13:28] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:13:30] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:13:32] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:13:34] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:13:36] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:13:38] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:13:40] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:13:42] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:13:44] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:13:46] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:13:48] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:13:50] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:13:52] "GET /api/status HTTP/1.0" 200 155
+[Time: 01.02.25 17:13:54] [Level: info] [State: compute] Epoch 50, Loss: 1.137576699256897
+127.0.0.1 - - [01/Feb/2025 17:13:54] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:13:56] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:13:58] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:14:00] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:14:02] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:14:04] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:14:06] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:14:08] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:14:10] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:14:12] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:14:14] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:14:16] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:14:18] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:14:20] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:14:22] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:14:24] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:14:27] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:14:29] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:14:31] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:14:33] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:14:35] "GET /api/status HTTP/1.0" 200 155
+[Time: 01.02.25 17:14:35] [Level: info] [State: compute] Epoch 60, Loss: 1.1262832880020142
+127.0.0.1 - - [01/Feb/2025 17:14:37] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:14:39] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:14:41] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:14:43] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:14:45] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:14:47] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:14:49] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:14:51] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:14:53] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:14:55] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:14:57] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:14:59] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:15:01] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:15:03] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:15:05] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:15:07] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:15:09] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:15:11] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:15:13] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:15:15] "GET /api/status HTTP/1.0" 200 155
+[Time: 01.02.25 17:15:17] [Level: info] [State: compute] Epoch 70, Loss: 1.1204804182052612
+127.0.0.1 - - [01/Feb/2025 17:15:17] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:15:19] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:15:21] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:15:23] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:15:25] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:15:27] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:15:29] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:15:31] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:15:33] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:15:35] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:15:37] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:15:39] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:15:41] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:15:43] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:15:45] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:15:47] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:15:49] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:15:51] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:15:53] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:15:55] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:15:57] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:15:59] "GET /api/status HTTP/1.0" 200 155
+[Time: 01.02.25 17:16:00] [Level: info] [State: compute] Epoch 80, Loss: 1.1145446300506592
+127.0.0.1 - - [01/Feb/2025 17:16:01] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:16:03] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:16:05] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:16:07] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:16:09] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:16:11] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:16:13] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:16:15] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:16:17] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:16:19] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:16:21] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:16:23] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:16:25] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:16:27] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:16:29] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:16:31] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:16:33] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:16:35] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:16:37] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:16:39] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:16:41] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:16:43] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:16:45] "GET /api/status HTTP/1.0" 200 155
+[Time: 01.02.25 17:16:46] [Level: info] [State: compute] Epoch 90, Loss: 1.1085952520370483
+127.0.0.1 - - [01/Feb/2025 17:16:47] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:16:49] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:16:51] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:16:53] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:16:55] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:16:57] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:16:59] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:17:01] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:17:03] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:17:05] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:17:07] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:17:10] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:17:12] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:17:14] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:17:16] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:17:18] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:17:20] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:17:22] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:17:24] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:17:26] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:17:28] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:17:30] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:17:32] "GET /api/status HTTP/1.0" 200 155
+[Time: 01.02.25 17:17:32] [Level: info] [State: compute] Epoch 100, Loss: 1.1014260053634644
+/usr/local/lib/python3.8/site-packages/sklearn/cluster/_kmeans.py:1416: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+[Time: 01.02.25 17:17:33] [Level: info] [State: compute] Saving model and decoder...
+[Time: 01.02.25 17:17:33] [Level: info] [State: compute] Sent updated weights to coordinator.
+[Time: 01.02.25 17:17:33] [Level: info] transition: aggregate
+127.0.0.1 - - [01/Feb/2025 17:17:34] "GET /api/status HTTP/1.0" 200 157
+[Time: 01.02.25 17:17:34] [Level: info] state: aggregate
+[Time: 01.02.25 17:17:34] [Level: info] [State: aggregate] Waitig for local models...
+127.0.0.1 - - [01/Feb/2025 17:17:36] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:17:38] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:17:40] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:17:42] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:17:44] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:17:46] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:17:48] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:17:50] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:17:52] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:17:54] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:17:56] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:17:58] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:18:00] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:18:02] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:18:04] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:18:06] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:18:08] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:18:10] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:18:12] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:18:14] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:18:16] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:18:18] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:18:20] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:18:22] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:18:24] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:18:26] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:18:28] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:18:30] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:18:32] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:18:34] "GET /api/status HTTP/1.0" 200 157
+[CTRL] POST /data
+127.0.0.1 - - [01/Feb/2025 17:18:36] "POST /api/data?client=9a88d5787ac0da7b&memo=GATHERROUND2 HTTP/1.0" 200 0
+127.0.0.1 - - [01/Feb/2025 17:18:36] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:18:38] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:18:40] "GET /api/status HTTP/1.0" 200 157
+[CTRL] POST /data
+127.0.0.1 - - [01/Feb/2025 17:18:41] "POST /api/data?client=0a29a8dc4a373d37&memo=GATHERROUND2 HTTP/1.0" 200 0
+[CTRL] POST /data
+127.0.0.1 - - [01/Feb/2025 17:18:42] "POST /api/data?client=dc643d695aafd7fe&memo=GATHERROUND2 HTTP/1.0" 200 0
+127.0.0.1 - - [01/Feb/2025 17:18:42] "GET /api/status HTTP/1.0" 200 157
+[CTRL] POST /data
+127.0.0.1 - - [01/Feb/2025 17:18:44] "POST /api/data?client=a0d769a2060e360c&memo=GATHERROUND2 HTTP/1.0" 200 0
+127.0.0.1 - - [01/Feb/2025 17:18:45] "GET /api/status HTTP/1.0" 200 157
+[Time: 01.02.25 17:18:45] [Level: info] [State: aggregate] Updating global model...
+[Time: 01.02.25 17:18:45] [Level: info] [State: aggregate] Broadcasting model...
+[Time: 01.02.25 17:18:45] [Level: info] transition: compute
+[Time: 01.02.25 17:18:46] [Level: info] state: compute
+[Time: 01.02.25 17:18:46] [Level: info] [State: compute] ITERATION 3
+[Time: 01.02.25 17:18:46] [Level: info] [State: compute] receiving weights...
+[Time: 01.02.25 17:18:46] [Level: info] [State: compute] Loading global weights for model...
+[Time: 01.02.25 17:18:46] [Level: info] [State: compute] Updated model with received weights.
+[Time: 01.02.25 17:18:46] [Level: info] [State: compute] Loading data...
+[Time: 01.02.25 17:18:46] [Level: info] [State: compute] Preparing model training...
+[Time: 01.02.25 17:18:46] [Level: info] [State: compute] Training model...
+127.0.0.1 - - [01/Feb/2025 17:18:47] "GET /api/status HTTP/1.0" 200 158
+[CTRL] GET /data
+127.0.0.1 - - [01/Feb/2025 17:18:49] "GET /api/data HTTP/1.0" 200 58363408
+[Time: 01.02.25 17:18:50] [Level: info] [State: compute] Epoch 10, Loss: 1.1441543102264404
+[Time: 01.02.25 17:18:52] [Level: info] [State: compute] Epoch 20, Loss: 1.099318265914917
+[Time: 01.02.25 17:18:54] [Level: info] [State: compute] Epoch 30, Loss: 1.0635509490966797
+127.0.0.1 - - [01/Feb/2025 17:18:56] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:18:58] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:19:00] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:19:02] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:19:04] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:19:06] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:19:08] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:19:10] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:19:12] "GET /api/status HTTP/1.0" 200 155
+[Time: 01.02.25 17:19:13] [Level: info] [State: compute] Epoch 40, Loss: 1.007611632347107
+127.0.0.1 - - [01/Feb/2025 17:19:14] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:19:16] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:19:18] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:19:20] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:19:22] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:19:24] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:19:26] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:19:28] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:19:30] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:19:32] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:19:34] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:19:36] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:19:38] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:19:40] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:19:42] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:19:44] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:19:46] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:19:48] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:19:51] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:19:53] "GET /api/status HTTP/1.0" 200 155
+[Time: 01.02.25 17:19:53] [Level: info] [State: compute] Epoch 50, Loss: 0.9921774864196777
+127.0.0.1 - - [01/Feb/2025 17:19:55] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:19:57] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:19:59] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:20:01] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:20:03] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:20:05] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:20:07] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:20:09] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:20:11] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:20:13] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:20:15] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:20:17] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:20:19] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:20:21] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:20:23] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:20:25] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:20:27] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:20:29] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:20:31] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:20:33] "GET /api/status HTTP/1.0" 200 155
+[Time: 01.02.25 17:20:33] [Level: info] [State: compute] Epoch 60, Loss: 0.9784233570098877
+127.0.0.1 - - [01/Feb/2025 17:20:35] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:20:37] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:20:39] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:20:41] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:20:43] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:20:45] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:20:47] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:20:49] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:20:51] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:20:53] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:20:55] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:20:57] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:20:59] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:21:01] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:21:03] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:21:05] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:21:07] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:21:09] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:21:11] "GET /api/status HTTP/1.0" 200 155
+[Time: 01.02.25 17:21:12] [Level: info] [State: compute] Epoch 70, Loss: 0.9665639400482178
+127.0.0.1 - - [01/Feb/2025 17:21:13] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:21:15] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:21:17] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:21:19] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:21:21] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:21:23] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:21:25] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:21:27] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:21:29] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:21:31] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:21:33] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:21:35] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:21:37] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:21:39] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:21:41] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:21:43] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:21:45] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:21:47] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:21:49] "GET /api/status HTTP/1.0" 200 155
+[Time: 01.02.25 17:21:51] [Level: info] [State: compute] Epoch 80, Loss: 0.9559491872787476
+127.0.0.1 - - [01/Feb/2025 17:21:51] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:21:53] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:21:55] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:21:57] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:21:59] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:22:01] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:22:03] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:22:05] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:22:07] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:22:09] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:22:11] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:22:13] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:22:15] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:22:17] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:22:19] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:22:21] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:22:23] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:22:25] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:22:27] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:22:29] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:22:31] "GET /api/status HTTP/1.0" 200 155
+[Time: 01.02.25 17:22:31] [Level: info] [State: compute] Epoch 90, Loss: 0.9480581283569336
+127.0.0.1 - - [01/Feb/2025 17:22:33] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:22:35] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:22:37] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:22:39] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:22:41] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:22:43] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:22:45] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:22:47] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:22:49] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:22:51] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:22:53] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:22:55] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:22:57] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:22:59] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:23:01] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:23:03] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:23:05] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:23:07] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:23:09] "GET /api/status HTTP/1.0" 200 155
+[Time: 01.02.25 17:23:11] [Level: info] [State: compute] Epoch 100, Loss: 0.942790687084198
+/usr/local/lib/python3.8/site-packages/sklearn/cluster/_kmeans.py:1416: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+127.0.0.1 - - [01/Feb/2025 17:23:11] "GET /api/status HTTP/1.0" 200 155
+[Time: 01.02.25 17:23:12] [Level: info] [State: compute] Saving model and decoder...
+[Time: 01.02.25 17:23:12] [Level: info] [State: compute] Sent updated weights to coordinator.
+[Time: 01.02.25 17:23:12] [Level: info] transition: aggregate
+[Time: 01.02.25 17:23:13] [Level: info] state: aggregate
+[Time: 01.02.25 17:23:13] [Level: info] [State: aggregate] Waitig for local models...
+127.0.0.1 - - [01/Feb/2025 17:23:13] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:23:15] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:23:17] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:23:19] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:23:21] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:23:23] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:23:25] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:23:27] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:23:29] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:23:31] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:23:33] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:23:35] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:23:37] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:23:39] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:23:41] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:23:43] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:23:45] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:23:47] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:23:49] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:23:51] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:23:54] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:23:56] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:23:58] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:24:00] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:24:02] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:24:04] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:24:06] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:24:08] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:24:10] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:24:12] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:24:14] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:24:16] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:24:18] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:24:20] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:24:22] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:24:24] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:24:26] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:24:28] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:24:30] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:24:32] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:24:34] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:24:36] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:24:38] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:24:40] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:24:42] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:24:44] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:24:46] "GET /api/status HTTP/1.0" 200 157
+[CTRL] POST /data
+127.0.0.1 - - [01/Feb/2025 17:24:48] "POST /api/data?client=dc643d695aafd7fe&memo=GATHERROUND3 HTTP/1.0" 200 0
+127.0.0.1 - - [01/Feb/2025 17:24:48] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:24:50] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:24:52] "GET /api/status HTTP/1.0" 200 157
+[CTRL] POST /data
+127.0.0.1 - - [01/Feb/2025 17:24:54] "POST /api/data?client=0a29a8dc4a373d37&memo=GATHERROUND3 HTTP/1.0" 200 0
+127.0.0.1 - - [01/Feb/2025 17:24:54] "GET /api/status HTTP/1.0" 200 157
+[CTRL] POST /data
+127.0.0.1 - - [01/Feb/2025 17:24:56] "POST /api/data?client=9a88d5787ac0da7b&memo=GATHERROUND3 HTTP/1.0" 200 0
+127.0.0.1 - - [01/Feb/2025 17:24:56] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:24:58] "GET /api/status HTTP/1.0" 200 157
+[CTRL] POST /data
+127.0.0.1 - - [01/Feb/2025 17:25:00] "POST /api/data?client=a0d769a2060e360c&memo=GATHERROUND3 HTTP/1.0" 200 0
+127.0.0.1 - - [01/Feb/2025 17:25:00] "GET /api/status HTTP/1.0" 200 157
+[Time: 01.02.25 17:25:00] [Level: info] [State: aggregate] Updating global model...
+[Time: 01.02.25 17:25:00] [Level: info] [State: aggregate] Broadcasting model...
+[Time: 01.02.25 17:25:01] [Level: info] transition: compute
+[Time: 01.02.25 17:25:02] [Level: info] state: compute
+[Time: 01.02.25 17:25:02] [Level: info] [State: compute] ITERATION 4
+[Time: 01.02.25 17:25:02] [Level: info] [State: compute] receiving weights...
+[Time: 01.02.25 17:25:02] [Level: info] [State: compute] Loading global weights for model...
+[Time: 01.02.25 17:25:02] [Level: info] [State: compute] Updated model with received weights.
+[Time: 01.02.25 17:25:02] [Level: info] [State: compute] Loading data...
+[Time: 01.02.25 17:25:02] [Level: info] [State: compute] Preparing model training...
+[Time: 01.02.25 17:25:02] [Level: info] [State: compute] Training model...
+127.0.0.1 - - [01/Feb/2025 17:25:02] "GET /api/status HTTP/1.0" 200 158
+[CTRL] GET /data
+127.0.0.1 - - [01/Feb/2025 17:25:03] "GET /api/data HTTP/1.0" 200 58363408
+[Time: 01.02.25 17:25:04] [Level: info] [State: compute] Epoch 10, Loss: 1.0220956802368164
+[Time: 01.02.25 17:25:07] [Level: info] [State: compute] Epoch 20, Loss: 0.9692549109458923
+[Time: 01.02.25 17:25:10] [Level: info] [State: compute] Epoch 30, Loss: 0.9090958833694458
+127.0.0.1 - - [01/Feb/2025 17:25:13] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:25:15] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:25:17] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:25:19] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:25:21] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:25:23] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:25:25] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:25:27] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:25:29] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:25:31] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:25:33] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:25:35] "GET /api/status HTTP/1.0" 200 155
+[Time: 01.02.25 17:25:37] [Level: info] [State: compute] Epoch 40, Loss: 0.8469566106796265
+127.0.0.1 - - [01/Feb/2025 17:25:37] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:25:39] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:25:41] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:25:43] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:25:45] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:25:47] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:25:49] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:25:51] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:25:54] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:25:56] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:25:58] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:26:00] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:26:02] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:26:04] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:26:06] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:26:08] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:26:10] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:26:12] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:26:14] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:26:16] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:26:18] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:26:20] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:26:22] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:26:24] "GET /api/status HTTP/1.0" 200 155
+[Time: 01.02.25 17:26:25] [Level: info] [State: compute] Epoch 50, Loss: 0.8228638172149658
+127.0.0.1 - - [01/Feb/2025 17:26:26] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:26:28] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:26:30] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:26:32] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:26:34] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:26:36] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:26:38] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:26:40] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:26:42] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:26:44] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:26:46] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:26:48] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:26:50] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:26:52] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:26:54] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:26:56] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:26:58] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:27:00] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:27:02] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:27:04] "GET /api/status HTTP/1.0" 200 155
+[Time: 01.02.25 17:27:05] [Level: info] [State: compute] Epoch 60, Loss: 0.8075616359710693
+127.0.0.1 - - [01/Feb/2025 17:27:06] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:27:08] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:27:10] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:27:12] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:27:14] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:27:16] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:27:18] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:27:20] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:27:22] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:27:24] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:27:26] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:27:28] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:27:30] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:27:32] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:27:34] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:27:36] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:27:38] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:27:40] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:27:42] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:27:44] "GET /api/status HTTP/1.0" 200 155
+[Time: 01.02.25 17:27:45] [Level: info] [State: compute] Epoch 70, Loss: 0.7959911227226257
+127.0.0.1 - - [01/Feb/2025 17:27:46] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:27:48] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:27:50] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:27:52] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:27:54] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:27:56] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:27:58] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:28:00] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:28:02] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:28:04] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:28:06] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:28:08] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:28:10] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:28:12] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:28:14] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:28:16] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:28:18] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:28:20] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:28:22] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:28:24] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:28:26] "GET /api/status HTTP/1.0" 200 155
+[Time: 01.02.25 17:28:27] [Level: info] [State: compute] Epoch 80, Loss: 0.78528892993927
+127.0.0.1 - - [01/Feb/2025 17:28:28] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:28:30] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:28:32] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:28:34] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:28:36] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:28:38] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:28:40] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:28:42] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:28:44] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:28:46] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:28:48] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:28:51] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:28:53] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:28:55] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:28:57] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:28:59] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:29:01] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:29:03] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:29:05] "GET /api/status HTTP/1.0" 200 155
+[Time: 01.02.25 17:29:05] [Level: info] [State: compute] Epoch 90, Loss: 0.7766432762145996
+127.0.0.1 - - [01/Feb/2025 17:29:07] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:29:09] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:29:11] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:29:13] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:29:15] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:29:17] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:29:19] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:29:21] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:29:23] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:29:25] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:29:27] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:29:29] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:29:31] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:29:33] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:29:35] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:29:37] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:29:39] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:29:41] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:29:43] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:29:45] "GET /api/status HTTP/1.0" 200 155
+[Time: 01.02.25 17:29:46] [Level: info] [State: compute] Epoch 100, Loss: 0.7938767671585083
+/usr/local/lib/python3.8/site-packages/sklearn/cluster/_kmeans.py:1416: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+127.0.0.1 - - [01/Feb/2025 17:29:47] "GET /api/status HTTP/1.0" 200 155
+[Time: 01.02.25 17:29:47] [Level: info] [State: compute] Saving model and decoder...
+[Time: 01.02.25 17:29:47] [Level: info] [State: compute] Sent updated weights to coordinator.
+[Time: 01.02.25 17:29:47] [Level: info] transition: aggregate
+[Time: 01.02.25 17:29:48] [Level: info] state: aggregate
+[Time: 01.02.25 17:29:48] [Level: info] [State: aggregate] Waitig for local models...
+127.0.0.1 - - [01/Feb/2025 17:29:49] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:29:51] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:29:53] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:29:55] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:29:57] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:29:59] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:30:01] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:30:03] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:30:05] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:30:07] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:30:09] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:30:11] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:30:13] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:30:15] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:30:17] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:30:19] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:30:21] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:30:23] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:30:25] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:30:27] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:30:29] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:30:31] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:30:33] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:30:35] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:30:37] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:30:39] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:30:41] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:30:43] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:30:45] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:30:47] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:30:49] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:30:51] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:30:53] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:30:55] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:30:57] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:30:59] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:31:01] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:31:03] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:31:05] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:31:07] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:31:09] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:31:11] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:31:13] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:31:15] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:31:17] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:31:19] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:31:21] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:31:23] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:31:25] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:31:27] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:31:29] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:31:31] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:31:33] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:31:35] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:31:37] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:31:39] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:31:41] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:31:43] "GET /api/status HTTP/1.0" 200 157
+[CTRL] POST /data
+127.0.0.1 - - [01/Feb/2025 17:31:45] "POST /api/data?client=0a29a8dc4a373d37&memo=GATHERROUND4 HTTP/1.0" 200 0
+127.0.0.1 - - [01/Feb/2025 17:31:45] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:31:47] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:31:49] "GET /api/status HTTP/1.0" 200 157
+[CTRL] POST /data
+127.0.0.1 - - [01/Feb/2025 17:31:51] "POST /api/data?client=9a88d5787ac0da7b&memo=GATHERROUND4 HTTP/1.0" 200 0
+[CTRL] POST /data
+127.0.0.1 - - [01/Feb/2025 17:31:51] "POST /api/data?client=dc643d695aafd7fe&memo=GATHERROUND4 HTTP/1.0" 200 0
+127.0.0.1 - - [01/Feb/2025 17:31:51] "GET /api/status HTTP/1.0" 200 157
+[CTRL] POST /data
+127.0.0.1 - - [01/Feb/2025 17:31:52] "POST /api/data?client=a0d769a2060e360c&memo=GATHERROUND4 HTTP/1.0" 200 0
+[Time: 01.02.25 17:31:52] [Level: info] [State: aggregate] Updating global model...
+[Time: 01.02.25 17:31:52] [Level: info] [State: aggregate] Broadcasting model...
+[Time: 01.02.25 17:31:52] [Level: info] transition: compute
+127.0.0.1 - - [01/Feb/2025 17:31:53] "GET /api/status HTTP/1.0" 200 158
+[CTRL] GET /data
+[Time: 01.02.25 17:31:53] [Level: info] state: compute
+[Time: 01.02.25 17:31:53] [Level: info] [State: compute] ITERATION 5
+[Time: 01.02.25 17:31:53] [Level: info] [State: compute] receiving weights...
+[Time: 01.02.25 17:31:53] [Level: info] [State: compute] Loading global weights for model...
+[Time: 01.02.25 17:31:54] [Level: info] [State: compute] Updated model with received weights.
+[Time: 01.02.25 17:31:54] [Level: info] [State: compute] Loading data...
+[Time: 01.02.25 17:31:54] [Level: info] [State: compute] Preparing model training...
+[Time: 01.02.25 17:31:54] [Level: info] [State: compute] Training model...
+[Time: 01.02.25 17:31:55] [Level: info] [State: compute] Epoch 10, Loss: 0.8548923134803772
+127.0.0.1 - - [01/Feb/2025 17:31:55] "GET /api/data HTTP/1.0" 200 58363408
+[Time: 01.02.25 17:31:57] [Level: info] [State: compute] Epoch 20, Loss: 0.7993810772895813
+[Time: 01.02.25 17:31:58] [Level: info] [State: compute] Epoch 30, Loss: 0.760433554649353
+[Time: 01.02.25 17:32:00] [Level: info] [State: compute] Epoch 40, Loss: 0.7159842252731323
+127.0.0.1 - - [01/Feb/2025 17:32:01] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:32:03] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:32:05] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:32:07] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:32:09] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:32:11] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:32:13] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:32:15] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:32:17] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:32:19] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:32:21] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:32:23] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:32:25] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:32:27] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:32:29] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:32:31] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:32:33] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:32:35] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:32:37] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:32:39] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:32:41] "GET /api/status HTTP/1.0" 200 155
+[Time: 01.02.25 17:32:42] [Level: info] [State: compute] Epoch 50, Loss: 0.6813143491744995
+127.0.0.1 - - [01/Feb/2025 17:32:43] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:32:45] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:32:47] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:32:49] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:32:51] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:32:53] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:32:55] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:32:57] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:32:59] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:33:01] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:33:03] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:33:05] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:33:07] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:33:09] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:33:11] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:33:13] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:33:15] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:33:17] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:33:19] "GET /api/status HTTP/1.0" 200 155
+[Time: 01.02.25 17:33:21] [Level: info] [State: compute] Epoch 60, Loss: 0.6614062786102295
+127.0.0.1 - - [01/Feb/2025 17:33:21] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:33:23] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:33:26] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:33:28] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:33:30] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:33:32] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:33:34] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:33:36] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:33:38] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:33:40] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:33:42] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:33:44] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:33:46] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:33:48] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:33:50] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:33:52] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:33:54] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:33:56] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:33:58] "GET /api/status HTTP/1.0" 200 155
+[Time: 01.02.25 17:33:59] [Level: info] [State: compute] Epoch 70, Loss: 0.6443349719047546
+127.0.0.1 - - [01/Feb/2025 17:34:00] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:34:02] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:34:04] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:34:06] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:34:08] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:34:10] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:34:12] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:34:14] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:34:16] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:34:18] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:34:20] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:34:22] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:34:24] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:34:26] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:34:28] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:34:30] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:34:32] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:34:34] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:34:36] "GET /api/status HTTP/1.0" 200 155
+[Time: 01.02.25 17:34:38] [Level: info] [State: compute] Epoch 80, Loss: 0.6281468868255615
+127.0.0.1 - - [01/Feb/2025 17:34:38] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:34:40] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:34:42] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:34:44] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:34:46] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:34:48] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:34:50] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:34:52] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:34:54] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:34:56] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:34:58] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:35:00] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:35:02] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:35:04] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:35:06] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:35:08] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:35:10] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:35:12] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:35:14] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:35:16] "GET /api/status HTTP/1.0" 200 155
+[Time: 01.02.25 17:35:17] [Level: info] [State: compute] Epoch 90, Loss: 0.6138244867324829
+127.0.0.1 - - [01/Feb/2025 17:35:18] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:35:20] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:35:22] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:35:24] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:35:26] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:35:28] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:35:30] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:35:32] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:35:34] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:35:36] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:35:38] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:35:40] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:35:42] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:35:44] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:35:46] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:35:48] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:35:50] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:35:53] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:35:55] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:35:57] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:35:59] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:36:01] "GET /api/status HTTP/1.0" 200 155
+127.0.0.1 - - [01/Feb/2025 17:36:03] "GET /api/status HTTP/1.0" 200 155
+[Time: 01.02.25 17:36:03] [Level: info] [State: compute] Epoch 100, Loss: 0.6022886633872986
+/usr/local/lib/python3.8/site-packages/sklearn/cluster/_kmeans.py:1416: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+[Time: 01.02.25 17:36:03] [Level: info] [State: compute] Saving model and decoder...
+[Time: 01.02.25 17:36:03] [Level: info] [State: compute] Sent updated weights to coordinator.
+[Time: 01.02.25 17:36:03] [Level: info] transition: aggregate
+[Time: 01.02.25 17:36:04] [Level: info] state: aggregate
+[Time: 01.02.25 17:36:04] [Level: info] [State: aggregate] Waitig for local models...
+127.0.0.1 - - [01/Feb/2025 17:36:05] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:36:07] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:36:09] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:36:11] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:36:13] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:36:15] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:36:17] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:36:19] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:36:21] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:36:23] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:36:25] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:36:27] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:36:29] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:36:31] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:36:33] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:36:35] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:36:37] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:36:39] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:36:41] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:36:43] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:36:45] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:36:47] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:36:49] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:36:51] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:36:53] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:36:55] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:36:57] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:36:59] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:37:01] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:37:03] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:37:05] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:37:07] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:37:09] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:37:11] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:37:13] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:37:15] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:37:17] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:37:19] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:37:21] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:37:23] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:37:25] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:37:27] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:37:29] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:37:31] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:37:33] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:37:35] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:37:37] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:37:39] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:37:41] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:37:43] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:37:45] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:37:47] "GET /api/status HTTP/1.0" 200 157
+127.0.0.1 - - [01/Feb/2025 17:37:49] "GET /api/status HTTP/1.0" 200 157
+[CTRL] POST /data
+127.0.0.1 - - [01/Feb/2025 17:37:49] "POST /api/data?client=9a88d5787ac0da7b&memo=GATHERROUND5 HTTP/1.0" 200 0
+[CTRL] POST /data
+127.0.0.1 - - [01/Feb/2025 17:37:50] "POST /api/data?client=0a29a8dc4a373d37&memo=GATHERROUND5 HTTP/1.0" 200 0
+[CTRL] POST /data
+127.0.0.1 - - [01/Feb/2025 17:37:50] "POST /api/data?client=dc643d695aafd7fe&memo=GATHERROUND5 HTTP/1.0" 200 0
+[CTRL] POST /data
+127.0.0.1 - - [01/Feb/2025 17:37:51] "POST /api/data?client=a0d769a2060e360c&memo=GATHERROUND5 HTTP/1.0" 200 0
+127.0.0.1 - - [01/Feb/2025 17:37:51] "GET /api/status HTTP/1.0" 200 157
+[Time: 01.02.25 17:37:51] [Level: info] [State: aggregate] Updating global model...
+[Time: 01.02.25 17:37:51] [Level: info] [State: aggregate] Broadcasting model...
+[Time: 01.02.25 17:37:52] [Level: info] transition: compute
+[Time: 01.02.25 17:37:53] [Level: info] state: compute
+[Time: 01.02.25 17:37:53] [Level: info] [State: compute] ITERATION 6
+[Time: 01.02.25 17:37:53] [Level: info] [State: compute] receiving weights...
+[Time: 01.02.25 17:37:53] [Level: info] transition: write
+127.0.0.1 - - [01/Feb/2025 17:37:53] "GET /api/status HTTP/1.0" 200 158
+[CTRL] GET /data
+[Time: 01.02.25 17:37:54] [Level: info] state: write
+[Time: 01.02.25 17:37:54] [Level: info] [State: write] Saving final model...
+[Time: 01.02.25 17:37:54] [Level: info] transition: terminal
+127.0.0.1 - - [01/Feb/2025 17:37:57] "GET /api/data HTTP/1.0" 200 58363408
+127.0.0.1 - - [01/Feb/2025 17:38:00] "GET /api/status HTTP/1.0" 200 156
+127.0.0.1 - - [01/Feb/2025 17:38:02] "GET /api/status HTTP/1.0" 200 156
+127.0.0.1 - - [01/Feb/2025 17:38:04] "GET /api/status HTTP/1.0" 200 156
+127.0.0.1 - - [01/Feb/2025 17:38:06] "GET /api/status HTTP/1.0" 200 154
