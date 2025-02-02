@@ -1,11 +1,9 @@
 id: 4
-image: vae
-createdat: 2025-01-27T19:08:26.458406783Z
+image: featurecloud.ai/fc-federated-kmeans
+createdat: 2025-02-02T16:43:55.835168682Z
 relayaddress: localhost
-queryinterval: 2
+queryinterval: 3
 dirs:
 - client1
-- client2
-- client3
 gendir: ""
-resultdir: /data/tests
+resultdir: /data/tests/results

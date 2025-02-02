@@ -1,7 +1,20 @@
-data: realdata.csv
-metadata: realmetadata.csv
-sep: ';'
-max_iter: 5
-target_value: target
-pred: pred.csv
-epochs: 100
+fc_kmeans:
+  algorithm:
+    k_max: 4
+    k_min: 2
+    k_step: 1
+  input:
+    delimiter: ;
+    dir: data
+    file: realData.csv
+  output:
+    centroids: centroids.csv
+    clustering: clustering.csv
+    delimiter: ;
+    dir: kmeans
+    silhouette: silhouette.csv
+  scaling:
+    center: true
+    log_transform: false
+    max_nan_fraction: 1
+    variance: true

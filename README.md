@@ -1,3 +1,15 @@
+## Testing K-Means
+
+### Featurecloud
+1. Download Featurecloud
+2. Use data_prep to extract data for n clients
+3. Use "Featurecloud controller start" in terminal from within this repo
+4. Open https://featurecloud.ai/development/test/ and create a new test
+5. Specify hpw many clients and path to folders of clients (client1, client2,...) 
+6. run test 
+7. In data --> tests -> results extract for clients in kmeans folders for K_x folder
+8. Run kmeans_eval after specifying number of cluster k and, if needed, path to K_x folder
+
 # FeatureCloud App Blank Template
 
 The app-blank template contains an initial state that does not execute commands other than transitioning to the terminal state.
