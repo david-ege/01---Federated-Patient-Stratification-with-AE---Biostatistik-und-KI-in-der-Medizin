@@ -1,0 +1,320 @@
+{"component":"MAIN","instance":"","level":"info","msg":"Controller start","time":"2025-02-03T14:45:27Z"}
+{"component":"MAIN","instance":"","level":"info","msg":"Mode: Dockerized (isolated)","time":"2025-02-03T14:45:27Z"}
+{"component":"MAIN","instance":"","level":"info","msg":"Configuration value 'HasGPU': false","time":"2025-02-03T14:45:27Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Removing leftover Docker entities for label: fc-controller-label","time":"2025-02-03T14:45:28Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Removed 0 of 0 leftover containers","time":"2025-02-03T14:45:28Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Removed 0 of 0 leftover volumes","time":"2025-02-03T14:45:28Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Removed 0 of 0 leftover networks","time":"2025-02-03T14:45:28Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Listening on port 9150","time":"2025-02-03T14:45:28Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Listening on port 9151","time":"2025-02-03T14:45:28Z"}
+{"component":"FLOW","instance":"","level":"debug","msg":"1 projects","time":"2025-02-03T14:45:28Z"}
+{"component":"FLOW","instance":"[Instance: 17081]","level":"info","msg":"Info change for project 17081: stage: error, step: 0","time":"2025-02-03T14:45:28Z"}
+{"component":"FLOW","instance":"[Instance: 17081]","level":"error","msg":"Workflow is shutting down because of an error","time":"2025-02-03T14:45:28Z"}
+{"component":"DATA","instance":"17081","level":"debug","msg":"Updated project state for project 17081","time":"2025-02-03T14:45:28Z"}
+{"component":"TESTBED","instance":"","level":"info","msg":"Create new test","time":"2025-02-03T14:46:07Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Create volumes and containers...","time":"2025-02-03T14:46:07Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Create volume test_1_input_0_1738593967","time":"2025-02-03T14:46:07Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Create volume test_1_output_0_1738593967","time":"2025-02-03T14:46:07Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Move data to workspace from C:/Users/david/Desktop/Biostatistik/Autoencoder/vae\\data/client1","time":"2025-02-03T14:46:07Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Move data to workspace","time":"2025-02-03T14:46:07Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-02-03T14:46:08Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove application","time":"2025-02-03T14:46:09Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Intermediary container used for moving data from host to volume has been removed","time":"2025-02-03T14:46:10Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Move generic data to workspace skipped, no source provided","time":"2025-02-03T14:46:10Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Start application","time":"2025-02-03T14:46:10Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-02-03T14:46:10Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Append app to list","time":"2025-02-03T14:46:12Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Create volume test_1_input_1_1738593972","time":"2025-02-03T14:46:12Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Create volume test_1_output_1_1738593972","time":"2025-02-03T14:46:12Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Move data to workspace from C:/Users/david/Desktop/Biostatistik/Autoencoder/vae\\data/client2","time":"2025-02-03T14:46:12Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Move data to workspace","time":"2025-02-03T14:46:12Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-02-03T14:46:13Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove application","time":"2025-02-03T14:46:15Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Intermediary container used for moving data from host to volume has been removed","time":"2025-02-03T14:46:16Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Move generic data to workspace skipped, no source provided","time":"2025-02-03T14:46:16Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Start application","time":"2025-02-03T14:46:16Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-02-03T14:46:16Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Append app to list","time":"2025-02-03T14:46:17Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Create volume test_1_input_2_1738593977","time":"2025-02-03T14:46:17Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Create volume test_1_output_2_1738593977","time":"2025-02-03T14:46:17Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Move data to workspace from C:/Users/david/Desktop/Biostatistik/Autoencoder/vae\\data/client3","time":"2025-02-03T14:46:17Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Move data to workspace","time":"2025-02-03T14:46:17Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-02-03T14:46:18Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove application","time":"2025-02-03T14:46:20Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Intermediary container used for moving data from host to volume has been removed","time":"2025-02-03T14:46:21Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Move generic data to workspace skipped, no source provided","time":"2025-02-03T14:46:21Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Start application","time":"2025-02-03T14:46:21Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-02-03T14:46:21Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Append app to list","time":"2025-02-03T14:46:23Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Create volume test_1_input_3_1738593983","time":"2025-02-03T14:46:23Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Create volume test_1_output_3_1738593983","time":"2025-02-03T14:46:23Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Move data to workspace from C:/Users/david/Desktop/Biostatistik/Autoencoder/vae\\data/client4","time":"2025-02-03T14:46:23Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Move data to workspace","time":"2025-02-03T14:46:23Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-02-03T14:46:23Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove application","time":"2025-02-03T14:46:24Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Intermediary container used for moving data from host to volume has been removed","time":"2025-02-03T14:46:26Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Move generic data to workspace skipped, no source provided","time":"2025-02-03T14:46:26Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Start application","time":"2025-02-03T14:46:26Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-02-03T14:46:26Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Append app to list","time":"2025-02-03T14:46:27Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Create volume test_1_input_4_1738593987","time":"2025-02-03T14:46:27Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Create volume test_1_output_4_1738593987","time":"2025-02-03T14:46:27Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Move data to workspace from C:/Users/david/Desktop/Biostatistik/Autoencoder/vae\\data/client5","time":"2025-02-03T14:46:27Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Move data to workspace","time":"2025-02-03T14:46:27Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-02-03T14:46:28Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove application","time":"2025-02-03T14:46:29Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Intermediary container used for moving data from host to volume has been removed","time":"2025-02-03T14:46:30Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Move generic data to workspace skipped, no source provided","time":"2025-02-03T14:46:30Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Start application","time":"2025-02-03T14:46:30Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-02-03T14:46:30Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Append app to list","time":"2025-02-03T14:46:32Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Link fc_vae_772661969 with global socket server","time":"2025-02-03T14:46:32Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Link fc_vae_166866114 with global socket server","time":"2025-02-03T14:46:32Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Link fc_vae_455022506 with global socket server","time":"2025-02-03T14:46:32Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Link fc_vae_37221380 with global socket server","time":"2025-02-03T14:46:32Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Link fc_vae_968801903 with global socket server","time":"2025-02-03T14:46:32Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Start local socket server","time":"2025-02-03T14:46:32Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Start local socket server","time":"2025-02-03T14:46:32Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Start local socket server","time":"2025-02-03T14:46:32Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Start local socket server","time":"2025-02-03T14:46:32Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Start local socket server","time":"2025-02-03T14:46:32Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Link to global address","time":"2025-02-03T14:46:32Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Link to global address","time":"2025-02-03T14:46:32Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Link to global address","time":"2025-02-03T14:46:32Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Link to global address","time":"2025-02-03T14:46:32Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Link to global address","time":"2025-02-03T14:46:32Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Registered new participant controller","time":"2025-02-03T14:46:32Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Registered new participant controller","time":"2025-02-03T14:46:32Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Registered new participant controller","time":"2025-02-03T14:46:32Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Registered new coordinator controller","time":"2025-02-03T14:46:32Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Registered new participant controller","time":"2025-02-03T14:46:32Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Received setup trigger","time":"2025-02-03T14:46:32Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Received setup trigger","time":"2025-02-03T14:46:32Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Received setup trigger","time":"2025-02-03T14:46:32Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Received setup trigger","time":"2025-02-03T14:46:32Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Received setup trigger","time":"2025-02-03T14:46:32Z"}
+{"component":"LOCAL","instance":"","level":"error","msg":"Got error during setup to http://172.18.0.7:9000: Post \"http://172.18.0.7:9000/setup\": dial tcp 172.18.0.7:9000: connect: connection refused","time":"2025-02-03T14:46:32Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Setup 5fd396da8e8b5933b13da14796a35a620593a93d9eb8351adcd6c0bdc5b07c07","time":"2025-02-03T14:46:33Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Setup triggered","time":"2025-02-03T14:46:33Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"5 apps and server created and running","time":"2025-02-03T14:46:33Z"}
+{"component":"LOCAL","instance":"","level":"error","msg":"Got error code during setup: 502, 502 Bad Gateway","time":"2025-02-03T14:46:34Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"http://172.18.0.3:9000/status: New data available","time":"2025-02-03T14:46:39Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Mode: plain","time":"2025-02-03T14:46:39Z"}
+{"component":"LOCAL","instance":"","level":"debug","msg":"http://172.18.0.3:9000/data: Fetched 58363374 bytes","time":"2025-02-03T14:46:45Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Coordinator (ID: 3264718ce6838956) broadcasting 58363374 bytes","time":"2025-02-03T14:46:45Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"received 58363374 bytes from Client 3264718ce6838956","time":"2025-02-03T14:46:45Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"POST to http://172.18.0.6:9000/data?client=3264718ce6838956\u0026memo=None [Try 1/3]","time":"2025-02-03T14:46:45Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"received 58363374 bytes from Client 3264718ce6838956","time":"2025-02-03T14:46:46Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"POST to http://172.18.0.7:9000/data?client=3264718ce6838956\u0026memo=None [Try 1/3]","time":"2025-02-03T14:46:46Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"received 58363374 bytes from Client 3264718ce6838956","time":"2025-02-03T14:46:46Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"POST to http://172.18.0.5:9000/data?client=3264718ce6838956\u0026memo=None [Try 1/3]","time":"2025-02-03T14:46:46Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"received 58363374 bytes from Client 3264718ce6838956","time":"2025-02-03T14:46:46Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"POST to http://172.18.0.4:9000/data?client=3264718ce6838956\u0026memo=None [Try 1/3]","time":"2025-02-03T14:46:46Z"}
+{"component":"HTTP","instance":"","level":"debug","msg":"Set site received","time":"2025-02-03T14:47:08Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"http://172.18.0.4:9000/status: New data available","time":"2025-02-03T14:52:56Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Mode: plain","time":"2025-02-03T14:52:56Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"http://172.18.0.6:9000/status: New data available","time":"2025-02-03T14:52:59Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Mode: plain","time":"2025-02-03T14:52:59Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"http://172.18.0.7:9000/status: New data available","time":"2025-02-03T14:53:01Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Mode: plain","time":"2025-02-03T14:53:01Z"}
+{"component":"LOCAL","instance":"","level":"debug","msg":"http://172.18.0.4:9000/data: Fetched 58363369 bytes","time":"2025-02-03T14:53:03Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Participant (ID: 6edf02394c773777) sending 58363369 bytes to Coordinator","time":"2025-02-03T14:53:03Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"http://172.18.0.5:9000/status: New data available","time":"2025-02-03T14:53:04Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Mode: plain","time":"2025-02-03T14:53:04Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"received 58363369 bytes from Client 6edf02394c773777","time":"2025-02-03T14:53:04Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"POST to http://172.18.0.3:9000/data?client=6edf02394c773777\u0026memo=GATHERROUND1 [Try 1/3]","time":"2025-02-03T14:53:04Z"}
+{"component":"LOCAL","instance":"","level":"debug","msg":"http://172.18.0.6:9000/data: Fetched 58363369 bytes","time":"2025-02-03T14:53:08Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Participant (ID: 8ce44c6a4a889dc4) sending 58363369 bytes to Coordinator","time":"2025-02-03T14:53:08Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"received 58363369 bytes from Client 8ce44c6a4a889dc4","time":"2025-02-03T14:53:09Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"POST to http://172.18.0.3:9000/data?client=8ce44c6a4a889dc4\u0026memo=GATHERROUND1 [Try 1/3]","time":"2025-02-03T14:53:09Z"}
+{"component":"LOCAL","instance":"","level":"debug","msg":"http://172.18.0.7:9000/data: Fetched 58363369 bytes","time":"2025-02-03T14:53:11Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Participant (ID: fefc6a442429b80b) sending 58363369 bytes to Coordinator","time":"2025-02-03T14:53:11Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"received 58363369 bytes from Client fefc6a442429b80b","time":"2025-02-03T14:53:11Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"POST to http://172.18.0.3:9000/data?client=fefc6a442429b80b\u0026memo=GATHERROUND1 [Try 1/3]","time":"2025-02-03T14:53:11Z"}
+{"component":"LOCAL","instance":"","level":"debug","msg":"http://172.18.0.5:9000/data: Fetched 58363369 bytes","time":"2025-02-03T14:53:12Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Participant (ID: 835d37cb8b6efea0) sending 58363369 bytes to Coordinator","time":"2025-02-03T14:53:12Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"received 58363369 bytes from Client 835d37cb8b6efea0","time":"2025-02-03T14:53:12Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"POST to http://172.18.0.3:9000/data?client=835d37cb8b6efea0\u0026memo=GATHERROUND1 [Try 1/3]","time":"2025-02-03T14:53:12Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"http://172.18.0.3:9000/status: New data available","time":"2025-02-03T14:53:16Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Mode: plain","time":"2025-02-03T14:53:16Z"}
+{"component":"LOCAL","instance":"","level":"debug","msg":"http://172.18.0.3:9000/data: Fetched 58363408 bytes","time":"2025-02-03T14:53:24Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Coordinator (ID: 3264718ce6838956) broadcasting 58363408 bytes","time":"2025-02-03T14:53:24Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"received 58363408 bytes from Client 3264718ce6838956","time":"2025-02-03T14:53:24Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"POST to http://172.18.0.6:9000/data?client=3264718ce6838956\u0026memo=None [Try 1/3]","time":"2025-02-03T14:53:24Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"received 58363408 bytes from Client 3264718ce6838956","time":"2025-02-03T14:53:24Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"POST to http://172.18.0.7:9000/data?client=3264718ce6838956\u0026memo=None [Try 1/3]","time":"2025-02-03T14:53:24Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"received 58363408 bytes from Client 3264718ce6838956","time":"2025-02-03T14:53:25Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"POST to http://172.18.0.5:9000/data?client=3264718ce6838956\u0026memo=None [Try 1/3]","time":"2025-02-03T14:53:25Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"received 58363408 bytes from Client 3264718ce6838956","time":"2025-02-03T14:53:25Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"POST to http://172.18.0.4:9000/data?client=3264718ce6838956\u0026memo=None [Try 1/3]","time":"2025-02-03T14:53:25Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"http://172.18.0.5:9000/status: New data available","time":"2025-02-03T14:59:22Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Mode: plain","time":"2025-02-03T14:59:22Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"http://172.18.0.6:9000/status: New data available","time":"2025-02-03T14:59:23Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Mode: plain","time":"2025-02-03T14:59:23Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"http://172.18.0.7:9000/status: New data available","time":"2025-02-03T14:59:23Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Mode: plain","time":"2025-02-03T14:59:23Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"http://172.18.0.4:9000/status: New data available","time":"2025-02-03T14:59:24Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Mode: plain","time":"2025-02-03T14:59:24Z"}
+{"component":"LOCAL","instance":"","level":"debug","msg":"http://172.18.0.5:9000/data: Fetched 58363369 bytes","time":"2025-02-03T14:59:25Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Participant (ID: 835d37cb8b6efea0) sending 58363369 bytes to Coordinator","time":"2025-02-03T14:59:26Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"received 58363369 bytes from Client 835d37cb8b6efea0","time":"2025-02-03T14:59:26Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"POST to http://172.18.0.3:9000/data?client=835d37cb8b6efea0\u0026memo=GATHERROUND2 [Try 1/3]","time":"2025-02-03T14:59:26Z"}
+{"component":"LOCAL","instance":"","level":"debug","msg":"http://172.18.0.7:9000/data: Fetched 58363369 bytes","time":"2025-02-03T14:59:26Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Participant (ID: fefc6a442429b80b) sending 58363369 bytes to Coordinator","time":"2025-02-03T14:59:26Z"}
+{"component":"LOCAL","instance":"","level":"debug","msg":"http://172.18.0.6:9000/data: Fetched 58363369 bytes","time":"2025-02-03T14:59:26Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Participant (ID: 8ce44c6a4a889dc4) sending 58363369 bytes to Coordinator","time":"2025-02-03T14:59:26Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"received 58363369 bytes from Client fefc6a442429b80b","time":"2025-02-03T14:59:26Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"POST to http://172.18.0.3:9000/data?client=fefc6a442429b80b\u0026memo=GATHERROUND2 [Try 1/3]","time":"2025-02-03T14:59:26Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"received 58363369 bytes from Client 8ce44c6a4a889dc4","time":"2025-02-03T14:59:27Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"POST to http://172.18.0.3:9000/data?client=8ce44c6a4a889dc4\u0026memo=GATHERROUND2 [Try 1/3]","time":"2025-02-03T14:59:27Z"}
+{"component":"LOCAL","instance":"","level":"debug","msg":"http://172.18.0.4:9000/data: Fetched 58363369 bytes","time":"2025-02-03T14:59:27Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Participant (ID: 6edf02394c773777) sending 58363369 bytes to Coordinator","time":"2025-02-03T14:59:27Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"received 58363369 bytes from Client 6edf02394c773777","time":"2025-02-03T14:59:27Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"POST to http://172.18.0.3:9000/data?client=6edf02394c773777\u0026memo=GATHERROUND2 [Try 1/3]","time":"2025-02-03T14:59:27Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"http://172.18.0.3:9000/status: New data available","time":"2025-02-03T14:59:29Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Mode: plain","time":"2025-02-03T14:59:29Z"}
+{"component":"LOCAL","instance":"","level":"debug","msg":"http://172.18.0.3:9000/data: Fetched 58363408 bytes","time":"2025-02-03T14:59:34Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Coordinator (ID: 3264718ce6838956) broadcasting 58363408 bytes","time":"2025-02-03T14:59:34Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"received 58363408 bytes from Client 3264718ce6838956","time":"2025-02-03T14:59:34Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"POST to http://172.18.0.6:9000/data?client=3264718ce6838956\u0026memo=None [Try 1/3]","time":"2025-02-03T14:59:34Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"received 58363408 bytes from Client 3264718ce6838956","time":"2025-02-03T14:59:35Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"POST to http://172.18.0.7:9000/data?client=3264718ce6838956\u0026memo=None [Try 1/3]","time":"2025-02-03T14:59:35Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"received 58363408 bytes from Client 3264718ce6838956","time":"2025-02-03T14:59:35Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"POST to http://172.18.0.5:9000/data?client=3264718ce6838956\u0026memo=None [Try 1/3]","time":"2025-02-03T14:59:35Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"received 58363408 bytes from Client 3264718ce6838956","time":"2025-02-03T14:59:35Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"POST to http://172.18.0.4:9000/data?client=3264718ce6838956\u0026memo=None [Try 1/3]","time":"2025-02-03T14:59:35Z"}
+{"component":"HTTP","instance":"","level":"debug","msg":"Set site received","time":"2025-02-03T15:01:36Z"}
+{"component":"HTTP","instance":"","level":"debug","msg":"Set site received","time":"2025-02-03T15:05:36Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"http://172.18.0.4:9000/status: New data available","time":"2025-02-03T15:07:24Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Mode: plain","time":"2025-02-03T15:07:24Z"}
+{"component":"LOCAL","instance":"","level":"debug","msg":"http://172.18.0.4:9000/data: Fetched 58363369 bytes","time":"2025-02-03T15:07:28Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Participant (ID: 6edf02394c773777) sending 58363369 bytes to Coordinator","time":"2025-02-03T15:07:28Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"received 58363369 bytes from Client 6edf02394c773777","time":"2025-02-03T15:07:28Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"POST to http://172.18.0.3:9000/data?client=6edf02394c773777\u0026memo=GATHERROUND3 [Try 1/3]","time":"2025-02-03T15:07:28Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"http://172.18.0.5:9000/status: New data available","time":"2025-02-03T15:07:30Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Mode: plain","time":"2025-02-03T15:07:30Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"http://172.18.0.7:9000/status: New data available","time":"2025-02-03T15:07:31Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Mode: plain","time":"2025-02-03T15:07:31Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"http://172.18.0.6:9000/status: New data available","time":"2025-02-03T15:07:32Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Mode: plain","time":"2025-02-03T15:07:32Z"}
+{"component":"LOCAL","instance":"","level":"debug","msg":"http://172.18.0.5:9000/data: Fetched 58363369 bytes","time":"2025-02-03T15:07:34Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Participant (ID: 835d37cb8b6efea0) sending 58363369 bytes to Coordinator","time":"2025-02-03T15:07:34Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"received 58363369 bytes from Client 835d37cb8b6efea0","time":"2025-02-03T15:07:34Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"POST to http://172.18.0.3:9000/data?client=835d37cb8b6efea0\u0026memo=GATHERROUND3 [Try 1/3]","time":"2025-02-03T15:07:34Z"}
+{"component":"LOCAL","instance":"","level":"debug","msg":"http://172.18.0.7:9000/data: Fetched 58363369 bytes","time":"2025-02-03T15:07:35Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Participant (ID: fefc6a442429b80b) sending 58363369 bytes to Coordinator","time":"2025-02-03T15:07:35Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"received 58363369 bytes from Client fefc6a442429b80b","time":"2025-02-03T15:07:35Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"POST to http://172.18.0.3:9000/data?client=fefc6a442429b80b\u0026memo=GATHERROUND3 [Try 1/3]","time":"2025-02-03T15:07:35Z"}
+{"component":"LOCAL","instance":"","level":"debug","msg":"http://172.18.0.6:9000/data: Fetched 58363369 bytes","time":"2025-02-03T15:07:35Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Participant (ID: 8ce44c6a4a889dc4) sending 58363369 bytes to Coordinator","time":"2025-02-03T15:07:35Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"received 58363369 bytes from Client 8ce44c6a4a889dc4","time":"2025-02-03T15:07:35Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"POST to http://172.18.0.3:9000/data?client=8ce44c6a4a889dc4\u0026memo=GATHERROUND3 [Try 1/3]","time":"2025-02-03T15:07:35Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"http://172.18.0.3:9000/status: New data available","time":"2025-02-03T15:07:37Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Mode: plain","time":"2025-02-03T15:07:37Z"}
+{"component":"LOCAL","instance":"","level":"debug","msg":"http://172.18.0.3:9000/data: Fetched 58363408 bytes","time":"2025-02-03T15:07:41Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Coordinator (ID: 3264718ce6838956) broadcasting 58363408 bytes","time":"2025-02-03T15:07:41Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"received 58363408 bytes from Client 3264718ce6838956","time":"2025-02-03T15:07:42Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"POST to http://172.18.0.6:9000/data?client=3264718ce6838956\u0026memo=None [Try 1/3]","time":"2025-02-03T15:07:42Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"received 58363408 bytes from Client 3264718ce6838956","time":"2025-02-03T15:07:42Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"POST to http://172.18.0.7:9000/data?client=3264718ce6838956\u0026memo=None [Try 1/3]","time":"2025-02-03T15:07:42Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"received 58363408 bytes from Client 3264718ce6838956","time":"2025-02-03T15:07:42Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"POST to http://172.18.0.5:9000/data?client=3264718ce6838956\u0026memo=None [Try 1/3]","time":"2025-02-03T15:07:42Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"received 58363408 bytes from Client 3264718ce6838956","time":"2025-02-03T15:07:42Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"POST to http://172.18.0.4:9000/data?client=3264718ce6838956\u0026memo=None [Try 1/3]","time":"2025-02-03T15:07:42Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"http://172.18.0.7:9000/status: New data available","time":"2025-02-03T15:13:49Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Mode: plain","time":"2025-02-03T15:13:49Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"http://172.18.0.6:9000/status: New data available","time":"2025-02-03T15:13:49Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Mode: plain","time":"2025-02-03T15:13:49Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"http://172.18.0.5:9000/status: New data available","time":"2025-02-03T15:13:50Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Mode: plain","time":"2025-02-03T15:13:50Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"http://172.18.0.4:9000/status: New data available","time":"2025-02-03T15:13:50Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Mode: plain","time":"2025-02-03T15:13:50Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Participant (ID: fefc6a442429b80b) sending 58363369 bytes to Coordinator","time":"2025-02-03T15:13:55Z"}
+{"component":"LOCAL","instance":"","level":"debug","msg":"http://172.18.0.7:9000/data: Fetched 58363369 bytes","time":"2025-02-03T15:13:55Z"}
+{"component":"LOCAL","instance":"","level":"debug","msg":"http://172.18.0.6:9000/data: Fetched 58363369 bytes","time":"2025-02-03T15:13:55Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Participant (ID: 8ce44c6a4a889dc4) sending 58363369 bytes to Coordinator","time":"2025-02-03T15:13:55Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"received 58363369 bytes from Client fefc6a442429b80b","time":"2025-02-03T15:13:55Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"POST to http://172.18.0.3:9000/data?client=fefc6a442429b80b\u0026memo=GATHERROUND4 [Try 1/3]","time":"2025-02-03T15:13:55Z"}
+{"component":"LOCAL","instance":"","level":"debug","msg":"http://172.18.0.5:9000/data: Fetched 58363369 bytes","time":"2025-02-03T15:13:57Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Participant (ID: 835d37cb8b6efea0) sending 58363369 bytes to Coordinator","time":"2025-02-03T15:13:57Z"}
+{"component":"LOCAL","instance":"","level":"debug","msg":"http://172.18.0.4:9000/data: Fetched 58363369 bytes","time":"2025-02-03T15:13:57Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Participant (ID: 6edf02394c773777) sending 58363369 bytes to Coordinator","time":"2025-02-03T15:13:57Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"received 58363369 bytes from Client 8ce44c6a4a889dc4","time":"2025-02-03T15:13:57Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"POST to http://172.18.0.3:9000/data?client=8ce44c6a4a889dc4\u0026memo=GATHERROUND4 [Try 1/3]","time":"2025-02-03T15:13:57Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"received 58363369 bytes from Client 835d37cb8b6efea0","time":"2025-02-03T15:13:59Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"POST to http://172.18.0.3:9000/data?client=835d37cb8b6efea0\u0026memo=GATHERROUND4 [Try 1/3]","time":"2025-02-03T15:13:59Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"received 58363369 bytes from Client 6edf02394c773777","time":"2025-02-03T15:13:59Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"POST to http://172.18.0.3:9000/data?client=6edf02394c773777\u0026memo=GATHERROUND4 [Try 1/3]","time":"2025-02-03T15:13:59Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"http://172.18.0.3:9000/status: New data available","time":"2025-02-03T15:14:03Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Mode: plain","time":"2025-02-03T15:14:03Z"}
+{"component":"LOCAL","instance":"","level":"debug","msg":"http://172.18.0.3:9000/data: Fetched 58363408 bytes","time":"2025-02-03T15:14:15Z"}
+{"component":"GLOBAL","instance":"","level":"info","msg":"Coordinator (ID: 3264718ce6838956) broadcasting 58363408 bytes","time":"2025-02-03T15:14:15Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"received 58363408 bytes from Client 3264718ce6838956","time":"2025-02-03T15:14:16Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"POST to http://172.18.0.6:9000/data?client=3264718ce6838956\u0026memo=None [Try 1/3]","time":"2025-02-03T15:14:16Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"received 58363408 bytes from Client 3264718ce6838956","time":"2025-02-03T15:14:16Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"POST to http://172.18.0.7:9000/data?client=3264718ce6838956\u0026memo=None [Try 1/3]","time":"2025-02-03T15:14:16Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"received 58363408 bytes from Client 3264718ce6838956","time":"2025-02-03T15:14:17Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"POST to http://172.18.0.5:9000/data?client=3264718ce6838956\u0026memo=None [Try 1/3]","time":"2025-02-03T15:14:17Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"received 58363408 bytes from Client 3264718ce6838956","time":"2025-02-03T15:14:17Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"POST to http://172.18.0.4:9000/data?client=3264718ce6838956\u0026memo=None [Try 1/3]","time":"2025-02-03T15:14:17Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Shutdown","time":"2025-02-03T15:16:15Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Shutdown","time":"2025-02-03T15:16:15Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Shutdown","time":"2025-02-03T15:16:15Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Shutdown","time":"2025-02-03T15:16:15Z"}
+{"component":"LOCAL","instance":"","level":"info","msg":"Shutdown","time":"2025-02-03T15:16:15Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Stopping test id: 1","time":"2025-02-03T15:16:15Z"}
+{"component":"GLOBAL","instance":"","level":"error","msg":"Participant (ID: fefc6a442429b80b): relaying stopped due to: EOF","time":"2025-02-03T15:16:15Z"}
+{"component":"GLOBAL","instance":"","level":"error","msg":"Participant (ID: 835d37cb8b6efea0): relaying stopped due to: EOF","time":"2025-02-03T15:16:15Z"}
+{"component":"GLOBAL","instance":"","level":"error","msg":"Participant (ID: 8ce44c6a4a889dc4): relaying stopped due to: EOF","time":"2025-02-03T15:16:15Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Stopping container fc_vae_772661969","time":"2025-02-03T15:16:15Z"}
+{"component":"GLOBAL","instance":"","level":"error","msg":"Participant (ID: 6edf02394c773777): relaying stopped due to: EOF","time":"2025-02-03T15:16:15Z"}
+{"component":"GLOBAL","instance":"","level":"error","msg":"Participant (ID: 3264718ce6838956): relaying stopped due to: EOF","time":"2025-02-03T15:16:15Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Move data to host","time":"2025-02-03T15:16:16Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-02-03T15:16:17Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove application","time":"2025-02-03T15:16:21Z"}
+{"component":"DOCKER","instance":"","level":"debug","msg":"Intermediary container used for moving data from volume to host has been removed","time":"2025-02-03T15:16:22Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Saved output volume content to /data/tests/results_test_1_client_0_fc_vae_772661969.zip","time":"2025-02-03T15:16:22Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove volume test_1_output_0_1738593967","time":"2025-02-03T15:16:22Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Deleted volume test_1_output_0_1738593967","time":"2025-02-03T15:16:22Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove volume test_1_input_0_1738593967","time":"2025-02-03T15:16:22Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Deleted volume test_1_input_0_1738593967","time":"2025-02-03T15:16:22Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Stopping container fc_vae_166866114","time":"2025-02-03T15:16:22Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Move data to host","time":"2025-02-03T15:16:23Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-02-03T15:16:24Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove application","time":"2025-02-03T15:16:27Z"}
+{"component":"DOCKER","instance":"","level":"debug","msg":"Intermediary container used for moving data from volume to host has been removed","time":"2025-02-03T15:16:28Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Saved output volume content to /data/tests/results_test_1_client_1_fc_vae_166866114.zip","time":"2025-02-03T15:16:28Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove volume test_1_output_1_1738593972","time":"2025-02-03T15:16:28Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Deleted volume test_1_output_1_1738593972","time":"2025-02-03T15:16:28Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove volume test_1_input_1_1738593972","time":"2025-02-03T15:16:28Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Deleted volume test_1_input_1_1738593972","time":"2025-02-03T15:16:28Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Stopping container fc_vae_455022506","time":"2025-02-03T15:16:28Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Move data to host","time":"2025-02-03T15:16:29Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-02-03T15:16:30Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove application","time":"2025-02-03T15:16:34Z"}
+{"component":"DOCKER","instance":"","level":"debug","msg":"Intermediary container used for moving data from volume to host has been removed","time":"2025-02-03T15:16:35Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Saved output volume content to /data/tests/results_test_1_client_2_fc_vae_455022506.zip","time":"2025-02-03T15:16:35Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove volume test_1_output_2_1738593977","time":"2025-02-03T15:16:35Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Deleted volume test_1_output_2_1738593977","time":"2025-02-03T15:16:35Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove volume test_1_input_2_1738593977","time":"2025-02-03T15:16:35Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Deleted volume test_1_input_2_1738593977","time":"2025-02-03T15:16:35Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Stopping container fc_vae_37221380","time":"2025-02-03T15:16:35Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Move data to host","time":"2025-02-03T15:16:37Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-02-03T15:16:37Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove application","time":"2025-02-03T15:16:39Z"}
+{"component":"DOCKER","instance":"","level":"debug","msg":"Intermediary container used for moving data from volume to host has been removed","time":"2025-02-03T15:16:41Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Saved output volume content to /data/tests/results_test_1_client_3_fc_vae_37221380.zip","time":"2025-02-03T15:16:41Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove volume test_1_output_3_1738593983","time":"2025-02-03T15:16:41Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Deleted volume test_1_output_3_1738593983","time":"2025-02-03T15:16:41Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove volume test_1_input_3_1738593983","time":"2025-02-03T15:16:41Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Deleted volume test_1_input_3_1738593983","time":"2025-02-03T15:16:41Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Stopping container fc_vae_968801903","time":"2025-02-03T15:16:41Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Move data to host","time":"2025-02-03T15:16:41Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Attach to internal network","time":"2025-02-03T15:16:42Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove application","time":"2025-02-03T15:16:44Z"}
+{"component":"DOCKER","instance":"","level":"debug","msg":"Intermediary container used for moving data from volume to host has been removed","time":"2025-02-03T15:16:45Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Saved output volume content to /data/tests/results_test_1_client_4_fc_vae_968801903.zip","time":"2025-02-03T15:16:45Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove volume test_1_output_4_1738593987","time":"2025-02-03T15:16:45Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Deleted volume test_1_output_4_1738593987","time":"2025-02-03T15:16:45Z"}
+{"component":"DOCKER","instance":"","level":"info","msg":"Remove volume test_1_input_4_1738593987","time":"2025-02-03T15:16:45Z"}
+{"component":"TESTBED","instance":"[Project: 1]","level":"info","msg":"Deleted volume test_1_input_4_1738593987","time":"2025-02-03T15:16:45Z"}
